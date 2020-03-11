@@ -1,0 +1,203 @@
+# Copyright (C) 2020 unnamed project
+# This file is distributed under the same license as the unnamed project package.
+msgid ""
+msgstr ""
+"Project-Id-Version: unnamed project\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../inc/hooks.php:63
+msgid "Accordion"
+msgstr ""
+
+#: ../../inc/hooks.php:64
+msgid "A custom set of collapsable accordion items."
+msgstr ""
+
+#: ../../inc/hooks.php:76
+msgid "Accordion Block Title"
+msgstr ""
+
+#: ../../inc/hooks.php:77
+msgid "Accordion Block Content"
+msgstr ""
+
+#: ../../inc/hooks.php:80
+msgid "Accordion Item Title"
+msgstr ""
+
+#: ../../inc/hooks.php:81
+msgid "Accordion Item Content"
+msgstr ""
+
+#: ../../inc/hooks.php:93
+msgid "Carousel"
+msgstr ""
+
+#: ../../inc/hooks.php:94
+msgid "A carousel with a call to action for each slide."
+msgstr ""
+
+#: ../../inc/hooks.php:114
+msgid "Call To Action"
+msgstr ""
+
+#: ../../inc/hooks.php:115
+msgid "A call to action block."
+msgstr ""
+
+#: ../../inc/hooks.php:127, ../../inc/hooks.php:181
+msgid "Call To Action Title"
+msgstr ""
+
+#: ../../inc/hooks.php:128, ../../inc/hooks.php:182
+msgid "Call To Action Text"
+msgstr ""
+
+#: ../../inc/hooks.php:130, ../../inc/hooks.php:184
+msgid "Learn More"
+msgstr ""
+
+#: ../../inc/hooks.php:142
+msgid "Fifty/Fifty Block"
+msgstr ""
+
+#: ../../inc/hooks.php:143
+msgid "A split-content block with text and/or media."
+msgstr ""
+
+#: ../../inc/hooks.php:155
+msgid "Primary Text content"
+msgstr ""
+
+#: ../../inc/hooks.php:168
+msgid "Hero Block"
+msgstr ""
+
+#: ../../inc/hooks.php:169
+msgid "A hero with an optional call to action."
+msgstr ""
+
+#: ../../inc/hooks.php:207
+msgid "Recent Posts Block"
+msgstr ""
+
+#: ../../inc/hooks.php:208
+msgid "A set of recent posts displayed by category and/or tag."
+msgstr ""
+
+#: ../../inc/hooks.php:223
+msgid "Related Posts Block"
+msgstr ""
+
+#: ../../inc/hooks.php:224
+msgid "A set of manually selected posts."
+msgstr ""
+
+#: ../../inc/hooks.php:253
+msgid "WDS Blocks"
+msgstr ""
+
+#: ../../inc/hooks.php:303
+msgid "Video"
+msgstr ""
+
+#: ../../inc/hooks.php:325
+msgid "expired"
+msgstr ""
+
+#: ../../inc/template-tags.php:52, ../../inc/template-tags.php:185
+msgid "Read More"
+msgstr ""
+
+#: ../../inc/template-tags.php:95
+msgid "Alto"
+msgstr ""
+
+#: ../../inc/template-tags.php:96
+msgid "Black"
+msgstr ""
+
+#: ../../inc/template-tags.php:97
+msgid "Blue"
+msgstr ""
+
+#: ../../inc/template-tags.php:98
+msgid "Cod Gray"
+msgstr ""
+
+#: ../../inc/template-tags.php:99
+msgid "Dove Gray"
+msgstr ""
+
+#: ../../inc/template-tags.php:100
+msgid "Gallery"
+msgstr ""
+
+#: ../../inc/template-tags.php:101
+msgid "Gray"
+msgstr ""
+
+#: ../../inc/template-tags.php:102
+msgid "Gray Alt"
+msgstr ""
+
+#: ../../inc/template-tags.php:103
+msgid "Light Yellow"
+msgstr ""
+
+#: ../../inc/template-tags.php:104
+msgid "Mineshaft"
+msgstr ""
+
+#: ../../inc/template-tags.php:105
+msgid "Silver"
+msgstr ""
+
+#: ../../inc/template-tags.php:106
+msgid "Silver Chalice"
+msgstr ""
+
+#: ../../inc/template-tags.php:107
+msgid "White"
+msgstr ""
+
+#: ../../inc/template-tags.php:108
+msgid "Whitesmoke"
+msgstr ""
+
+#: ../../inc/template-tags.php:318
+msgid "Your block has expired. Please change or remove the Start and End dates under Other Options to display your block on the frontend."
+msgstr ""
+
+#: ../../inc/template-tags.php:366
+msgid "Slide Title"
+msgstr ""
+
+#: ../../inc/template-tags.php:367
+msgid "Slide Content"
+msgstr ""
+
+#. translators: get the title of the video.
+#: ../../inc/template-tags.php:496
+msgid "Video Background"
+msgstr ""
+
+#: ../../inc/template-tags.php:509
+msgid "Toggle video playback"
+msgstr ""
+
+#: ../../template-parts/content-blocks/block-wds-accordion.php:37
+msgid "Accordion Content Block"
+msgstr ""
+
+#: ../../wds-acf-gutenberg.php:43
+msgid "Advanced Custom Fields Pro must be active in order for you to use WDS ACF Gutenberg."
+msgstr ""

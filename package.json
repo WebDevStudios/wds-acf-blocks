@@ -1,0 +1,112 @@
+{
+  "name": "wds_acf_gutenberg",
+  "version": "1.0.0",
+  "description": "ACF + Gutenberg for WordPress.",
+  "author": "WebDevStudios",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebDevStudios/wds-acf-gutenberg.git"
+  },
+  "keywords": [
+    "plugin"
+  ],
+  "bugs": {
+    "url": "https://github.com/WebDevStudios/wds-acf-gutenberg/issues"
+  },
+  "homepage": "https://github.com/WebDevStudios/wds-acf-gutenberg#readme",
+  "main": "src/js/app.js",
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@webdevstudios/js-coding-standards": "~1.0.1",
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "imagemin-cli": "^5.1.0",
+    "mkdirp": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.1.0",
+    "postcss-cli": "^7.1.0",
+    "rimraf": "^3.0.2",
+    "stylelint": "^13.1.0",
+    "stylelint-config-wordpress": "^16.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.14.2",
+    "svgo": "^1.3.2",
+    "svgstore-cli": "^1.3.1",
+    "uglify-es": "^3.3.9",
+    "wp-pot-cli": "^1.3.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist/{css/*,js/*,images/*,languages/*}",
+    "optimizecss": "postcss dist/css/style.css -c postcss.config.js -o dist/css/style.css",
+    "scss": "node-sass src/scss/style.scss -o dist/css",
+    "lint": "npm run lint-js && npm run lint-scss",
+    "lint:js": "npm run lint-js",
+    "lint:scss": "npm run lint-scss",
+    "lint-js": "./node_modules/.bin/eslint src/js/concat/**/*.js || true",
+    "lint-scss": "./node_modules/.bin/stylelint src/scss/**/*.scss --syntax scss --config .stylelintrc || true",
+    "uglify": "mkdirp dist/js -p && uglifyjs src/js/concat/*.js -m -o dist/js/app.js && uglifyjs src/js/concat/*.js -m -c -o dist/js/app.min.js",
+    "polyfill": "uglifyjs src/js/babel-polyfill.min.js -m -o dist/js/babel-polyfill.js && uglifyjs src/js/babel-polyfill.min.js -m -c -o dist/js/babel-polyfill.min.js",
+    "imagemin": "imagemin src/images/*.* --out-dir=dist/images/",
+    "icons": "svgo -f src/images/icons -o dist/images/icons && svgstore dist/images/icons/*.svg --inline -o dist/images/icons/sprite.svg",
+    "pot": "mkdirp dist/languages && wp-pot --src './**/*.php' --dest-file 'dist/languages/wds-acf-gutenberg.pot'",
+    "lint:php": "phpcs -p -s -n . --standard=phpcs.xml.dist --extensions=php || true || exit",
+    "php": "npm run lint:php",
+    "serve": "browser-sync start --https --proxy 'https://testing.test' --no-open --files \"dist/css/*.css, dist/js/*.js, **/*.html, **/*.php, !node_modules/**/*.html\"",
+    "build:css": "run-s lint-scss scss optimizecss",
+    "build:js": "run-s lint uglify polyfill",
+    "build:images": "run-s imagemin icons",
+    "build:pot": "run-s pot",
+    "build": "run-s clean build:*",
+    "watch:css": "onchange \"src/scss\" -- run-s build:css",
+    "watch:js": "onchange \"src/js\" -- run-s build:js",
+    "watch:images": "onchange \"src/images\" -- run-s build:images",
+    "watch:php": "onchange './*.php', './**/*.php' -- run-s php",
+    "watch": "run-p serve watch:*",
+    "postinstall": "run-s build"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "plugin:@wordpress/eslint-plugin/esnext",
+      "plugin:@wordpress/eslint-plugin/react",
+      "@webdevstudios/js-coding-standards"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-wordpress",
+    "plugins": [
+      "stylelint-scss"
+    ],
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "extend",
+            "at-root",
+            "debug",
+            "warn",
+            "error",
+            "if",
+            "else",
+            "for",
+            "each",
+            "while",
+            "mixin",
+            "include",
+            "content",
+            "return",
+            "function"
+          ]
+        }
+      ]
+    }
+  }
+}

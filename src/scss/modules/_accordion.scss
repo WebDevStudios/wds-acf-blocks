@@ -1,0 +1,87 @@
+//--------------------------------------------------------------
+// Accordion Block
+//--------------------------------------------------------------
+// sass-lint:disable no-transition-all
+.accordion-block {
+	position: relative;
+} // .accordion-block
+
+//-----------------------------------------
+// Accordion Items
+//-----------------------------------------
+.accordion {
+
+	.accordion-item {
+		@include margin(#{rem(24)} null null null);
+
+		&-header {
+			cursor: pointer;
+			position: relative;
+		} // &-header
+
+		&-title {
+			@include margin(0);
+
+			padding-right: rem(30); // Space for toggle.
+			position: relative;
+		} // &-title
+
+		&-content {
+			max-height: 0;
+			opacity: 0;
+			transition: $transition-accordion;
+			transition-delay: 0.4s, 0s, 0.2s;
+			visibility: hidden;
+
+			p:last-of-type {
+				margin-bottom: 0;
+			} // p:last-of-type
+		} // &-content
+
+		&.open,
+		.no-js & {
+
+			.accordion-item-content {
+				max-height: rem(10000);
+				opacity: 1;
+				visibility: visible;
+			} // .accordion-item-content
+		} // &.open
+
+		&-toggle {
+			@include position(absolute, rem(12) 0 null null);
+			@include size(#{rem(32)});
+
+			align-items: center;
+			background-color: transparent;
+			border: none;
+			color: inherit;
+			display: flex;
+			padding: 0;
+
+			&-icon {
+				@include position(absolute, calc(50% - #{rem(12)}) 0 null null);
+				@include size(#{rem(32)});
+
+				background-color: $color-background-button;
+				border-radius: 100%; /* stylelint-disable-line declaration-property-unit-whitelist */
+				color: $color-white;
+				transition: $transition-transform;
+
+				.no-js & {
+					display: none;
+				} // .no-js &
+			} // &-icon
+		} // &-toggle
+
+		&.open {
+
+			.accordion-item-toggle {
+
+				span {
+					transform: rotate(45deg);
+				} // span
+			} // .item-toggle
+		} // &.open
+	} // .accordion-item
+} // .accordion
