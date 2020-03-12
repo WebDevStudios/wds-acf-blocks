@@ -1,0 +1,18 @@
+//-----------------------------------------
+// Preview Styles
+//-----------------------------------------
+// sass-lint:disable class-name-format
+.block-editor-inserter__preview-content {
+
+	.accordion-block {
+
+		.accordion-item-toggle {
+			font-size: rem(25);
+		}
+	}
+
+	.hero-block-content {
+		max-width: 100%;
+		min-height: unset;
+	}
+}

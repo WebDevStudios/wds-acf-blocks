@@ -79,3 +79,16 @@ function wds_acf_gutenberg_acf_enqueue_carousel_scripts() {
 	wp_enqueue_style( 'slick-carousel' );
 	wp_enqueue_script( 'slick-carousel-js' );
 }
+
+/**
+ * Enqueues styles just for the block preview.
+ *
+ * @author Corey Collins
+ * @since 1.0
+ */
+function wds_acf_gutenberg_block_preview_styles() {
+
+	wp_register_style( 'wds_acf_blocks_editor', plugin_dir_url( dirname( __FILE__ ) ) . 'dist/css/editor.css', array(), WDS_ACF_VERSION );
+	wp_enqueue_style( 'wds_acf_blocks_editor' );
+}
+add_action( 'enqueue_block_editor_assets', 'wds_acf_gutenberg_block_preview_styles' );
