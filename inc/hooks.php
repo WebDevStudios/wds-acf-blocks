@@ -9,6 +9,8 @@
 
 /**
  * Specify the location for saving ACF JSON files.
+ * Only enable this filter when you actually need to create new field groups, or edit existing field groups.
+ * If this is always on, any time a new field group is added on a project the field group will be saved to this plugin. You probably don't want that!
  *
  * @param string $path The path we're saving the files.
  * @return string $path
