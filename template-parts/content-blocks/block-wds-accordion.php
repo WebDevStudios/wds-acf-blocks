@@ -34,7 +34,7 @@ wds_acf_blocks_display_block_options(
 
 		<?php if ( $accordion_items ) : ?>
 			<?php $count = 0; ?>
-			<div class="accordion" aria-label="<?php esc_attr_e( 'Accordion Content Block', 'wds-acf-gutenberg' ); ?>">
+			<div class="accordion" aria-label="<?php esc_attr_e( 'Accordion Content Block', 'wds-acf-blocks' ); ?>">
 				<?php foreach ( $accordion_items as $accordion_item ) : ?>
 					<?php
 					$count++;
@@ -46,7 +46,7 @@ wds_acf_blocks_display_block_options(
 						<div class="accordion-item-header">
 							<h3 class="accordion-item-title"><?php echo esc_html( $accordion_item['accordion_title'] ); ?>
 								<button class="accordion-item-toggle" aria-expanded="false" aria-controls="<?php echo esc_attr( $item_content_id ); ?>">
-									<span class="screen-reader-text"><?php echo sprintf( esc_html( 'Toggle %s', 'wds-acf-gutenberg' ), esc_html( $accordion_item['accordion_title'] ) ); ?></span>
+									<span class="screen-reader-text"><?php echo sprintf( esc_html( 'Toggle %s', 'wds-acf-blocks' ), esc_html( $accordion_item['accordion_title'] ) ); ?></span>
 									<span class="accordion-item-toggle-icon" aria-hidden="true">+</span>
 								</button>
 							</h3>

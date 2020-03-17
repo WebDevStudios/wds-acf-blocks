@@ -28,7 +28,7 @@ Because the plugin compiles and bundles assets via NPM scripts, basic knowledge 
 1. From the command line, change directories to your new theme directory:
 
 ```bash
-cd /plugin/wds-acf-gutenberg
+cd /plugin/wds-acf-blocks
 ```
 
 2. Install plugin dependencies and trigger an initial build:

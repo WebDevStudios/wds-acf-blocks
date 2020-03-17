@@ -4,11 +4,11 @@
  * Description: A set of custom Gutenberg blocks built lovingly with Advanced Custom Fields.
  * Author: Corey Collins
  * Version: 1.0.0
- * Text Domain: wds-acf-gutenberg
+ * Text Domain: wds-acf-blocks
  * Domain Path: /dist/languages/
  *
  * @since 1.0
- * @package wds-acf-gutenberg
+ * @package wds-acf-blocks
  */
 
 /**
@@ -44,7 +44,7 @@ add_action( 'admin_init', 'wds_acf_blocks_has_parent_plugin' );
 function wds_acf_blocks_child_plugin_notice() {
 	?>
 	<div class="error">
-		<p><?php esc_html_e( 'Advanced Custom Fields Pro must be active in order for you to use WDS ACF Blocks.', 'wds-acf-gutenberg' ); ?></p>
+		<p><?php esc_html_e( 'Advanced Custom Fields Pro must be active in order for you to use WDS ACF Blocks.', 'wds-acf-blocks' ); ?></p>
 	</div>
 	<?php
 }
@@ -58,7 +58,7 @@ function wds_acf_blocks_child_plugin_notice() {
 function wds_acf_blocks_parent_plugin_notice() {
 	?>
 	<div class="error">
-		<p><?php esc_html_e( 'WDS ACF Blocks has been deactivated because Advanced Custom Fields Pro has been deactivated. Advanced Custom Fields Pro must be active in order for you to use WDS ACF Blocks.', 'wds-acf-gutenberg' ); ?></p>
+		<p><?php esc_html_e( 'WDS ACF Blocks has been deactivated because Advanced Custom Fields Pro has been deactivated. Advanced Custom Fields Pro must be active in order for you to use WDS ACF Blocks.', 'wds-acf-blocks' ); ?></p>
 	</div>
 	<?php
 }

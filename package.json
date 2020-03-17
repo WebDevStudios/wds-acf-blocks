@@ -54,7 +54,7 @@
     "polyfill": "uglifyjs src/js/babel-polyfill.min.js -m -o dist/js/babel-polyfill.js && uglifyjs src/js/babel-polyfill.min.js -m -c -o dist/js/babel-polyfill.min.js",
     "imagemin": "imagemin src/images/*.* --out-dir=dist/images/",
     "icons": "svgo -f src/images/icons -o dist/images/icons && svgstore dist/images/icons/*.svg --inline -o dist/images/icons/sprite.svg",
-    "pot": "mkdirp dist/languages && wp-pot --src './**/*.php' --dest-file 'dist/languages/wds-acf-gutenberg.pot'",
+    "pot": "mkdirp dist/languages && wp-pot --src './**/*.php' --dest-file 'dist/languages/wds-acf-blocks.pot'",
     "lint:php": "phpcs -p -s -n . --standard=phpcs.xml.dist --extensions=php || true || exit",
     "php": "npm run lint:php",
     "serve": "browser-sync start --https --proxy 'https://testing.test' --no-open --files \"dist/css/*.css, dist/js/*.js, **/*.html, **/*.php, !node_modules/**/*.html\"",

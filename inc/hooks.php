@@ -4,7 +4,7 @@
  *
  * @author Corey Collins
  * @since 1.0
- * @package wds-acf-gutenberg
+ * @package wds-acf-blocks
  */
 
 /**
@@ -62,8 +62,8 @@ function wds_acf_blocks_acf_init() {
 	acf_register_block_type(
 		array(
 			'name'            => 'wds-accordion',
-			'title'           => esc_html__( 'Accordion', 'wds-acf-gutenberg' ),
-			'description'     => esc_html__( 'A custom set of collapsable accordion items.', 'wds-acf-gutenberg' ),
+			'title'           => esc_html__( 'Accordion', 'wds-acf-blocks' ),
+			'description'     => esc_html__( 'A custom set of collapsable accordion items.', 'wds-acf-blocks' ),
 			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'sort',
@@ -75,12 +75,12 @@ function wds_acf_blocks_acf_init() {
 			'example'         => array(
 				'attributes' => array(
 					'data' => array(
-						'title'           => esc_html__( 'Accordion Block Title', 'wds-acf-gutenberg' ),
-						'text'            => esc_html__( 'Accordion Block Content', 'wds-acf-gutenberg' ),
+						'title'           => esc_html__( 'Accordion Block Title', 'wds-acf-blocks' ),
+						'text'            => esc_html__( 'Accordion Block Content', 'wds-acf-blocks' ),
 						'accordion_items' => array(
 							'0' => array(
-								'accordion_title' => esc_html__( 'Accordion Item Title', 'wds-acf-gutenberg' ),
-								'accordion_text'  => esc_html__( 'Accordion Item Content', 'wds-acf-gutenberg' ),
+								'accordion_title' => esc_html__( 'Accordion Item Title', 'wds-acf-blocks' ),
+								'accordion_text'  => esc_html__( 'Accordion Item Content', 'wds-acf-blocks' ),
 							),
 						),
 					),
@@ -92,8 +92,8 @@ function wds_acf_blocks_acf_init() {
 	acf_register_block_type(
 		array(
 			'name'            => 'wds-carousel',
-			'title'           => esc_html__( 'Carousel', 'wds-acf-gutenberg' ),
-			'description'     => esc_html__( 'A carousel with a call to action for each slide.', 'wds-acf-gutenberg' ),
+			'title'           => esc_html__( 'Carousel', 'wds-acf-blocks' ),
+			'description'     => esc_html__( 'A carousel with a call to action for each slide.', 'wds-acf-blocks' ),
 			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'slides',
@@ -113,8 +113,8 @@ function wds_acf_blocks_acf_init() {
 	acf_register_block_type(
 		array(
 			'name'            => 'wds-cta',
-			'title'           => esc_html__( 'Call To Action', 'wds-acf-gutenberg' ),
-			'description'     => esc_html__( 'A call to action block.', 'wds-acf-gutenberg' ),
+			'title'           => esc_html__( 'Call To Action', 'wds-acf-blocks' ),
+			'description'     => esc_html__( 'A call to action block.', 'wds-acf-blocks' ),
 			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'megaphone',
@@ -126,10 +126,10 @@ function wds_acf_blocks_acf_init() {
 			'example'         => array(
 				'attributes' => array(
 					'data' => array(
-						'title'       => esc_html__( 'Call To Action Title', 'wds-acf-gutenberg' ),
-						'text'        => esc_html__( 'Call To Action Text', 'wds-acf-gutenberg' ),
+						'title'       => esc_html__( 'Call To Action Title', 'wds-acf-blocks' ),
+						'text'        => esc_html__( 'Call To Action Text', 'wds-acf-blocks' ),
 						'button_link' => array(
-							'title' => esc_html__( 'Learn More', 'wds-acf-gutenberg' ),
+							'title' => esc_html__( 'Learn More', 'wds-acf-blocks' ),
 							'url'   => '#',
 						),
 					),
@@ -141,8 +141,8 @@ function wds_acf_blocks_acf_init() {
 	acf_register_block_type(
 		array(
 			'name'            => 'wds-fifty-fifty',
-			'title'           => esc_html__( 'Fifty/Fifty Block', 'wds-acf-gutenberg' ),
-			'description'     => esc_html__( 'A split-content block with text and/or media.', 'wds-acf-gutenberg' ),
+			'title'           => esc_html__( 'Fifty/Fifty Block', 'wds-acf-blocks' ),
+			'description'     => esc_html__( 'A split-content block with text and/or media.', 'wds-acf-blocks' ),
 			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'editor-table',
@@ -154,7 +154,7 @@ function wds_acf_blocks_acf_init() {
 			'example'         => array(
 				'attributes' => array(
 					'data' => array(
-						'text_primary' => esc_html__( 'Primary Text content', 'wds-acf-gutenberg' ),
+						'text_primary' => esc_html__( 'Primary Text content', 'wds-acf-blocks' ),
 						'media_right'  => array(
 							'url' => plugin_dir_url( dirname( __FILE__ ) ) . '/dist/images/placeholder.png',
 						),
@@ -167,8 +167,8 @@ function wds_acf_blocks_acf_init() {
 	acf_register_block_type(
 		array(
 			'name'            => 'wds-hero',
-			'title'           => esc_html__( 'Hero Block', 'wds-acf-gutenberg' ),
-			'description'     => esc_html__( 'A hero with an optional call to action.', 'wds-acf-gutenberg' ),
+			'title'           => esc_html__( 'Hero Block', 'wds-acf-blocks' ),
+			'description'     => esc_html__( 'A hero with an optional call to action.', 'wds-acf-blocks' ),
 			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'slides',
@@ -180,10 +180,10 @@ function wds_acf_blocks_acf_init() {
 			'example'         => array(
 				'attributes' => array(
 					'data' => array(
-						'title'              => esc_html__( 'Call To Action Title', 'wds-acf-gutenberg' ),
-						'text'               => esc_html__( 'Call To Action Text', 'wds-acf-gutenberg' ),
+						'title'              => esc_html__( 'Call To Action Title', 'wds-acf-blocks' ),
+						'text'               => esc_html__( 'Call To Action Text', 'wds-acf-blocks' ),
 						'button_link'        => array(
-							'title' => esc_html__( 'Learn More', 'wds-acf-gutenberg' ),
+							'title' => esc_html__( 'Learn More', 'wds-acf-blocks' ),
 							'url'   => '#',
 						),
 						'background_options' => array(
@@ -206,8 +206,8 @@ function wds_acf_blocks_acf_init() {
 	acf_register_block_type(
 		array(
 			'name'            => 'wds-recent-posts',
-			'title'           => esc_html__( 'Recent Posts Block', 'wds-acf-gutenberg' ),
-			'description'     => esc_html__( 'A set of recent posts displayed by category and/or tag.', 'wds-acf-gutenberg' ),
+			'title'           => esc_html__( 'Recent Posts Block', 'wds-acf-blocks' ),
+			'description'     => esc_html__( 'A set of recent posts displayed by category and/or tag.', 'wds-acf-blocks' ),
 			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'admin-page',
@@ -222,8 +222,8 @@ function wds_acf_blocks_acf_init() {
 	acf_register_block_type(
 		array(
 			'name'            => 'wds-related-posts',
-			'title'           => esc_html__( 'Related Posts Block', 'wds-acf-gutenberg' ),
-			'description'     => esc_html__( 'A set of manually selected posts.', 'wds-acf-gutenberg' ),
+			'title'           => esc_html__( 'Related Posts Block', 'wds-acf-blocks' ),
+			'description'     => esc_html__( 'A set of manually selected posts.', 'wds-acf-blocks' ),
 			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'admin-page',
@@ -252,7 +252,7 @@ function wds_acf_blocks_add_block_categories( $categories, $post ) {
 		array(
 			array(
 				'slug'  => 'wds-blocks',
-				'title' => esc_html__( 'WDS Blocks', 'wds-acf-gutenberg' ),
+				'title' => esc_html__( 'WDS Blocks', 'wds-acf-blocks' ),
 			),
 		)
 	);
@@ -302,7 +302,7 @@ function wds_acf_blocks_acf_flexible_content_layout_title( $block_title, $field,
 		}
 
 		if ( 'video' === $background_type ) {
-			$block_heading .= '<div style="font-size: 30px; height: 26px; width: 30px;" class="dashicons dashicons-format-video acf-flexible-title-image"><span class="screen-reader-text">' . esc_html__( 'Video', 'wds-acf-gutenberg' ) . '</span></div>';
+			$block_heading .= '<div style="font-size: 30px; height: 26px; width: 30px;" class="dashicons dashicons-format-video acf-flexible-title-image"><span class="screen-reader-text">' . esc_html__( 'Video', 'wds-acf-blocks' ) . '</span></div>';
 		}
 	}
 
@@ -324,7 +324,7 @@ function wds_acf_blocks_acf_flexible_content_layout_title( $block_title, $field,
 			)
 		)
 	) {
-		$expired .= '<span style="color: red;">&nbsp;(' . esc_html__( 'expired', 'wds-acf-gutenberg' ) . ')</span>';
+		$expired .= '<span style="color: red;">&nbsp;(' . esc_html__( 'expired', 'wds-acf-blocks' ) . ')</span>';
 	}
 
 	// Load title field text else Load headline text - Hero.

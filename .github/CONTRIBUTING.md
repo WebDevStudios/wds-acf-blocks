@@ -3,7 +3,7 @@
 WebDevStudios welcomes contributions and bug fixes from third-parties. Here are the steps to get started:
 
 * Create an [Issue](https://github.com/WebDevStudios/wds-acf-blocks/issues) so we can all discuss your idea
-* Fork wds-acf-gutenberg
+* Fork wds-acf-blocks
 * Create a feature/hotfix branch off [master](https://github.com/WebDevStudios/wds-acf-blocks/tree/master)
 * Commit code changes to your feature/hotifx branch
 * Continue to merge master into your feature/hotifx branch so it stays current

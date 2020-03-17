@@ -4,7 +4,7 @@
  *
  * @author Corey Collins
  * @since 1.0
- * @package wds-acf-gutenberg
+ * @package wds-acf-blocks
  */
 
 /**
@@ -34,7 +34,7 @@ function wds_acf_blocks_display_card( $args = array() ) {
 			<?php if ( $args['image'] ) : ?>
 				<?php echo wp_kses_post( $args['image'] ); ?>
 			<?php else : ?>
-				<img src="<?php echo esc_url( plugin_dir_url( dirname( __FILE__ ) ) ); ?>/dist/images/placeholder.png" class="card-image" loading="lazy" alt="<?php echo sprintf( esc_attr( 'Featured image for %s', 'wds-acf-gutenberg' ), esc_attr( $args['title'] ) ); ?>">
+				<img src="<?php echo esc_url( plugin_dir_url( dirname( __FILE__ ) ) ); ?>/dist/images/placeholder.png" class="card-image" loading="lazy" alt="<?php echo sprintf( esc_attr( 'Featured image for %s', 'wds-acf-blocks' ), esc_attr( $args['title'] ) ); ?>">
 			<?php endif; ?>
 		</a>
 
@@ -49,7 +49,7 @@ function wds_acf_blocks_display_card( $args = array() ) {
 		<?php endif; ?>
 
 		<?php if ( $args['url'] ) : ?>
-			<a class="button button-card" href="<?php echo esc_url( $args['url'] ); ?>"><?php esc_html_e( 'Read More', 'wds-acf-gutenberg' ); ?></a>
+			<a class="button button-card" href="<?php echo esc_url( $args['url'] ); ?>"><?php esc_html_e( 'Read More', 'wds-acf-blocks' ); ?></a>
 		<?php endif; ?>
 
 		</div><!-- .card-section -->
@@ -92,20 +92,20 @@ function wds_acf_blocks_get_the_excerpt( $args = array() ) {
  */
 function wds_acf_blocks_get_theme_colors() {
 	return array(
-		esc_html__( 'Alto', 'wds-acf-gutenberg' )           => '#ddd',
-		esc_html__( 'Black', 'wds-acf-gutenberg' )          => '#000',
-		esc_html__( 'Blue', 'wds-acf-gutenberg' )           => '#21759b',
-		esc_html__( 'Cod Gray', 'wds-acf-gutenberg' )       => '#111',
-		esc_html__( 'Dove Gray', 'wds-acf-gutenberg' )      => '#666',
-		esc_html__( 'Gallery', 'wds-acf-gutenberg' )        => '#eee',
-		esc_html__( 'Gray', 'wds-acf-gutenberg' )           => '#808080',
-		esc_html__( 'Gray Alt', 'wds-acf-gutenberg' )       => '#929292',
-		esc_html__( 'Light Yellow', 'wds-acf-gutenberg' )   => '#fff9c0',
-		esc_html__( 'Mineshaft', 'wds-acf-gutenberg' )      => '#333',
-		esc_html__( 'Silver', 'wds-acf-gutenberg' )         => '#ccc',
-		esc_html__( 'Silver Chalice', 'wds-acf-gutenberg' ) => '#aaa',
-		esc_html__( 'White', 'wds-acf-gutenberg' )          => '#fff',
-		esc_html__( 'Whitesmoke', 'wds-acf-gutenberg' )     => '#f1f1f1',
+		esc_html__( 'Alto', 'wds-acf-blocks' )           => '#ddd',
+		esc_html__( 'Black', 'wds-acf-blocks' )          => '#000',
+		esc_html__( 'Blue', 'wds-acf-blocks' )           => '#21759b',
+		esc_html__( 'Cod Gray', 'wds-acf-blocks' )       => '#111',
+		esc_html__( 'Dove Gray', 'wds-acf-blocks' )      => '#666',
+		esc_html__( 'Gallery', 'wds-acf-blocks' )        => '#eee',
+		esc_html__( 'Gray', 'wds-acf-blocks' )           => '#808080',
+		esc_html__( 'Gray Alt', 'wds-acf-blocks' )       => '#929292',
+		esc_html__( 'Light Yellow', 'wds-acf-blocks' )   => '#fff9c0',
+		esc_html__( 'Mineshaft', 'wds-acf-blocks' )      => '#333',
+		esc_html__( 'Silver', 'wds-acf-blocks' )         => '#ccc',
+		esc_html__( 'Silver Chalice', 'wds-acf-blocks' ) => '#aaa',
+		esc_html__( 'White', 'wds-acf-blocks' )          => '#fff',
+		esc_html__( 'Whitesmoke', 'wds-acf-blocks' )     => '#f1f1f1',
 	);
 }
 
@@ -182,7 +182,7 @@ function wds_acf_blocks_get_link( $args = array() ) {
 	$classes .= ' ' . $args['class'];
 
 	// Get title else default to "Read More".
-	$title = wds_acf_blocks_has_array_key( 'title', $button_array ) ? $button_array['title'] : esc_html__( 'Read More', 'wds-acf-gutenberg' );
+	$title = wds_acf_blocks_has_array_key( 'title', $button_array ) ? $button_array['title'] : esc_html__( 'Read More', 'wds-acf-blocks' );
 
 	// Get url.
 	$url = wds_acf_blocks_has_array_key( 'url', $button_array ) ? $button_array['url'] : '';
@@ -315,7 +315,7 @@ function wds_acf_blocks_display_expired_block_message() {
 
 	?>
 	<div class="block-expired-message">
-		<span class="block-expired-text"><?php esc_html_e( 'Your block has expired. Please change or remove the Start and End dates under Other Options to display your block on the frontend.', 'wds-acf-gutenberg' ); ?></span>
+		<span class="block-expired-text"><?php esc_html_e( 'Your block has expired. Please change or remove the Start and End dates under Other Options to display your block on the frontend.', 'wds-acf-blocks' ); ?></span>
 	</div>
 	<?php
 }
@@ -363,8 +363,8 @@ function wds_acf_blocks_acf_gutenberg_display_admin_default_carousel( $block ) {
 		?>
 		<section class="slide">
 			<div class="slide-content container">
-				<h2 class="slide-title"><?php esc_html_e( 'Slide Title', 'wds-acf-gutenberg' ); ?></h2>
-				<p class="slide-description"><?php esc_html_e( 'Slide Content', 'wds-acf-gutenberg' ); ?></p>
+				<h2 class="slide-title"><?php esc_html_e( 'Slide Title', 'wds-acf-blocks' ); ?></h2>
+				<p class="slide-description"><?php esc_html_e( 'Slide Content', 'wds-acf-blocks' ); ?></p>
 			</div>
 		</section>
 	<?php
@@ -493,7 +493,7 @@ function wds_acf_blocks_display_block_options( $args = array() ) {
 			$background_title      = $background_options['background_video_title'];
 			$args['class']        .= ' has-background video-as-background' . esc_attr( $has_show_overlay );
 			// Translators: get the title of the video.
-			$background_alt = $background_title ? sprintf( esc_attr( 'Video Background of %s', 'wds-acf-gutenberg' ), esc_attr( $background_options['background_video_title'] ) ) : __( 'Video Background', 'wds-acf-gutenberg' );
+			$background_alt = $background_title ? sprintf( esc_attr( 'Video Background of %s', 'wds-acf-blocks' ), esc_attr( $background_options['background_video_title'] ) ) : __( 'Video Background', 'wds-acf-blocks' );
 
 			ob_start();
 			?>
@@ -506,7 +506,7 @@ function wds_acf_blocks_display_block_options( $args = array() ) {
 						<source src="<?php echo esc_url( $background_video['url'] ); ?>" type="video/mp4">
 						<?php endif; ?>
 				</video>
-				<button class="video-toggle"><span class="screen-reader-text"><?php esc_html_e( 'Toggle video playback', 'wds-acf-gutenberg' ); ?></span></button>
+				<button class="video-toggle"><span class="screen-reader-text"><?php esc_html_e( 'Toggle video playback', 'wds-acf-blocks' ); ?></span></button>
 			<?php
 			$background_video_markup = ob_get_clean();
 		}

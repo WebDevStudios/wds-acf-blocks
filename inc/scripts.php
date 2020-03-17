@@ -4,7 +4,7 @@
  *
  * @author Corey Collins
  * @since 1.0
- * @package wds-acf-gutenberg
+ * @package wds-acf-blocks
  */
 
 // Define a global version number.
