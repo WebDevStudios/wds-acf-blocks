@@ -5,12 +5,12 @@
  * @package _s
  */
 
-$alignment    = wds_acf_gutenberg_get_block_alignment( $block );
-$classes      = wds_acf_gutenberg_get_block_classes( $block );
+$alignment    = wds_acf_blocks_get_block_alignment( $block );
+$classes      = wds_acf_blocks_get_block_classes( $block );
 $classnames[] = 'content-block carousel-block' . $alignment . $classes;
 $classnames[] = get_sub_field( 'block_width' );
 
-wds_acf_gutenberg_acf_gutenberg_display_admin_default_carousel( $block );
+wds_acf_blocks_acf_gutenberg_display_admin_default_carousel( $block );
 
 // Start repeater markup...
 if ( have_rows( 'carousel_slides' ) ) :
@@ -26,10 +26,10 @@ if ( have_rows( 'carousel_slides' ) ) :
 		$text          = get_sub_field( 'text' );
 		$button        = get_sub_field( 'button_link' );
 		$other_options = get_sub_field( 'other_options' ) ? get_sub_field( 'other_options' ) : get_field( 'other_options' )['other_options'];
-		$classname     = $color && wds_acf_gutenberg_has_array_key( 'color_picker', $color ) ? 'has-font-color color-' . esc_attr( $color['color_picker'] ) : '';
+		$classname     = $color && wds_acf_blocks_has_array_key( 'color_picker', $color ) ? 'has-font-color color-' . esc_attr( $color['color_picker'] ) : '';
 
 		// If the block has expired, then bail!
-		if ( wds_acf_gutenberg_has_block_expired(
+		if ( wds_acf_blocks_has_block_expired(
 			array(
 				'start_date' => $other_options['start_date'],
 				'end_date'   => $other_options['end_date'],
@@ -39,7 +39,7 @@ if ( have_rows( 'carousel_slides' ) ) :
 		}
 
 		// Start a <container> with possible block options.
-		wds_acf_gutenberg_display_block_options(
+		wds_acf_blocks_display_block_options(
 			array(
 				'block'     => $block,
 				'container' => 'section', // Any HTML5 container: section, div, etc...
@@ -59,7 +59,7 @@ if ( have_rows( 'carousel_slides' ) ) :
 				<?php endif; ?>
 
 				<?php
-				wds_acf_gutenberg_display_link(
+				wds_acf_blocks_display_link(
 					array(
 						'button' => true,
 						'class'  => 'button-slide',

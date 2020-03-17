@@ -17,14 +17,14 @@
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_acf_json_save_point( $path ) {
+function wds_acf_blocks_acf_json_save_point( $path ) {
 
 	// Update the path.
 	$path = plugin_dir_path( dirname( __FILE__ ) ) . '/acf-json';
 
 	return $path;
 }
-// add_filter( 'acf/settings/save_json', 'wds_acf_gutenberg_acf_json_save_point' );
+// add_filter( 'acf/settings/save_json', 'wds_acf_blocks_acf_json_save_point' );
 
 /**
  * Specify the location for loading ACF JSON files.
@@ -34,7 +34,7 @@ function wds_acf_gutenberg_acf_json_save_point( $path ) {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_acf_json_load_point( $paths ) {
+function wds_acf_blocks_acf_json_load_point( $paths ) {
 
 	// Remove original path (optional).
 	unset( $paths[0] );
@@ -44,14 +44,14 @@ function wds_acf_gutenberg_acf_json_load_point( $paths ) {
 
 	return $paths;
 }
-add_filter( 'acf/settings/load_json', 'wds_acf_gutenberg_acf_json_load_point' );
+add_filter( 'acf/settings/load_json', 'wds_acf_blocks_acf_json_load_point' );
 
 /**
  * Register our ACF Blocks.
  *
  * @author Corey Collins
  */
-function wds_acf_gutenberg_acf_init() {
+function wds_acf_blocks_acf_init() {
 
 	$supports = array(
 		'align'  => array( 'wide', 'full' ),
@@ -64,12 +64,12 @@ function wds_acf_gutenberg_acf_init() {
 			'name'            => 'wds-accordion',
 			'title'           => esc_html__( 'Accordion', 'wds-acf-gutenberg' ),
 			'description'     => esc_html__( 'A custom set of collapsable accordion items.', 'wds-acf-gutenberg' ),
-			'render_callback' => 'wds_acf_gutenberg_acf_block_registration_callback',
+			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'sort',
 			'keywords'        => array( 'accordion', 'wds' ),
 			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_gutenberg_acf_enqueue_backend_block_styles',
+			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
 			'align'           => 'wide',
 			'supports'        => $supports,
 			'example'         => array(
@@ -94,12 +94,12 @@ function wds_acf_gutenberg_acf_init() {
 			'name'            => 'wds-carousel',
 			'title'           => esc_html__( 'Carousel', 'wds-acf-gutenberg' ),
 			'description'     => esc_html__( 'A carousel with a call to action for each slide.', 'wds-acf-gutenberg' ),
-			'render_callback' => 'wds_acf_gutenberg_acf_block_registration_callback',
+			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'slides',
 			'keywords'        => array( 'carousel', 'slider', 'wds' ),
 			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_gutenberg_acf_enqueue_carousel_scripts',
+			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_carousel_scripts',
 			'align'           => 'wide',
 			'supports'        => $supports,
 			'example'         => array(
@@ -115,12 +115,12 @@ function wds_acf_gutenberg_acf_init() {
 			'name'            => 'wds-cta',
 			'title'           => esc_html__( 'Call To Action', 'wds-acf-gutenberg' ),
 			'description'     => esc_html__( 'A call to action block.', 'wds-acf-gutenberg' ),
-			'render_callback' => 'wds_acf_gutenberg_acf_block_registration_callback',
+			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'megaphone',
 			'keywords'        => array( 'call to action', 'cta', 'wds' ),
 			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_gutenberg_acf_enqueue_backend_block_styles',
+			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
 			'align'           => 'wide',
 			'supports'        => $supports,
 			'example'         => array(
@@ -143,12 +143,12 @@ function wds_acf_gutenberg_acf_init() {
 			'name'            => 'wds-fifty-fifty',
 			'title'           => esc_html__( 'Fifty/Fifty Block', 'wds-acf-gutenberg' ),
 			'description'     => esc_html__( 'A split-content block with text and/or media.', 'wds-acf-gutenberg' ),
-			'render_callback' => 'wds_acf_gutenberg_acf_block_registration_callback',
+			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'editor-table',
 			'keywords'        => array( 'fifty fifty', 'columns', 'wds' ),
 			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_gutenberg_acf_enqueue_backend_block_styles',
+			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
 			'align'           => 'wide',
 			'supports'        => $supports,
 			'example'         => array(
@@ -169,12 +169,12 @@ function wds_acf_gutenberg_acf_init() {
 			'name'            => 'wds-hero',
 			'title'           => esc_html__( 'Hero Block', 'wds-acf-gutenberg' ),
 			'description'     => esc_html__( 'A hero with an optional call to action.', 'wds-acf-gutenberg' ),
-			'render_callback' => 'wds_acf_gutenberg_acf_block_registration_callback',
+			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'slides',
 			'keywords'        => array( 'hero', 'wds' ),
 			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_gutenberg_acf_enqueue_backend_block_styles',
+			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
 			'align'           => 'wide',
 			'supports'        => $supports,
 			'example'         => array(
@@ -208,12 +208,12 @@ function wds_acf_gutenberg_acf_init() {
 			'name'            => 'wds-recent-posts',
 			'title'           => esc_html__( 'Recent Posts Block', 'wds-acf-gutenberg' ),
 			'description'     => esc_html__( 'A set of recent posts displayed by category and/or tag.', 'wds-acf-gutenberg' ),
-			'render_callback' => 'wds_acf_gutenberg_acf_block_registration_callback',
+			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'admin-page',
 			'keywords'        => array( 'recent posts', 'posts', 'wds' ),
 			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_gutenberg_acf_enqueue_backend_block_styles',
+			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
 			'align'           => 'wide',
 			'supports'        => $supports,
 		)
@@ -224,18 +224,18 @@ function wds_acf_gutenberg_acf_init() {
 			'name'            => 'wds-related-posts',
 			'title'           => esc_html__( 'Related Posts Block', 'wds-acf-gutenberg' ),
 			'description'     => esc_html__( 'A set of manually selected posts.', 'wds-acf-gutenberg' ),
-			'render_callback' => 'wds_acf_gutenberg_acf_block_registration_callback',
+			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
 			'category'        => 'wds-blocks',
 			'icon'            => 'admin-page',
 			'keywords'        => array( 'related posts', 'posts', 'wds' ),
 			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_gutenberg_acf_enqueue_backend_block_styles',
+			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
 			'align'           => 'wide',
 			'supports'        => $supports,
 		)
 	);
 }
-add_action( 'acf/init', 'wds_acf_gutenberg_acf_init' );
+add_action( 'acf/init', 'wds_acf_blocks_acf_init' );
 
 /**
  * Adds a WDS Block category to the Gutenberg category list.
@@ -245,7 +245,7 @@ add_action( 'acf/init', 'wds_acf_gutenberg_acf_init' );
  * @return array The updated array of categories.
  * @author Corey Collins
  */
-function wds_acf_gutenberg_add_block_categories( $categories, $post ) {
+function wds_acf_blocks_add_block_categories( $categories, $post ) {
 
 	return array_merge(
 		$categories,
@@ -257,7 +257,7 @@ function wds_acf_gutenberg_add_block_categories( $categories, $post ) {
 		)
 	);
 }
-add_filter( 'block_categories', 'wds_acf_gutenberg_add_block_categories', 10, 2 );
+add_filter( 'block_categories', 'wds_acf_blocks_add_block_categories', 10, 2 );
 
 /**
  * Update Layout Titles with Subfield Image and Text Fields
@@ -272,7 +272,7 @@ add_filter( 'block_categories', 'wds_acf_gutenberg_add_block_categories', 10, 2 
  *
  * @return string new ACF title.
  */
-function wds_acf_gutenberg_acf_flexible_content_layout_title( $block_title, $field, $layout, $i ) {
+function wds_acf_blocks_acf_flexible_content_layout_title( $block_title, $field, $layout, $i ) {
 
 	// Current ACF field name.
 	$current_title = $block_title;
@@ -294,7 +294,7 @@ function wds_acf_gutenberg_acf_flexible_content_layout_title( $block_title, $fie
 		$background_repeater = get_sub_field( 'carousel_slides' )[0]['background_options']['background_type']['value'];
 		$background_type     = $background ? $background : $background_repeater;
 
-		$type = wds_acf_gutenberg_return_flexible_content_layout_value( $background_type );
+		$type = wds_acf_blocks_return_flexible_content_layout_value( $background_type );
 
 		// Load image from non-repeater sub field background image, if it exists else Load image from repeater sub field background image, if it exists - Hero.
 		if ( 'image' === $background_type ) {
@@ -317,7 +317,7 @@ function wds_acf_gutenberg_acf_flexible_content_layout_title( $block_title, $fie
 	$end_date    = $other_options['end_date'];
 
 	// If the block has expired, add "(expired)" to the title.
-	if ( wds_acf_gutenberg_has_block_expired(
+	if ( wds_acf_blocks_has_block_expired(
 			array(
 				'start_date' => $start_date,
 				'end_date'   => $end_date,
@@ -335,16 +335,16 @@ function wds_acf_gutenberg_acf_flexible_content_layout_title( $block_title, $fie
 	// Return New Title.
 	return $block_heading . $expired;
 }
-add_filter( 'acf/fields/flexible_content/layout_title/name=content_blocks', 'wds_acf_gutenberg_acf_flexible_content_layout_title', 10, 4 );
+add_filter( 'acf/fields/flexible_content/layout_title/name=content_blocks', 'wds_acf_blocks_acf_flexible_content_layout_title', 10, 4 );
 
-if ( function_exists( 'wds_acf_gutenberg_acf_flexible_content_layout_title' ) ) {
+if ( function_exists( 'wds_acf_blocks_acf_flexible_content_layout_title' ) ) {
 
 	/**
-	 * Set Admin Styles for Flexible Content Layout Image/Title in wds_acf_gutenberg_acf_flexible_content_layout_title().
+	 * Set Admin Styles for Flexible Content Layout Image/Title in wds_acf_blocks_acf_flexible_content_layout_title().
 	 *
 	 * @author WDS
 	 */
-	function wds_acf_gutenberg_flexible_content_layout_title_acf_admin_head() {
+	function wds_acf_blocks_flexible_content_layout_title_acf_admin_head() {
 	?>
 	<style type="text/css">
 		.acf-flexible-content .layout .acf-fc-layout-handle {
@@ -364,11 +364,11 @@ if ( function_exists( 'wds_acf_gutenberg_acf_flexible_content_layout_title' ) ) 
 	</style>
 	<?php
 	}
-	add_action( 'acf/input/admin_head', 'wds_acf_gutenberg_flexible_content_layout_title_acf_admin_head' );
+	add_action( 'acf/input/admin_head', 'wds_acf_blocks_flexible_content_layout_title_acf_admin_head' );
 }
 
 /**
- * Load colors dynamically into select field from wds_acf_gutenberg_get_theme_colors()
+ * Load colors dynamically into select field from wds_acf_blocks_get_theme_colors()
  *
  * @author WDS
  * @param array $field field options.
@@ -376,13 +376,13 @@ if ( function_exists( 'wds_acf_gutenberg_acf_flexible_content_layout_title' ) ) 
  *
  * @author Corey Colins <corey@webdevstudios.com>
  */
-function wds_acf_gutenberg_acf_load_color_picker_field_choices( $field ) {
+function wds_acf_blocks_acf_load_color_picker_field_choices( $field ) {
 
 	// Reset choices.
 	$field['choices'] = array();
 
 	// Grab our colors array.
-	$colors = wds_acf_gutenberg_get_theme_colors();
+	$colors = wds_acf_blocks_get_theme_colors();
 
 	// Loop through colors.
 	foreach ( $colors as $key => $color ) {
@@ -397,7 +397,7 @@ function wds_acf_gutenberg_acf_load_color_picker_field_choices( $field ) {
 	// Return the field.
 	return $field;
 }
-add_filter( 'acf/load_field/name=color_picker', 'wds_acf_gutenberg_acf_load_color_picker_field_choices' );
+add_filter( 'acf/load_field/name=color_picker', 'wds_acf_blocks_acf_load_color_picker_field_choices' );
 
 /**
  * Filters WYSIWYG content with the_content filter.
@@ -406,7 +406,7 @@ add_filter( 'acf/load_field/name=color_picker', 'wds_acf_gutenberg_acf_load_colo
  * @return mixed $content.
  * @author jomurgel
  */
-function wds_acf_gutenberg_get_the_content( $content ) {
+function wds_acf_blocks_get_the_content( $content ) {
 
 	// Bail if no content exists.
 	if ( empty( $content ) ) {
@@ -415,4 +415,4 @@ function wds_acf_gutenberg_get_the_content( $content ) {
 	// Returns the content.
 	return $content;
 }
-add_filter( 'the_content', 'wds_acf_gutenberg_get_the_content', 20 );
+add_filter( 'the_content', 'wds_acf_blocks_get_the_content', 20 );

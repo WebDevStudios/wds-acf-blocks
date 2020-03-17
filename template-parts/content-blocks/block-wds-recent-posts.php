@@ -14,28 +14,28 @@ $block_title = get_field( 'title' );
 $post_count  = get_field( 'number_of_posts' );
 $categories  = get_field( 'categories' );
 $tags        = get_field( 'tags' );
-$alignment   = wds_acf_gutenberg_get_block_alignment( $block );
-$classes     = wds_acf_gutenberg_get_block_classes( $block );
+$alignment   = wds_acf_blocks_get_block_alignment( $block );
+$classes     = wds_acf_blocks_get_block_classes( $block );
 
 // Variable to hold query args.
 $args = array();
 
 // Only if there are either categories or tags.
 if ( $categories || $tags ) {
-	$args = wds_acf_gutenberg_get_recent_posts_query_arguments( $categories, $tags );
+	$args = wds_acf_blocks_get_recent_posts_query_arguments( $categories, $tags );
 }
 
 // Always merge in the number of posts.
 $args['posts_per_page'] = is_numeric( $post_count ) ? $post_count : 3;
 
 // Get the recent posts.
-$recent_posts = wds_acf_gutenberg_get_recent_posts( $args );
+$recent_posts = wds_acf_blocks_get_recent_posts( $args );
 
 // Display section if we have any posts.
 if ( $recent_posts->have_posts() ) :
 
 	// Start a <container> with possible block options.
-	wds_acf_gutenberg_display_block_options(
+	wds_acf_blocks_display_block_options(
 		array(
 			'block'     => $block,
 			'container' => 'section', // Any HTML5 container: section, div, etc...
@@ -58,11 +58,11 @@ if ( $recent_posts->have_posts() ) :
 				$recent_posts->the_post();
 
 				// Display a card.
-				wds_acf_gutenberg_display_card(
+				wds_acf_blocks_display_card(
 					array(
 						'title' => get_the_title(),
 						'image' => wp_get_attachment_image( get_post_thumbnail_id(), 'medium', false, array( 'card-image' ) ),
-						'text'  => wds_acf_gutenberg_get_the_excerpt(
+						'text'  => wds_acf_blocks_get_the_excerpt(
 							array(
 								'length' => 20,
 								'more'   => '...',

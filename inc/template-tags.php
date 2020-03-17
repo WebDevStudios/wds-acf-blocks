@@ -14,7 +14,7 @@
  * @param array $args Card defaults.
  * @since 1.0
  */
-function wds_acf_gutenberg_display_card( $args = array() ) {
+function wds_acf_blocks_display_card( $args = array() ) {
 
 	// Setup defaults.
 	$defaults = array(
@@ -66,7 +66,7 @@ function wds_acf_gutenberg_display_card( $args = array() ) {
  * @return string
  * @since 1.0
  */
-function wds_acf_gutenberg_get_the_excerpt( $args = array() ) {
+function wds_acf_blocks_get_the_excerpt( $args = array() ) {
 
 	// Set defaults.
 	$defaults = array(
@@ -90,7 +90,7 @@ function wds_acf_gutenberg_get_the_excerpt( $args = array() ) {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_get_theme_colors() {
+function wds_acf_blocks_get_theme_colors() {
 	return array(
 		esc_html__( 'Alto', 'wds-acf-gutenberg' )           => '#ddd',
 		esc_html__( 'Black', 'wds-acf-gutenberg' )          => '#000',
@@ -118,7 +118,7 @@ function wds_acf_gutenberg_get_theme_colors() {
  * @return void
  * @since 1.0
  */
-function wds_acf_gutenberg_display_hero_heading( $block_title ) {
+function wds_acf_blocks_display_hero_heading( $block_title ) {
 
 	// Bail if our title is empty.
 	if ( empty( $block_title ) ) {
@@ -139,8 +139,8 @@ function wds_acf_gutenberg_display_hero_heading( $block_title ) {
  * @author jomurgel <jo@webdevstudios.com>
  * @since 1.0
  */
-function wds_acf_gutenberg_display_link( $args = array() ) {
-	echo wds_acf_gutenberg_get_link( $args ); // WPCS: XSS Ok.
+function wds_acf_blocks_display_link( $args = array() ) {
+	echo wds_acf_blocks_get_link( $args ); // WPCS: XSS Ok.
 }
 
 /**
@@ -152,7 +152,7 @@ function wds_acf_gutenberg_display_link( $args = array() ) {
  *
  * @return string button markup.
  */
-function wds_acf_gutenberg_get_link( $args = array() ) {
+function wds_acf_blocks_get_link( $args = array() ) {
 
 	// Defaults.
 	$defaults = array(
@@ -182,13 +182,13 @@ function wds_acf_gutenberg_get_link( $args = array() ) {
 	$classes .= ' ' . $args['class'];
 
 	// Get title else default to "Read More".
-	$title = wds_acf_gutenberg_has_array_key( 'title', $button_array ) ? $button_array['title'] : esc_html__( 'Read More', 'wds-acf-gutenberg' );
+	$title = wds_acf_blocks_has_array_key( 'title', $button_array ) ? $button_array['title'] : esc_html__( 'Read More', 'wds-acf-gutenberg' );
 
 	// Get url.
-	$url = wds_acf_gutenberg_has_array_key( 'url', $button_array ) ? $button_array['url'] : '';
+	$url = wds_acf_blocks_has_array_key( 'url', $button_array ) ? $button_array['url'] : '';
 
 	// Get target, else default internal.
-	$target = wds_acf_gutenberg_has_array_key( 'target', $button_array ) ? $button_array['target'] : '_self';
+	$target = wds_acf_blocks_has_array_key( 'target', $button_array ) ? $button_array['target'] : '_self';
 	?>
 
 	<a href="<?php echo esc_url( $url ); ?>" class="<?php echo esc_attr( $classes ); ?>" target="<?php echo esc_attr( $target ); ?>"><?php echo esc_html( $title ); ?></a>
@@ -208,7 +208,7 @@ function wds_acf_gutenberg_get_link( $args = array() ) {
  *
  * @return bool
  */
-function wds_acf_gutenberg_has_array_key( $key, $array = array() ) {
+function wds_acf_blocks_has_array_key( $key, $array = array() ) {
 
 	if ( ! is_array( $array ) || ( ! $array || ! $key ) ) {
 		return false;
@@ -225,7 +225,7 @@ function wds_acf_gutenberg_has_array_key( $key, $array = array() ) {
  * @return string field value.
  * @since 1.0
  */
-function wds_acf_gutenberg_return_flexible_content_layout_value( $type ) {
+function wds_acf_blocks_return_flexible_content_layout_value( $type ) {
 
 	if ( empty( $type ) ) {
 		return;
@@ -245,7 +245,7 @@ function wds_acf_gutenberg_return_flexible_content_layout_value( $type ) {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_get_block_alignment( $block ) {
+function wds_acf_blocks_get_block_alignment( $block ) {
 
 	if ( ! $block ) {
 		return;
@@ -262,14 +262,14 @@ function wds_acf_gutenberg_get_block_alignment( $block ) {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_get_block_classes( $block ) {
+function wds_acf_blocks_get_block_classes( $block ) {
 
 	if ( ! $block ) {
 		return;
 	}
 
 	$classes  = '';
-	$classes  = wds_acf_gutenberg_get_block_expired_class();
+	$classes  = wds_acf_blocks_get_block_expired_class();
 	$classes .= ! empty( $block['className'] ) ? ' ' . esc_attr( $block['className'] ) : '';
 
 	return $classes;
@@ -282,7 +282,7 @@ function wds_acf_gutenberg_get_block_classes( $block ) {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_get_block_expired_class() {
+function wds_acf_blocks_get_block_expired_class() {
 
 	if ( ! is_admin() ) {
 		return;
@@ -290,7 +290,7 @@ function wds_acf_gutenberg_get_block_expired_class() {
 
 	$other_options = get_sub_field( 'other_options' ) ? get_sub_field( 'other_options' ) : get_field( 'other_options' )['other_options'];
 
-	if ( wds_acf_gutenberg_has_block_expired(
+	if ( wds_acf_blocks_has_block_expired(
 		array(
 			'start_date' => $other_options['start_date'],
 			'end_date'   => $other_options['end_date'],
@@ -307,9 +307,9 @@ function wds_acf_gutenberg_get_block_expired_class() {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_display_expired_block_message() {
+function wds_acf_blocks_display_expired_block_message() {
 
-	if ( ! wds_acf_gutenberg_get_block_expired_class() ) {
+	if ( ! wds_acf_blocks_get_block_expired_class() ) {
 		return;
 	}
 
@@ -328,7 +328,7 @@ function wds_acf_gutenberg_display_expired_block_message() {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_get_block_id( $block ) {
+function wds_acf_blocks_get_block_id( $block ) {
 
 	if ( ! $block ) {
 		return;
@@ -345,7 +345,7 @@ function wds_acf_gutenberg_get_block_id( $block ) {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_acf_gutenberg_display_admin_default_carousel( $block ) {
+function wds_acf_blocks_acf_gutenberg_display_admin_default_carousel( $block ) {
 
 	// Only in the dashboard.
 	if ( ! is_admin() ) {
@@ -382,7 +382,7 @@ function wds_acf_gutenberg_acf_gutenberg_display_admin_default_carousel( $block 
  *
  * @return bool
  */
-function wds_acf_gutenberg_has_block_expired( $args = array() ) {
+function wds_acf_blocks_has_block_expired( $args = array() ) {
 
 	// Setup defaults.
 	$defaults = array(
@@ -419,7 +419,7 @@ function wds_acf_gutenberg_has_block_expired( $args = array() ) {
  * @param  array $args Possible arguments.
  * @since 1.0
  */
-function wds_acf_gutenberg_display_block_options( $args = array() ) {
+function wds_acf_blocks_display_block_options( $args = array() ) {
 
 	// Get block background options.
 	$background_options = get_sub_field( 'background_options' ) ? get_sub_field( 'background_options' ) : get_field( 'background_options' )['background_options'];
@@ -447,7 +447,7 @@ function wds_acf_gutenberg_display_block_options( $args = array() ) {
 	}
 
 	// Get the block ID.
-	$block_id = wds_acf_gutenberg_get_block_id( $args['block'] );
+	$block_id = wds_acf_blocks_get_block_id( $args['block'] );
 
 	// Setup defaults.
 	$defaults = array(
@@ -464,7 +464,7 @@ function wds_acf_gutenberg_display_block_options( $args = array() ) {
 	$background_video_markup = $background_image_markup = '';
 
 	// Show overlay class, if it exists.
-	$has_show_overlay = wds_acf_gutenberg_has_array_key( 'show_overlay', $background_options ) && true === $background_options['show_overlay'] ? ' has-overlay' : '';
+	$has_show_overlay = wds_acf_blocks_has_array_key( 'show_overlay', $background_options ) && true === $background_options['show_overlay'] ? ' has-overlay' : '';
 
 	// Only try to get the rest of the settings if the background type is set to anything.
 	if ( $args['background_type'] ) {
@@ -549,7 +549,7 @@ function wds_acf_gutenberg_display_block_options( $args = array() ) {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_acf_block_registration_callback( $block ) {
+function wds_acf_blocks_acf_block_registration_callback( $block ) {
 
 	// Convert the block name into a handy slug.
 	$block_slug = str_replace( 'acf/', '', $block['name'] );
@@ -559,7 +559,7 @@ function wds_acf_gutenberg_acf_block_registration_callback( $block ) {
 	$end_date   = isset( $block['data']['other_options_end_date'] ) ? $block['data']['other_options_end_date'] : '';
 
 	// If the block has expired, then bail! But only on the frontend, so we can still see and edit the block in the backend.
-	if ( ! is_admin() && wds_acf_gutenberg_has_block_expired(
+	if ( ! is_admin() && wds_acf_blocks_has_block_expired(
 		array(
 			'start_date' => strtotime( $start_date, true ),
 			'end_date'   => strtotime( $end_date, true ),
@@ -568,7 +568,7 @@ function wds_acf_gutenberg_acf_block_registration_callback( $block ) {
 		return;
 	}
 
-	wds_acf_gutenberg_display_expired_block_message();
+	wds_acf_blocks_display_expired_block_message();
 
 	// Include our template part.
 	if ( file_exists( plugin_dir_path( dirname( __FILE__ ) ) . 'template-parts/content-blocks/block-' . $block_slug . '.php' ) ) {

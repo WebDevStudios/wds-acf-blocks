@@ -9,8 +9,8 @@
 global $fifty_block, $fifty_alignment, $fifty_classes;
 $block_layout    = get_field( 'block_layout' );
 $fifty_block     = $block;
-$fifty_alignment = wds_acf_gutenberg_get_block_alignment( $fifty_block );
-$fifty_classes   = wds_acf_gutenberg_get_block_classes( $fifty_block );
+$fifty_alignment = wds_acf_blocks_get_block_alignment( $fifty_block );
+$fifty_classes   = wds_acf_blocks_get_block_classes( $fifty_block );
 
 switch ( $block_layout ) {
 

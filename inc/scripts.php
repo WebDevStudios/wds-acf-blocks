@@ -57,7 +57,7 @@ add_action( 'wp_enqueue_scripts', 'wds_acf_enqueue_gutenberg_scripts' );
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_acf_enqueue_backend_block_styles() {
+function wds_acf_blocks_acf_enqueue_backend_block_styles() {
 
 	if ( ! is_admin() ) {
 		return;
@@ -73,9 +73,9 @@ function wds_acf_gutenberg_acf_enqueue_backend_block_styles() {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_acf_enqueue_carousel_scripts() {
+function wds_acf_blocks_acf_enqueue_carousel_scripts() {
 
-	wds_acf_gutenberg_acf_enqueue_backend_block_styles();
+	wds_acf_blocks_acf_enqueue_backend_block_styles();
 	wp_enqueue_style( 'slick-carousel' );
 	wp_enqueue_script( 'slick-carousel-js' );
 }
@@ -86,9 +86,9 @@ function wds_acf_gutenberg_acf_enqueue_carousel_scripts() {
  * @author Corey Collins
  * @since 1.0
  */
-function wds_acf_gutenberg_block_preview_styles() {
+function wds_acf_blocks_block_preview_styles() {
 
 	wp_register_style( 'wds_acf_blocks_editor', plugin_dir_url( dirname( __FILE__ ) ) . 'dist/css/editor.css', array(), WDS_ACF_VERSION );
 	wp_enqueue_style( 'wds_acf_blocks_editor' );
 }
-add_action( 'enqueue_block_editor_assets', 'wds_acf_gutenberg_block_preview_styles' );
+add_action( 'enqueue_block_editor_assets', 'wds_acf_blocks_block_preview_styles' );

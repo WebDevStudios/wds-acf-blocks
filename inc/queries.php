@@ -18,7 +18,7 @@
  * @author Greg Rickaby, Eric Fuller, Jeffrey de Wit
  * @since 1.0
  */
-function wds_acf_gutenberg_get_recent_posts( $args = array() ) {
+function wds_acf_blocks_get_recent_posts( $args = array() ) {
 
 	// Setup default WP_Query args.
 	$defaults = array(

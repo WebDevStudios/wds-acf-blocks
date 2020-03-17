@@ -10,11 +10,11 @@ $block_title     = get_field( 'title' );
 $text            = get_field( 'text' );
 $accordion_items = get_field( 'accordion_items' );
 $row_index       = get_row_index();
-$alignment       = wds_acf_gutenberg_get_block_alignment( $block );
-$classes         = wds_acf_gutenberg_get_block_classes( $block );
+$alignment       = wds_acf_blocks_get_block_alignment( $block );
+$classes         = wds_acf_blocks_get_block_classes( $block );
 
 // Start a <container> with possible block options.
-wds_acf_gutenberg_display_block_options(
+wds_acf_blocks_display_block_options(
 	array(
 		'block'     => $block,
 		'container' => 'section', // Any HTML5 container: section, div, etc...
@@ -29,7 +29,7 @@ wds_acf_gutenberg_display_block_options(
 		<?php endif; ?>
 
 		<?php if ( $text ) : ?>
-			<?php echo wds_acf_gutenberg_get_the_content( $text ); // phpcs: xss: ok. ?>
+			<?php echo wds_acf_blocks_get_the_content( $text ); // phpcs: xss: ok. ?>
 		<?php endif; ?>
 
 		<?php if ( $accordion_items ) : ?>
@@ -52,7 +52,7 @@ wds_acf_gutenberg_display_block_options(
 							</h3>
 						</div>
 						<div id="<?php echo esc_attr( $item_content_id ); ?>" class="accordion-item-content" aria-hidden="true">
-							<?php echo wds_acf_gutenberg_get_the_content( $accordion_item['accordion_text'] ); // phpcs: xss: ok. ?>
+							<?php echo wds_acf_blocks_get_the_content( $accordion_item['accordion_text'] ); // phpcs: xss: ok. ?>
 						</div>
 					</div>
 				<?php endforeach; ?>

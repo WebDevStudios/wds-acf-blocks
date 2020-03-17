@@ -11,7 +11,7 @@ $image_data = get_field( 'media_right' );
 $text       = get_field( 'text_primary' );
 
 // Start a <container> with a possible media background.
-wds_acf_gutenberg_display_block_options(
+wds_acf_blocks_display_block_options(
 	array(
 		'block'     => $fifty_block,
 		'container' => 'section', // Any HTML5 container: section, div, etc...
@@ -22,7 +22,7 @@ wds_acf_gutenberg_display_block_options(
 	<div class="display-flex container">
 
 		<div class="half">
-			<?php echo wds_acf_gutenberg_get_the_content( $text ); // WPCS: XSS OK. ?>
+			<?php echo wds_acf_blocks_get_the_content( $text ); // WPCS: XSS OK. ?>
 		</div>
 
 		<div class="half">
