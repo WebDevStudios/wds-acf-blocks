@@ -13,103 +13,103 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../inc/hooks.php:63
+#: ../../inc/hooks.php:65
 msgid "Accordion"
 msgstr ""
 
-#: ../../inc/hooks.php:64
+#: ../../inc/hooks.php:66
 msgid "A custom set of collapsable accordion items."
 msgstr ""
 
-#: ../../inc/hooks.php:76
+#: ../../inc/hooks.php:78
 msgid "Accordion Block Title"
 msgstr ""
 
-#: ../../inc/hooks.php:77
+#: ../../inc/hooks.php:79
 msgid "Accordion Block Content"
 msgstr ""
 
-#: ../../inc/hooks.php:80
+#: ../../inc/hooks.php:82
 msgid "Accordion Item Title"
 msgstr ""
 
-#: ../../inc/hooks.php:81
+#: ../../inc/hooks.php:83
 msgid "Accordion Item Content"
 msgstr ""
 
-#: ../../inc/hooks.php:93
+#: ../../inc/hooks.php:95
 msgid "Carousel"
 msgstr ""
 
-#: ../../inc/hooks.php:94
+#: ../../inc/hooks.php:96
 msgid "A carousel with a call to action for each slide."
 msgstr ""
 
-#: ../../inc/hooks.php:114
+#: ../../inc/hooks.php:116
 msgid "Call To Action"
 msgstr ""
 
-#: ../../inc/hooks.php:115
+#: ../../inc/hooks.php:117
 msgid "A call to action block."
 msgstr ""
 
-#: ../../inc/hooks.php:127, ../../inc/hooks.php:181
+#: ../../inc/hooks.php:129, ../../inc/hooks.php:183
 msgid "Call To Action Title"
 msgstr ""
 
-#: ../../inc/hooks.php:128, ../../inc/hooks.php:182
+#: ../../inc/hooks.php:130, ../../inc/hooks.php:184
 msgid "Call To Action Text"
 msgstr ""
 
-#: ../../inc/hooks.php:130, ../../inc/hooks.php:184
+#: ../../inc/hooks.php:132, ../../inc/hooks.php:186
 msgid "Learn More"
 msgstr ""
 
-#: ../../inc/hooks.php:142
+#: ../../inc/hooks.php:144
 msgid "Fifty/Fifty Block"
 msgstr ""
 
-#: ../../inc/hooks.php:143
+#: ../../inc/hooks.php:145
 msgid "A split-content block with text and/or media."
 msgstr ""
 
-#: ../../inc/hooks.php:155
+#: ../../inc/hooks.php:157
 msgid "Primary Text content"
 msgstr ""
 
-#: ../../inc/hooks.php:168
+#: ../../inc/hooks.php:170
 msgid "Hero Block"
 msgstr ""
 
-#: ../../inc/hooks.php:169
+#: ../../inc/hooks.php:171
 msgid "A hero with an optional call to action."
 msgstr ""
 
-#: ../../inc/hooks.php:207
+#: ../../inc/hooks.php:209
 msgid "Recent Posts Block"
 msgstr ""
 
-#: ../../inc/hooks.php:208
+#: ../../inc/hooks.php:210
 msgid "A set of recent posts displayed by category and/or tag."
 msgstr ""
 
-#: ../../inc/hooks.php:223
+#: ../../inc/hooks.php:225
 msgid "Related Posts Block"
 msgstr ""
 
-#: ../../inc/hooks.php:224
+#: ../../inc/hooks.php:226
 msgid "A set of manually selected posts."
 msgstr ""
 
-#: ../../inc/hooks.php:253
+#: ../../inc/hooks.php:255
 msgid "WDS Blocks"
 msgstr ""
 
-#: ../../inc/hooks.php:303
+#: ../../inc/hooks.php:305
 msgid "Video"
 msgstr ""
 
-#: ../../inc/hooks.php:325
+#: ../../inc/hooks.php:327
 msgid "expired"
 msgstr ""
 
@@ -198,6 +198,10 @@ msgstr ""
 msgid "Accordion Content Block"
 msgstr ""
 
-#: ../../wds-acf-gutenberg.php:43
-msgid "Advanced Custom Fields Pro must be active in order for you to use WDS ACF Gutenberg."
+#: ../../wds-acf-blocks.php:47
+msgid "Advanced Custom Fields Pro must be active in order for you to use WDS ACF Blocks."
+msgstr ""
+
+#: ../../wds-acf-blocks.php:61
+msgid "WDS ACF Blocks has been deactivated because Advanced Custom Fields Pro has been deactivated. Advanced Custom Fields Pro must be active in order for you to use WDS ACF Blocks."
 msgstr ""

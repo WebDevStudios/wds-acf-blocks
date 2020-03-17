@@ -1,20 +1,20 @@
 {
-  "name": "wds_acf_gutenberg",
+  "name": "wds_acf_blocks",
   "version": "1.0.0",
   "description": "ACF + Gutenberg for WordPress.",
   "author": "WebDevStudios",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebDevStudios/wds-acf-gutenberg.git"
+    "url": "git+https://github.com/WebDevStudios/wds-acf-blocks.git"
   },
   "keywords": [
     "plugin"
   ],
   "bugs": {
-    "url": "https://github.com/WebDevStudios/wds-acf-gutenberg/issues"
+    "url": "https://github.com/WebDevStudios/wds-acf-blocks/issues"
   },
-  "homepage": "https://github.com/WebDevStudios/wds-acf-gutenberg#readme",
+  "homepage": "https://github.com/WebDevStudios/wds-acf-blocks#readme",
   "main": "src/js/app.js",
   "dependencies": {
     "slick-carousel": "^1.8.1"
