@@ -47,4 +47,4 @@ From the command line, type any of the following to perform an action:
 
 ## Contributing and Support
 
-Your contributions and [support tickets](https://github.com/WebDevStudios/wds-acf-gutenberg/issues) are welcome. Please see our [guidelines](https://github.com/WebDevStudios/wds-acf-gutenberg/blob/master/.github/CONTRIBUTING.md) before submitting a pull request.
+Your contributions and [support tickets](https://github.com/WebDevStudios/wds-acf-blocks/issues) are welcome. Please see our [guidelines](https://github.com/WebDevStudios/wds-acf-blocks/blob/master/.github/CONTRIBUTING.md) before submitting a pull request.
