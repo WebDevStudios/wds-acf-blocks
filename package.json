@@ -37,9 +37,6 @@
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "wp-scripts build && composer install"
 	},
-	"browserslist": [
-		"defaults"
-	],
 	"eslintConfig": {
 		"extends": [
 			"plugin:@wordpress/eslint-plugin/esnext",
