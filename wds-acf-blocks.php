@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WDS ACF Blocks
  * Description: A set of custom Gutenberg blocks built lovingly with Advanced Custom Fields.
- * Author: Corey Collins
+ * Author: WebDevStudios
  * Version: 1.0.0
  * Text Domain: wds-acf-blocks
  * Domain Path: /dist/languages/
