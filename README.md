@@ -18,6 +18,8 @@ To better manage ACF Field Groups, the plugin supports [synchronized JSON](https
 
 <a href="https://webdevstudios.com/contact/"><img src="https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png" alt="WebDevStudios. Your Success is Our Mission."></a>
 
+---
+
 ## 📝 Requirements
 
 -   [Node LTS](https://nodejs.org/en/)
@@ -66,6 +68,8 @@ From the command line, type any of the following in the root of the plugin to pe
 From the command line, type any of the following in the root of the plugin to perform an action:
 
 `composer run lint` - Lint PHP using WDS Coding Standards
+
+---
 
 ## :octocat: Contributing and Support
 
