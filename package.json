@@ -60,12 +60,20 @@
 			"plugin:@wordpress/eslint-plugin/esnext",
 			"plugin:@wordpress/eslint-plugin/react",
 			"@webdevstudios/js-coding-standards"
+		],
+		"ignorePatterns": [
+			"build/**",
+			"vendor/**"
 		]
 	},
 	"stylelint": {
 		"extends": "stylelint-config-wordpress",
 		"plugins": [
 			"stylelint-scss"
+		],
+		"ignoreFiles": [
+			"build/**",
+			"vendor/**"
 		],
 		"rules": {
 			"at-rule-no-unknown": [
