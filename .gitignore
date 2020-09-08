@@ -8,5 +8,6 @@ compass_app_log.txt
 .DS_Store
 .AppleDouble
 .LSOverride
-/vendor/
-/.vscode/
+vendor/
+.vscode/
+dist/
