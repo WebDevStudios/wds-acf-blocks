@@ -156,7 +156,7 @@ function wds_acf_blocks_acf_init() {
 					'data' => array(
 						'text_primary' => esc_html__( 'Primary Text content', 'wds-acf-blocks' ),
 						'media_right'  => array(
-							'url' => plugin_dir_url( dirname( __FILE__ ) ) . '/dist/images/placeholder.png',
+							'url' => plugin_dir_url( dirname( __FILE__ ) ) . '/src/images/placeholder.png',
 						),
 					),
 				),
