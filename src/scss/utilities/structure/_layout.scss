@@ -2,20 +2,8 @@
 // Base Layout
 //--------------------------------------------------------------
 .content-block {
+
 	@include padding($gutter * 2 null);
-
-	&.has-background:not(.alignfull) {
-		@include margin(0 auto);
-
-		&.container-width {
-			@include margin($gutter * 2 auto);
-			@include padding($gutter * 2 0);
-
-			@include media($container-offset) {
-				@include padding($gutter * 2 $gutter);
-			}
-		} // &.container-width.
-	} // &.has-background
 
 	// Remove the extra padding on nested no-background blocks.
 	&.no-background,
@@ -23,11 +11,27 @@
 	&.has-background.container-width {
 
 		// Remove padding from nth no-background block.
-		& + .no-background,
-		& + .no-background.container-width {
+		&.no-background,
+		&.no-background.container-width {
 			padding-top: 0;
 		} // & + .no-background
 	} // &.no-background
+
+	&.has-background:not(.alignfull) {
+
+		@include margin(0 auto);
+
+		&.container-width {
+
+			@include margin($gutter * 2 auto);
+			@include padding($gutter * 2 0);
+
+			@include media($container-offset) {
+
+				@include padding($gutter * 2 $gutter);
+			}
+		} // &.container-width.
+	} // &.has-background
 
 	// Make sure videos stay in their containers.
 	&.video-as-background {
@@ -59,6 +63,7 @@
 // Video and Image as background.
 .video-background,
 .image-background {
+
 	@include position(absolute, 50% null null 0);
 	@include size(100%, auto);
 
@@ -67,6 +72,7 @@
 	z-index: -1;
 
 	@supports (object-fit: cover) {
+
 		@include size(100%);
 
 		object-fit: cover;
@@ -83,6 +89,7 @@
 	object-position: center center;
 
 	img {
+
 		@include size(100%);
 
 		object-fit: cover;
@@ -132,16 +139,19 @@
 
 	// 50%.
 	.half {
+
 		@include half;
 	} // .half
 
 	// 33%.
 	.third {
+
 		@include third;
 	} // .third
 
 	// 25%
 	.quarter {
+
 		@include quarter;
 	} // .quarter
 
@@ -151,21 +161,25 @@
 
 	// Left @ ~66% with ~50px gutter.
 	.left-two-thirds {
+
 		@include left-two-thirds;
 	} // .left-two-thirds
 
 	// 33%.
 	.right-third {
+
 		@include right-third;
 	} // .right-third
 
 	// 33%.
 	.left-third {
+
 		@include left-third;
 	} // .left-third
 
 	// Right @ ~66% with ~50px gutter.
 	.right-two-thirds {
+
 		@include right-two-thirds;
 	} // .right-two-thirds
 } // .site-wrapper, .display-flex

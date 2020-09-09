@@ -54,6 +54,8 @@ function wdsAccordion() {
  *
  * @since January 31, 2020
  * @author Shannon MacMillan, Corey Collins
+ *
+ * @return {boolean} Return false if hash is not found.
  */
 function openHashLink() {
 	if ( ! window.location.hash ) {

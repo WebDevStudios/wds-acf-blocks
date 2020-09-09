@@ -24,7 +24,7 @@ function wds_acf_blocks_acf_json_save_point( $path ) {
 
 	return $path;
 }
-// add_filter( 'acf/settings/save_json', 'wds_acf_blocks_acf_json_save_point' );
+// add_filter( 'acf/settings/save_json', 'wds_acf_blocks_acf_json_save_point' ); @codingStandardsIgnoreLine Squiz.Commenting.InlineComment.InvalidEndChar
 
 /**
  * Specify the location for loading ACF JSON files.

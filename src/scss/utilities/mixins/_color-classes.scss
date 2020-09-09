@@ -7,7 +7,8 @@
 /// @author Carrie Forde
 ////
 
-/// Quickly and easily create color presentational classes. Includes background-color, color, and fill clases.
+/// Quickly and easily create color presentational classes.
+/// Includes background-color, color, and fill clases.
 ///
 /// @param {map} $colors [$plugin-colors] - The theme color map.
 ///
@@ -27,8 +28,9 @@
 
 @mixin colors($colors: $plugin-colors) {
 
-	@if type-of($colors) != 'map' {
-		@error 'Sorry, $colors is not a Sass map!';
+	@if type-of($colors) != "map" {
+
+		@error "Sorry, $colors is not a Sass map!";
 	}
 
 	@each $name, $color in $colors {

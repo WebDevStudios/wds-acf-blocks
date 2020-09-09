@@ -5,6 +5,7 @@
 
 	// Content container.
 	&-content {
+
 		@include margin(0 auto);
 
 		align-items: center;
@@ -37,10 +38,11 @@
 // Video Controls
 //-----------------------------------------
 .video-toggle {
+
 	@include position(absolute, null 1% 2% null);
 	@include size(rem(22));
 
-	background: url('../images/icons/pause.svg') center center no-repeat transparent;
+	background: url("../images/icons/pause.svg") center center no-repeat transparent; /* stylelint-disable-line function-url-quotes */
 	background-size: rem(16);
 	opacity: 0.2;
 	padding: 0;
@@ -54,7 +56,7 @@
 	}
 
 	.video-toggled & {
-		background-image: url('../images/icons/play.svg');
+		background-image: url("../images/icons/play.svg"); /* stylelint-disable-line function-url-quotes */
 	}
 } // .video-toggle
 
