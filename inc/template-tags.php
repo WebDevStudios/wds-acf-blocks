@@ -34,7 +34,13 @@ function wds_acf_blocks_display_card( $args = array() ) {
 			<?php if ( $args['image'] ) : ?>
 				<?php echo wp_kses_post( $args['image'] ); ?>
 			<?php else : ?>
-				<img src="<?php echo esc_url( plugin_dir_url( dirname( __FILE__ ) ) ); ?>/src/images/placeholder.png" class="card-image" loading="lazy" alt="<?php echo sprintf( esc_attr__( 'Featured image for %s', 'wds-acf-blocks' ), esc_attr( $args['title'] ) ); ?>">
+				<img
+					src="<?php echo esc_url( plugin_dir_url( dirname( __FILE__ ) ) ); ?>/src/images/placeholder.png"
+					class="card-image"
+					loading="lazy"
+					<?php /* translators: Post title */ ?>
+					alt="<?php echo sprintf( esc_attr__( 'Featured image for %s', 'wds-acf-blocks' ), esc_attr( $args['title'] ) ); ?>"
+					>
 			<?php endif; ?>
 		</a>
 
