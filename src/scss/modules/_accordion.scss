@@ -12,6 +12,7 @@
 .accordion {
 
 	.accordion-item {
+
 		@include margin(#{rem(24)} null null null);
 
 		&-header {
@@ -20,6 +21,7 @@
 		} // &-header
 
 		&-title {
+
 			@include margin(0);
 
 			padding-right: rem(30); // Space for toggle.
@@ -49,6 +51,7 @@
 		} // &.open
 
 		&-toggle {
+
 			@include position(absolute, rem(12) 0 null null);
 			@include size(#{rem(32)});
 
@@ -60,6 +63,7 @@
 			padding: 0;
 
 			&-icon {
+
 				@include position(absolute, calc(50% - #{rem(12)}) 0 null null);
 				@include size(#{rem(32)});
 
