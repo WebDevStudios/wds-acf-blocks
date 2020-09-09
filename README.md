@@ -33,7 +33,7 @@ _We highly recommend [NVM](https://github.com/nvm-sh/nvm) so you can easily swit
 
 ## 🚀 Installation
 
-Clone the repo:
+Clone the repo into `wp-content/plugins`:
 
 ```bash
 git clone git@github.com:WebDevStudios/wds-acf-blocks.git
@@ -42,7 +42,7 @@ git clone git@github.com:WebDevStudios/wds-acf-blocks.git
 From the command line, change directories to your new theme directory:
 
 ```bash
-cd /plugin/wds-acf-blocks
+cd wds-acf-blocks
 ```
 
 Install plugin dependencies and trigger an initial build:
