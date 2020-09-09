@@ -41,3 +41,27 @@ function wds_acf_blocks_get_recent_posts( $args = array() ) {
 
 	return $recent_posts;
 }
+
+/**
+ * Get recent posts query arguments.
+ *
+ * @author Ashar Irfan
+ * @since 1.0
+ *
+ * @param array $categories List of categories.
+ * @param array $tags List of tags.
+ * @return array
+ */
+function wds_acf_blocks_get_recent_posts_query_arguments( $categories, $tags ) {
+	$args = [];
+
+	if ( is_array( $categories ) && ! empty( $categories ) ) {
+		$args['category__in'] = implode( ',', $categories );
+	}
+
+	if ( is_array( $tags ) && ! empty( $tags ) ) {
+		$args['tag__in'] = implode( ',', $tags );
+	}
+
+	return $args;
+}
