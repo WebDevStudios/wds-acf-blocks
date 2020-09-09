@@ -24,6 +24,7 @@ To better manage ACF Field Groups, the plugin supports [synchronized JSON](https
 
 -   [Node LTS](https://nodejs.org/en/)
 -   [Composer](https://getcomposer.org/)
+-   [WordPress](https://wordpress.org/)
 -   [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/pro/)
 -   [wd_s](https://github.com/WebDevStudios/wd_s)
 
