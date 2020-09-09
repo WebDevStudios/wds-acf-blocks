@@ -60,9 +60,9 @@ npm i
 
 From the command line, type any of the following in the root of the plugin to perform an action:
 
-`npm run build` - Compile and build all assets.
+`npm run dev` - Automatically handle changes to CSS, JS, SVGs, and image sprites.
 
-`npm run watch` - Automatically handle changes to CSS, JS, SVGs, and image sprites.
+`npm run build` - Compile and build all assets.
 
 ### Composer Scripts
 
