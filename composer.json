@@ -17,8 +17,8 @@
   },
   "scripts": {
     "lint": "composer run compat && composer run lint:php",
-    "format": "./vendor/bin/phpcbf -p -v . --standard=.phpcs.xml.dist --extensions=php --report-summary --report-source --ignore='*/node_modules/*,*/vendor/*,*/build/*'",
-    "lint:php": "./vendor/bin/phpcs -p -s -n . --standard=.phpcs.xml.dist --extensions=php -n --colors --ignore='*/node_modules/*,*/vendor/*,*/build/*'",
+    "format": "./vendor/bin/phpcbf -p -v . --standard=.phpcs.xml.dist --extensions=php --report-summary --report-source",
+    "lint:php": "./vendor/bin/phpcs -p -s -n . --standard=.phpcs.xml.dist --extensions=php -n --colors",
     "compat": "./vendor/bin/phpcs -p . --standard=PHPCompatibility --extensions=php --runtime-set testVersion 7.4 --ignore='.github/*,vendor/*' --warning-severity=8 -d memory_limit=4096M || true || exit"
   }
 }
