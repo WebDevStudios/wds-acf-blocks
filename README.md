@@ -40,7 +40,7 @@ Clone the repo into `wp-content/plugins`:
 git clone git@github.com:WebDevStudios/wds-acf-blocks.git
 ```
 
-From the command line, change directories to your new theme directory:
+From the command line, change directories:
 
 ```bash
 cd wds-acf-blocks
