@@ -53,14 +53,37 @@ function wds_acf_blocks_get_recent_posts( $args = array() ) {
  * @return array
  */
 function wds_acf_blocks_get_recent_posts_query_arguments( $categories, $tags ) {
-	$args = [];
 
-	if ( is_array( $categories ) && ! empty( $categories ) ) {
-		$args['category__in'] = implode( ',', $categories );
+	$args = array();
+
+	// If no tags and just categories.
+	if ( ! $tags && $categories ) {
+		$args['category__in'] = $categories;
 	}
 
-	if ( is_array( $tags ) && ! empty( $tags ) ) {
-		$args['tag__in'] = implode( ',', $tags );
+	// If no categories and just tags.
+	if ( ! $categories && $tags ) {
+		$args['tag__in'] = $tags;
+	}
+
+	// If both categories and tags.
+	if ( $categories && $tags ) {
+		$args = array_merge(
+			$args,
+			array(
+				'tax_query' => array(
+					'relation' => 'OR',
+					array(
+						'taxonomy' => 'category',
+						'terms'    => $categories,
+					),
+					array(
+						'taxonomy' => 'post_tag',
+						'terms'    => $tags,
+					),
+				),
+			)
+		);
 	}
 
 	return $args;
