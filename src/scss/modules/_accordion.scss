@@ -64,13 +64,15 @@
 
 			&-icon {
 
-				@include position(absolute, calc(50% - #{rem(12)}) 0 null null);
-				@include size(#{rem(32)});
+				@include position(absolute, 0 0 null null);
+				@include size(20px);
 
 				background-color: $color-background-button;
 				border-radius: 100%; /* stylelint-disable-line declaration-property-unit-whitelist */
 				color: $color-white;
 				transition: $transition-transform;
+				font-size: 18px;
+				line-height: 1;
 
 				.no-js & {
 					display: none;
