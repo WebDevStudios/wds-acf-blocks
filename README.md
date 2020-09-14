@@ -24,8 +24,6 @@ To better manage ACF Field Groups, the plugin supports [synchronized JSON](https
 
 👉 You can visit the [WDS ACF Blocks Wiki](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks) to learn more about the [features of the blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#block-features) and how you can [create Gutenberg Blocks with ACF](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#creating-gutenberg-blocks-with-acf).
 
----
-
 ## 📝 Requirements
 
 -   [Node LTS](https://nodejs.org/en/)
@@ -35,8 +33,6 @@ To better manage ACF Field Groups, the plugin supports [synchronized JSON](https
 -   [wd_s](https://github.com/WebDevStudios/wd_s)
 
 _We highly recommend [NVM](https://github.com/nvm-sh/nvm) so you can easily switch between Node versions._
-
----
 
 ## 💻 Development
 
@@ -63,6 +59,8 @@ Watch for changes:
 ```bash
 npm run dev
 ```
+
+![image](https://i.imgur.com/n2FEkhB.jpg)
 
 Build a production version:
 
@@ -91,8 +89,6 @@ composer run lint
 ```
 
 **Important:** This plugin uses [@wordpress/scripts](https://www.npmjs.com/package/@wordpress/scripts) to lint and compile JavaScript and SCSS.
-
----
 
 ## :octocat: Contributing and Support
 
