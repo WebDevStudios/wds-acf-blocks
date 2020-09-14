@@ -4,8 +4,6 @@ With the advent of Gutenberg in WordPress, Advanced Custom Fields stepped up to 
 
 <a href="https://webdevstudios.com/contact/"><img src="https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png" alt="WebDevStudios. Your Success is Our Mission."></a>
 
----
-
 ## 🧱 Available Blocks
 
 This plugin includes the following blocks:
@@ -18,7 +16,7 @@ This plugin includes the following blocks:
 -   Recent Posts
 -   Related Posts
 
-<div align="center"><img src="https://i.imgur.com/Ffk7dGC.jpg" width="400"></div>
+<div align="center"><img src="https://i.imgur.com/Ffk7dGC.jpg" width="400"></div><br>
 
 WDS ACF Blocks is bundled with a [Style Lint](https://stylelint.io/), [ESLint](https://eslint.org/), and [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) linting rulesets – plus, it passes both WCAG 2.1AA and Section 508 standards out of the box.
 
