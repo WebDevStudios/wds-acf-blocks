@@ -22,7 +22,7 @@ WDS ACF Blocks is bundled with a [Style Lint](https://stylelint.io/), [ESLint](h
 
 To better manage ACF Field Groups, the plugin supports [synchronized JSON](https://www.advancedcustomfields.com/resources/synchronized-json/) for Advanced Custom Fields.
 
-👉 You can visit the [WDS ACF Blocks Wiki](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks) to learn more about the [features of the blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#block-features) and how you can [create Gutenberg Blocks with ACF](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#creating-gutenberg-blocks-with-acf).
+👉 Please visit the [WDS ACF Blocks Wiki](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks) to learn more about the [features of the blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#block-features) and how you can [create Gutenberg Blocks with ACF](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#creating-gutenberg-blocks-with-acf).
 
 ## 📝 Requirements
 
@@ -36,7 +36,9 @@ _We highly recommend [NVM](https://github.com/nvm-sh/nvm) so you can easily swit
 
 ## 💻 Development
 
-Clone the repo into `wp-content/plugins`:
+### 🚀 Installation
+
+Clone the repository into `wp-content/plugins` of a WordPress website:
 
 ```bash
 git clone git@github.com:WebDevStudios/wds-acf-blocks.git
@@ -54,7 +56,9 @@ Install plugin dependencies and trigger an initial build:
 npm install
 ```
 
-Watch for changes:
+### 🚦 Workflow
+
+To watch for changes during development, run the following command:
 
 ```bash
 npm run dev
@@ -62,33 +66,37 @@ npm run dev
 
 ![image](https://i.imgur.com/n2FEkhB.jpg)
 
-Build a production version:
+To build the production version, execute this command:
 
 ```bash
 npm run build
 ```
 
-### Linting Commands
+### 🛠 Linting Commands
 
-Lint JS:
+Linting rules for JavaScript and SCSS are defined in [package.json](package.json) from line number 40 to 84.
+
+**Lint JS:**
 
 ```bash
 npm run lint:js
 ```
 
-Lint SCSS:
+**Lint SCSS:**
 
 ```bash
 npm run lint:css
 ```
 
-Lint PHP using WDS Coding Standards:
+**Lint PHP:**
+
+The PHPCS ruleset is defined in [.phpcs.xml.dist](.phpcs.xml.dist). To lint PHP via composer, run the following command:
 
 ```bash
 composer run lint
 ```
 
-**Important:** This plugin uses [@wordpress/scripts](https://www.npmjs.com/package/@wordpress/scripts) to lint and compile JavaScript and SCSS.
+👉 **Important:** This plugin uses [@wordpress/scripts](https://www.npmjs.com/package/@wordpress/scripts) to lint and compile JavaScript and SCSS.
 
 ## :octocat: Contributing and Support
 
