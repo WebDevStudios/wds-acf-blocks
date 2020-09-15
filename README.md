@@ -2,23 +2,37 @@
 
 With the advent of Gutenberg in WordPress, Advanced Custom Fields stepped up to help make the process of creating custom blocks easier and faster. This plugin creates a set of custom blocks with basic styles for you to customize in your theme.
 
+<a href="https://webdevstudios.com/contact/"><img src="https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png" alt="WebDevStudios. Your Success is Our Mission."></a>
+
+## 🧱 Available Blocks
+
 This plugin includes the following blocks:
 
 -   Accordion
--   Call To Action
 -   Carousel
+-   Call To Action
 -   Fifty/Fifty
 -   Hero
 -   Recent Posts
 -   Related Posts
 
+<div align="center"><img src="https://i.imgur.com/Ffk7dGC.jpg" width="400"></div><br>
+
 WDS ACF Blocks is bundled with a [Style Lint](https://stylelint.io/), [ESLint](https://eslint.org/), and [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) linting rulesets – plus, it passes both WCAG 2.1AA and Section 508 standards out of the box.
 
 To better manage ACF Field Groups, the plugin supports [synchronized JSON](https://www.advancedcustomfields.com/resources/synchronized-json/) for Advanced Custom Fields.
 
-<a href="https://webdevstudios.com/contact/"><img src="https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png" alt="WebDevStudios. Your Success is Our Mission."></a>
+👉 Please visit the [WDS ACF Blocks Wiki](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks) to learn more about the [features of the blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#block-features) and how you can [create Gutenberg Blocks with ACF](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#creating-gutenberg-blocks-with-acf).
 
----
+## 📚 Developer Documentation
+
+Please find extensive developer documentation at the following links:
+
+- [WDS ACF Blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks)
+- [Block Features](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#block-features)
+- [Block Details](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#block-details)
+- [How to create Gutenberg Blocks with ACF](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#creating-gutenberg-blocks-with-acf)
+- [Saving and Loading Blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/Saving-and-Loading-Blocks)
 
 ## 📝 Requirements
 
@@ -30,11 +44,11 @@ To better manage ACF Field Groups, the plugin supports [synchronized JSON](https
 
 _We highly recommend [NVM](https://github.com/nvm-sh/nvm) so you can easily switch between Node versions._
 
----
+## 💻 Development
 
-## 🚀 Installation
+### 🚀 Installation
 
-Clone the repo into `wp-content/plugins`:
+Clone the repository into `wp-content/plugins` of a WordPress website:
 
 ```bash
 git clone git@github.com:WebDevStudios/wds-acf-blocks.git
@@ -49,28 +63,50 @@ cd wds-acf-blocks
 Install plugin dependencies and trigger an initial build:
 
 ```bash
-npm i
+npm install
 ```
 
----
+### 🚦 Workflow
 
-## 💻 Development
+To watch for changes during development, run the following command:
 
-### NPM Scripts
+```bash
+npm run dev
+```
 
-From the command line, type any of the following in the root of the plugin to perform an action:
+![image](https://i.imgur.com/n2FEkhB.jpg)
 
-`npm run dev` - Automatically handle changes to CSS, JS, SVGs, and image sprites.
+To build the production version, execute this command:
 
-`npm run build` - Compile and build all assets.
+```bash
+npm run build
+```
 
-### Composer Scripts
+### 🛠 Linting Commands
 
-From the command line, type any of the following in the root of the plugin to perform an action:
+Linting rules for JavaScript and SCSS are defined in [package.json](package.json) from line number 40 to 84.
 
-`composer run lint` - Lint PHP using WDS Coding Standards
+**Lint JS:**
 
----
+```bash
+npm run lint:js
+```
+
+**Lint SCSS:**
+
+```bash
+npm run lint:css
+```
+
+**Lint PHP:**
+
+The PHPCS ruleset is defined in [.phpcs.xml.dist](.phpcs.xml.dist). To lint PHP via composer, run the following command:
+
+```bash
+composer run lint
+```
+
+👉 **Important:** This plugin uses [@wordpress/scripts](https://www.npmjs.com/package/@wordpress/scripts) to lint and compile JavaScript and SCSS.
 
 ## :octocat: Contributing and Support
 
