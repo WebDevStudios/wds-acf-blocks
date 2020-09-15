@@ -45,6 +45,7 @@ html {
 
 	// Z-index container in ACF blocks.
 	.container {
+		position: relative;
 		z-index: 3;
 	}
 
@@ -73,7 +74,7 @@ html {
 
 	display: block;
 	transform: translateY(-50%);
-	z-index: -1;
+	z-index: 0;
 
 	@supports (object-fit: cover) {
 
