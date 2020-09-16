@@ -427,22 +427,25 @@ function wds_acf_blocks_has_block_expired( $args = array() ) {
  * Associate the possible block options with the appropriate section.
  *
  * @author WDS
- * @param  array $args Possible arguments.
  * @since 1.0
+ *
+ * @param  array $args Possible arguments.
+ * @return void Bail if the background options are not set.
  */
 function wds_acf_blocks_display_block_options( $args = array() ) {
 
 	// Get block background options.
-	$background_options = get_sub_field( 'background_options' ) ? get_sub_field( 'background_options' ) : get_field( 'background_options' )['background_options'];
+	$background_options = array();
 
-	// Get block other options.
-	$other_options = array();
+	// Set our Background Options if we have them. Some blocks may not.
+	if ( get_sub_field( 'background_options' ) ) {
+		$background_options = get_sub_field( 'background_options' );
+	} elseif ( get_field( 'background_options' ) ) {
+		$background_options = get_field( 'background_options' )['background_options'] ?? [];
+	}
 
-	// Set our Other Options if we have them. Some blocks may not.
-	if ( get_sub_field( 'other_options' ) ) {
-		$other_options = get_sub_field( 'other_options' );
-	} elseif ( get_field( 'other_options' ) ) {
-		$other_options = get_field( 'other_options' )['other_options'];
+	if ( empty( $background_options ) ) {
+		return;
 	}
 
 	// Get block display options.
