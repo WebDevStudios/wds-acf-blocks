@@ -426,11 +426,9 @@ function wds_acf_blocks_has_block_expired( $args = array() ) {
 /**
  * Associate the possible block options with the appropriate section.
  *
+ * @param  array $args Possible arguments.
  * @author WDS
  * @since 1.0
- *
- * @param  array $args Possible arguments.
- * @return void Bail if the background options are not set.
  */
 function wds_acf_blocks_display_block_options( $args = array() ) {
 
@@ -441,11 +439,7 @@ function wds_acf_blocks_display_block_options( $args = array() ) {
 	if ( get_sub_field( 'background_options' ) ) {
 		$background_options = get_sub_field( 'background_options' );
 	} elseif ( get_field( 'background_options' ) ) {
-		$background_options = get_field( 'background_options' )['background_options'] ?? [];
-	}
-
-	if ( empty( $background_options ) ) {
-		return;
+		$background_options = get_field( 'background_options' )['background_options'] ?? $background_options;
 	}
 
 	// Get block display options.
@@ -457,7 +451,7 @@ function wds_acf_blocks_display_block_options( $args = array() ) {
 	if ( get_sub_field( 'display_options' ) ) {
 		$display_options = get_sub_field( 'display_options' );
 	} elseif ( get_field( 'display_options' ) ) {
-		$display_options = get_field( 'display_options' )['display_options'];
+		$display_options = get_field( 'display_options' )['display_options'] ?? $display_options;
 	}
 
 	// Get the block ID.
@@ -465,7 +459,7 @@ function wds_acf_blocks_display_block_options( $args = array() ) {
 
 	// Setup defaults.
 	$defaults = array(
-		'background_type' => $background_options['background_type']['value'],
+		'background_type' => ! empty( $background_options ) ? $background_options['background_type']['value'] : 'none',
 		'container'       => 'section',
 		'class'           => 'content-block',
 		'font_color'      => $display_options['font_color'],
