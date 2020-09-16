@@ -294,7 +294,12 @@ function wds_acf_blocks_get_block_expired_class() {
 		return;
 	}
 
-	$other_options = get_sub_field( 'other_options' ) ? get_sub_field( 'other_options' ) : get_field( 'other_options' )['other_options'];
+	$other_options = get_sub_field( 'other_options' );
+	$other_options = $other_options ? $other_options : get_field( 'other_options' )['other_options'] ?? [];
+
+	if ( empty( $other_options ) ) {
+		return;
+	}
 
 	if ( wds_acf_blocks_has_block_expired(
 		array(
