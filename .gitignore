@@ -10,5 +10,5 @@ compass_app_log.txt
 .LSOverride
 vendor/
 .vscode/
-build
+!build
 dist/
