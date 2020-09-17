@@ -15,11 +15,19 @@ define( 'WDS_ACF_VERSION', '1.0.0' );
  *
  * @author Corey Collins
  * @since 1.0
+ *
+ * @return void Bail early if the asset dependency file does not exist.
  */
 function wds_acf_enqueue_gutenberg_block_scripts() {
 
 	// Autoload dependencies and version.
-	$asset_file = require plugin_dir_path( dirname( __FILE__ ) ) . 'build/index.asset.php';
+	$asset_file_path = plugin_dir_path( dirname( __FILE__ ) ) . 'build/index.asset.php';
+
+	if ( ! file_exists( $asset_file_path ) ) {
+		return;
+	}
+
+	$asset_file = require $asset_file_path;
 
 	wp_register_script(
 		'wds-acf-block-js',

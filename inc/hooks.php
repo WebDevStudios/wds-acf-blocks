@@ -416,3 +416,33 @@ function wds_acf_blocks_get_the_content( $content ) {
 	return $content;
 }
 add_filter( 'the_content', 'wds_acf_blocks_get_the_content', 20 );
+
+/**
+ * Dependency check to show warning to run `npm install`
+ * before using the plugin.
+ *
+ * @author Ashar Irfan <ashar.irfan@webdevstudios.com>
+ * @since 1.0.0
+ *
+ * @return void Bail early if the asset dependency file does not exist.
+ */
+function wds_acf_blocks_dependency_check() {
+	$asset_file = plugin_dir_path( dirname( __FILE__ ) ) . 'build/index.asset.php';
+
+	if ( file_exists( $asset_file ) ) {
+		return;
+	}
+	?>
+	<div class="notice notice-error">
+		<p>
+			<?php
+			esc_html_e(
+				'Whoops! You need to run `npm install` in the terminal for the WDS ACF Blocks plugin to work first.',
+				'wds-acf-blocks'
+			);
+			?>
+		</p>
+	</div>
+	<?php
+}
+add_action( 'admin_notices', 'wds_acf_blocks_dependency_check' );
