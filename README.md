@@ -98,6 +98,32 @@ composer run lint
 
 👉 **Important:** This plugin uses [@wordpress/scripts](https://www.npmjs.com/package/@wordpress/scripts) to lint and compile JavaScript and SCSS.
 
+## ✏️ Editing an ACF Block in Gutenberg
+
+To edit an ACF block in Gutenberg, you need to access the settings. Please follow these three simple steps to access the block settings:
+
+### → Step #1
+
+Go to the WordPress admin and open the *add new post* or *edit post* screen in Gutenberg.
+
+![image](https://i.imgur.com/pE7CyPe.jpg)
+
+### → Step #2
+
+Click on the add (+) block icon on the top left corner of the screen and search for *call to action* to add a new *Call to Action* block to the editor.
+
+![image](https://i.imgur.com/ho4XIgC.png)
+
+### → Step #3
+
+Click on the edit (✏️) icon that is appearing in the toolbar of the block to access the settings.
+
+![image](https://i.imgur.com/qVnBD9Q.png)
+
+**ACF Block Settings:**
+
+![image](https://i.imgur.com/1x4VK5k.jpg)
+
 ## 📚 Developer Documentation
 
 Please find extensive developer documentation at the following links:
