@@ -126,6 +126,14 @@ Click on the edit (✏️) icon that is appearing in the toolbar of the block to
 
 ## 📚 Developer Documentation
 
+### → Saving ACF JSON Files
+
+By default, saving the ACF blocks to JSON files filter is commented out in the plugin. You can enable this feature by removing the comments from this line: https://github.com/WebDevStudios/wds-acf-blocks/blob/main/inc/hooks.php#L27
+
+To know more about loading and saving of blocks in ACF JSON files, visit the [Saving and Loading Blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/Saving-and-Loading-Blocks) section in the Wiki.
+
+### → Important Wiki Links
+
 Please find extensive developer documentation at the following links:
 
 - [WDS ACF Blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks)
