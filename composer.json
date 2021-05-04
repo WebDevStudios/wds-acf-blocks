@@ -10,7 +10,9 @@
     }
   ],
   "minimum-stability": "stable",
-  "require": {},
+  "require": {
+    "composer/installers": "^1.5"
+  },
   "require-dev": {
     "webdevstudios/php-coding-standards": "^1.0",
     "phpcompatibility/php-compatibility": "^9.3"
