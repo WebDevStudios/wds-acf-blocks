@@ -36,10 +36,6 @@ function wds_acf_enqueue_gutenberg_block_scripts() {
 		$asset_file['version'],
 		true
 	);
-
-	wp_register_style( 'slick-carousel', plugin_dir_url( dirname( __FILE__ ) ) . 'node_modules/slick-carousel/slick/slick.css', null, '1.8.1' );
-	wp_register_script( 'slick-carousel-js', plugin_dir_url( dirname( __FILE__ ) ) . 'node_modules/slick-carousel/slick/slick.min.js', array( 'jquery', 'wds-acf-block-js' ), '1.8.1', true );
-
 	wp_enqueue_script( 'wds-acf-block-js' );
 }
 
