@@ -53,7 +53,7 @@ function wds_acf_enqueue_gutenberg_block_styles() {
 
 	wp_register_style(
 		'wds_acf_gutenberg-style',
-		get_stylesheet_directory_uri( dirname( __FILE__ ) ) . 'build/index.css',
+		get_stylesheet_directory_uri( dirname( __FILE__ ) ) . '/build/index.css',
 		array(),
 		WDS_ACF_VERSION
 	);
