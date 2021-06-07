@@ -4,7 +4,6 @@
  * Carousel functionality in the Carousel ACF Gutenberg block.
  */
 import Glider from 'glider-js';
-import 'glider-js/glider.min.css';
 
 // Make sure everything is loaded first.
 if (
