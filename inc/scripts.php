@@ -36,6 +36,10 @@ function wds_acf_enqueue_gutenberg_block_scripts() {
 		$asset_file['version'],
 		true
 	);
+
+	// Register Glider-js style.
+	wp_register_style( 'glider-css', plugin_dir_url( dirname( __FILE__ ) ) . 'node_modules/glider-js/glider.min.css', null, '1.7.7' );
+
 	wp_enqueue_script( 'wds-acf-block-js' );
 }
 
@@ -96,8 +100,7 @@ function wds_acf_blocks_acf_enqueue_backend_block_styles() {
 function wds_acf_blocks_acf_enqueue_carousel_scripts() {
 
 	wds_acf_blocks_acf_enqueue_backend_block_styles();
-	wp_enqueue_style( 'slick-carousel' );
-	wp_enqueue_script( 'slick-carousel-js' );
+	wp_enqueue_style( 'glider-css' );
 }
 
 /**
