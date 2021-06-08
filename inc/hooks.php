@@ -9,8 +9,6 @@
 
 /**
  * Specify the location for saving ACF JSON files.
- * Only enable this filter when you actually need to create new field groups, or edit existing field groups.
- * If this is always on, any time a new field group is added on a project the field group will be saved to this plugin. You probably don't want that!
  *
  * @param string $path The path we're saving the files.
  * @return string $path
@@ -20,11 +18,11 @@
 function wds_acf_blocks_acf_json_save_point( $path ) {
 
 	// Update the path.
-	$path = plugin_dir_path( dirname( __FILE__ ) ) . '/acf-json';
+	$path = get_stylesheet_directory( dirname( __FILE__ ) ) . '/acf-json';
 
 	return $path;
 }
-// add_filter( 'acf/settings/save_json', 'wds_acf_blocks_acf_json_save_point' ); @codingStandardsIgnoreLine Squiz.Commenting.InlineComment.InvalidEndChar
+add_filter( 'acf/settings/save_json', 'wds_acf_blocks_acf_json_save_point' );
 
 /**
  * Specify the location for loading ACF JSON files.
@@ -40,7 +38,7 @@ function wds_acf_blocks_acf_json_load_point( $paths ) {
 	unset( $paths[0] );
 
 	// Append the new path.
-	$paths[] = plugin_dir_path( dirname( __FILE__ ) ) . '/acf-json';
+	$paths[] = get_stylesheet_directory( dirname( __FILE__ ) ) . '/acf-json';
 
 	return $paths;
 }
@@ -68,7 +66,7 @@ function wds_acf_blocks_acf_init() {
 			'category'        => 'wds-blocks',
 			'icon'            => 'sort',
 			'keywords'        => array( 'accordion', 'wds' ),
-			'mode'            => 'preview',
+			'mode'            => 'auto',
 			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
 			'align'           => 'wide',
 			'supports'        => $supports,
@@ -98,7 +96,7 @@ function wds_acf_blocks_acf_init() {
 			'category'        => 'wds-blocks',
 			'icon'            => 'slides',
 			'keywords'        => array( 'carousel', 'slider', 'wds' ),
-			'mode'            => 'preview',
+			'mode'            => 'auto',
 			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_carousel_scripts',
 			'align'           => 'wide',
 			'supports'        => $supports,
@@ -110,59 +108,6 @@ function wds_acf_blocks_acf_init() {
 		)
 	);
 
-	acf_register_block_type(
-		array(
-			'name'            => 'wds-cta',
-			'title'           => esc_html__( 'Call To Action', 'wds-acf-blocks' ),
-			'description'     => esc_html__( 'A call to action block.', 'wds-acf-blocks' ),
-			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
-			'category'        => 'wds-blocks',
-			'icon'            => 'megaphone',
-			'keywords'        => array( 'call to action', 'cta', 'wds' ),
-			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
-			'align'           => 'wide',
-			'supports'        => $supports,
-			'example'         => array(
-				'attributes' => array(
-					'data' => array(
-						'title'       => esc_html__( 'Call To Action Title', 'wds-acf-blocks' ),
-						'text'        => esc_html__( 'Call To Action Text', 'wds-acf-blocks' ),
-						'button_link' => array(
-							'title' => esc_html__( 'Learn More', 'wds-acf-blocks' ),
-							'url'   => '#',
-						),
-					),
-				),
-			),
-		)
-	);
-
-	acf_register_block_type(
-		array(
-			'name'            => 'wds-fifty-fifty',
-			'title'           => esc_html__( 'Fifty/Fifty Block', 'wds-acf-blocks' ),
-			'description'     => esc_html__( 'A split-content block with text and/or media.', 'wds-acf-blocks' ),
-			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
-			'category'        => 'wds-blocks',
-			'icon'            => 'editor-table',
-			'keywords'        => array( 'fifty fifty', 'columns', 'wds' ),
-			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
-			'align'           => 'wide',
-			'supports'        => $supports,
-			'example'         => array(
-				'attributes' => array(
-					'data' => array(
-						'text_primary' => esc_html__( 'Primary Text content', 'wds-acf-blocks' ),
-						'media_right'  => array(
-							'url' => plugin_dir_url( dirname( __FILE__ ) ) . '/src/images/placeholder.png',
-						),
-					),
-				),
-			),
-		)
-	);
 
 	acf_register_block_type(
 		array(
@@ -173,7 +118,7 @@ function wds_acf_blocks_acf_init() {
 			'category'        => 'wds-blocks',
 			'icon'            => 'slides',
 			'keywords'        => array( 'hero', 'wds' ),
-			'mode'            => 'preview',
+			'mode'            => 'auto',
 			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
 			'align'           => 'wide',
 			'supports'        => $supports,
@@ -203,37 +148,6 @@ function wds_acf_blocks_acf_init() {
 		)
 	);
 
-	acf_register_block_type(
-		array(
-			'name'            => 'wds-recent-posts',
-			'title'           => esc_html__( 'Recent Posts Block', 'wds-acf-blocks' ),
-			'description'     => esc_html__( 'A set of recent posts displayed by category and/or tag.', 'wds-acf-blocks' ),
-			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
-			'category'        => 'wds-blocks',
-			'icon'            => 'admin-page',
-			'keywords'        => array( 'recent posts', 'posts', 'wds' ),
-			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
-			'align'           => 'wide',
-			'supports'        => $supports,
-		)
-	);
-
-	acf_register_block_type(
-		array(
-			'name'            => 'wds-related-posts',
-			'title'           => esc_html__( 'Related Posts Block', 'wds-acf-blocks' ),
-			'description'     => esc_html__( 'A set of manually selected posts.', 'wds-acf-blocks' ),
-			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
-			'category'        => 'wds-blocks',
-			'icon'            => 'admin-page',
-			'keywords'        => array( 'related posts', 'posts', 'wds' ),
-			'mode'            => 'preview',
-			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
-			'align'           => 'wide',
-			'supports'        => $supports,
-		)
-	);
 }
 add_action( 'acf/init', 'wds_acf_blocks_acf_init' );
 
