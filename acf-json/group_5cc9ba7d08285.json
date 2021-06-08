@@ -20,22 +20,6 @@
             "esc_html": 0
         },
         {
-            "key": "field_5cc9ba7d0f78a",
-            "label": "Carousel Content",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
             "key": "field_5cc9ba7d0f79c",
             "label": "Carousel Slides",
             "name": "carousel_slides",
@@ -72,22 +56,6 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_5e4ac4e3e42bd",
-                    "label": "Content",
-                    "name": "",
-                    "type": "tab",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "placement": "left",
-                    "endpoint": 0
-                },
-                {
                     "key": "field_5cc9ba7d132c7",
                     "label": "Title",
                     "name": "title",
@@ -96,12 +64,12 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Slide Title",
-                    "placeholder": "",
+                    "default_value": "",
+                    "placeholder": "Slide Title",
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
@@ -110,20 +78,20 @@
                     "key": "field_5cc9ba7d132d5",
                     "label": "Text",
                     "name": "text",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "Optional. Write a short sentence.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Slide Content",
+                    "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
                 },
                 {
                     "key": "field_5cc9ba7d132e3",
@@ -145,93 +113,8 @@
                     "layout": "block",
                     "prefix_label": 0,
                     "prefix_name": 0
-                },
-                {
-                    "key": "field_5cc9ba7d132f2",
-                    "label": "Slide Background Options",
-                    "name": "background_options",
-                    "type": "clone",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "clone": [
-                        "group_58ebcc07bfbd7"
-                    ],
-                    "display": "seamless",
-                    "layout": "block",
-                    "prefix_label": 0,
-                    "prefix_name": 0
-                },
-                {
-                    "key": "field_5cc9ba7d1330e",
-                    "label": "Slide Display Options",
-                    "name": "display_options",
-                    "type": "clone",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "clone": [
-                        "field_5c1418dcb3fbf",
-                        "field_5c49f13b705f3"
-                    ],
-                    "display": "seamless",
-                    "layout": "block",
-                    "prefix_label": 0,
-                    "prefix_name": 0
-                },
-                {
-                    "key": "field_5cc9ba7d13300",
-                    "label": "Slide Other Options",
-                    "name": "other_options",
-                    "type": "clone",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "clone": [
-                        "group_594168e970d85"
-                    ],
-                    "display": "seamless",
-                    "layout": "block",
-                    "prefix_label": 0,
-                    "prefix_name": 0
                 }
             ]
-        },
-        {
-            "key": "field_5cc9ba96a3c86",
-            "label": "Other Options",
-            "name": "other_options",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "group_594168e970d85"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
         }
     ],
     "location": [
@@ -249,7 +132,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1581959009
+    "modified": 1623175305
 }

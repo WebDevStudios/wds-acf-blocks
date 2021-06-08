@@ -1,93 +1,53 @@
 //--------------------------------------------------------------
 // Accordion Block
 //--------------------------------------------------------------
-// sass-lint:disable no-transition-all
-.accordion-block {
-	position: relative;
-} // .accordion-block
-
-//-----------------------------------------
-// Accordion Items
-//-----------------------------------------
 .accordion {
+	@apply my-32;
 
-	.accordion-item {
+	&-item {
+		@apply border-b border-gray-300 py-32;
 
-		@include margin(#{rem(24)} null null null);
-
-		&-header {
-			cursor: pointer;
-			position: relative;
-		} // &-header
-
-		&-title {
-
-			@include margin(0);
-
-			padding-right: rem(30); // Space for toggle.
-			position: relative;
-		} // &-title
-
-		&-content {
-			max-height: 0;
-			opacity: 0;
-			transition: $transition-accordion;
-			transition-delay: 0.4s, 0s, 0.2s;
-			visibility: hidden;
-
-			p:last-of-type {
-				margin-bottom: 0;
-			} // p:last-of-type
-		} // &-content
-
-		&.open,
-		.no-js & {
-
-			.accordion-item-content {
-				max-height: rem(10000);
-				opacity: 1;
-				visibility: visible;
-			} // .accordion-item-content
-		} // &.open
-
-		&-toggle {
-
-			@include position(absolute, rem(12) 0 null null);
-			@include size(#{rem(32)});
-
-			align-items: center;
-			background-color: transparent;
-			border: none;
-			color: inherit;
-			display: flex;
-			padding: 0;
-
-			&-icon {
-
-				@include position(absolute, 0 0 null null);
-				@include size(20px);
-
-				background-color: $color-background-button;
-				border-radius: 100%; /* stylelint-disable-line declaration-property-unit-whitelist */
-				color: $color-white;
-				transition: $transition-transform;
-				font-size: 18px;
-				line-height: 1;
-
-				.no-js & {
-					display: none;
-				} // .no-js &
-			} // &-icon
-		} // &-toggle
-
-		&.open {
-
-			.accordion-item-toggle {
-
-				span {
-					transform: rotate(45deg);
-				} // span
-			} // .item-toggle
-		} // &.open
+		&:first-child {
+			@apply pt-0;
+		}
 	} // .accordion-item
-} // .accordion
+
+	&-item-toggle {
+		@apply text-left absolute flex items-center justify-end h-full w-full border-none top-0 right-0;
+
+		&:focus:not( :focus-visible ) {
+			@apply outline-none;
+		}
+
+		&:focus-visible {
+			@apply border-gray-800 border;
+		} // &:focus-visible
+
+		&-icon {
+			@apply text-black transition-transform text-2xl leading-none h-20 w-20;
+		} // .accordion-item-toggle-icon
+
+		&[aria-expanded='true'] {
+			.accordion-item-title {
+				@apply mb-32;
+			} // .accordion-item-title
+
+			.accordion-item-toggle-icon {
+				transform: rotate( 45deg );
+			} // .accordion-item-toggle-icon
+		} // &[aria-expanded='true']
+	} // .accordion-item-toggle
+
+	&-item-title {
+		@apply block text-2xl mb-0 pr-32 relative;
+	} // .accordion-item-title
+
+	&-item-body {
+		@apply h-0 overflow-hidden;
+		transition: height 500ms ease;
+	} // .accordion-item-body
+
+	&-item-content {
+		@apply text-base pr-48;
+	} // .accordion-item-content
+} // &.accordion
