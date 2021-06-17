@@ -1,53 +1,54 @@
 //--------------------------------------------------------------
 // Accordion Block
+// Transfer this over to the theme uncomment all the things.
 //--------------------------------------------------------------
-.accordion {
-	@apply my-32;
-
-	&-item {
-		@apply border-b border-gray-300 py-32;
-
-		&:first-child {
-			@apply pt-0;
-		}
-	} // .accordion-item
-
-	&-item-toggle {
-		@apply text-left absolute flex items-center justify-end h-full w-full border-none top-0 right-0;
-
-		&:focus:not( :focus-visible ) {
-			@apply outline-none;
-		}
-
-		&:focus-visible {
-			@apply border-gray-800 border;
-		} // &:focus-visible
-
-		&-icon {
-			@apply text-black transition-transform text-2xl leading-none h-20 w-20;
-		} // .accordion-item-toggle-icon
-
-		&[aria-expanded='true'] {
-			.accordion-item-title {
-				@apply mb-32;
-			} // .accordion-item-title
-
-			.accordion-item-toggle-icon {
-				transform: rotate( 45deg );
-			} // .accordion-item-toggle-icon
-		} // &[aria-expanded='true']
-	} // .accordion-item-toggle
-
-	&-item-title {
-		@apply block text-2xl mb-0 pr-32 relative;
-	} // .accordion-item-title
-
-	&-item-body {
-		@apply h-0 overflow-hidden;
-		transition: height 500ms ease;
-	} // .accordion-item-body
-
-	&-item-content {
-		@apply text-base pr-48;
-	} // .accordion-item-content
-} // &.accordion
+//.accordion {
+//	@apply my-32;
+//
+//	&-item {
+//		@apply border-b border-gray-300 py-32;
+//
+//		&:first-child {
+//			@apply pt-0;
+//		}
+//	} // .accordion-item
+//
+//	&-item-toggle {
+//		@apply text-left absolute flex items-center justify-end h-full w-full border-none top-0 right-0;
+//
+//		&:focus:not( :focus-visible ) {
+//			@apply outline-none;
+//		}
+//
+//		&:focus-visible {
+//			@apply border-gray-800 border;
+//		} // &:focus-visible
+//
+//		&-icon {
+//			@apply text-black transition-transform text-2xl leading-none h-20 w-20;
+//		} // .accordion-item-toggle-icon
+//
+//		&[aria-expanded='true'] {
+//			.accordion-item-title {
+//				@apply mb-32;
+//			} // .accordion-item-title
+//
+//			.accordion-item-toggle-icon {
+//				transform: rotate( 45deg );
+//			} // .accordion-item-toggle-icon
+//		} // &[aria-expanded='true']
+//	} // .accordion-item-toggle
+//
+//	&-item-title {
+//		@apply block text-2xl mb-0 pr-32 relative;
+//	} // .accordion-item-title
+//
+//	&-item-body {
+//		@apply h-0 overflow-hidden;
+//		transition: height 500ms ease;
+//	} // .accordion-item-body
+//
+//	&-item-content {
+//		@apply text-base pr-48;
+//	} // .accordion-item-content
+//} // &.accordion
