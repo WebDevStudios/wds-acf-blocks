@@ -108,46 +108,6 @@ function wds_acf_blocks_acf_init() {
 		)
 	);
 
-
-	acf_register_block_type(
-		array(
-			'name'            => 'wds-hero',
-			'title'           => esc_html__( 'Hero Block', 'wds-acf-blocks' ),
-			'description'     => esc_html__( 'A hero with an optional call to action.', 'wds-acf-blocks' ),
-			'render_callback' => 'wds_acf_blocks_acf_block_registration_callback',
-			'category'        => 'wds-blocks',
-			'icon'            => 'slides',
-			'keywords'        => array( 'hero', 'wds' ),
-			'mode'            => 'auto',
-			'enqueue_assets'  => 'wds_acf_blocks_acf_enqueue_backend_block_styles',
-			'align'           => 'wide',
-			'supports'        => $supports,
-			'example'         => array(
-				'attributes' => array(
-					'data' => array(
-						'title'              => esc_html__( 'Call To Action Title', 'wds-acf-blocks' ),
-						'text'               => esc_html__( 'Call To Action Text', 'wds-acf-blocks' ),
-						'button_link'        => array(
-							'title' => esc_html__( 'Learn More', 'wds-acf-blocks' ),
-							'url'   => '#',
-						),
-						'background_options' => array(
-							'background_type'  => 'color',
-							'background_color' => array(
-								'color_picker' => 'blue',
-							),
-						),
-						'display_options'    => array(
-							'font_color' => array(
-								'color_picker' => 'gallery',
-							),
-						),
-					),
-				),
-			),
-		)
-	);
-
 }
 add_action( 'acf/init', 'wds_acf_blocks_acf_init' );
 
