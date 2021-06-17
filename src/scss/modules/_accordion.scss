@@ -14,7 +14,8 @@
 //	} // .accordion-item
 //
 //	&-item-toggle {
-//		@apply text-left absolute flex items-center justify-end h-full w-full border-none top-0 right-0;
+//		@apply text-left border-none flex items-center justify-end;
+//		@apply h-full w-full absolute top-0 right-0;
 //
 //		&:focus:not( :focus-visible ) {
 //			@apply outline-none;
