@@ -8,15 +8,10 @@ With the advent of Gutenberg in WordPress, Advanced Custom Fields stepped up to 
 
 This plugin includes the following blocks:
 
--   Accordion
--   Carousel
--   Call To Action
--   Fifty/Fifty
--   Hero
--   Recent Posts
--   Related Posts
+- Accordion
+- Carousel
 
-<div align="center"><img src="https://i.imgur.com/Ffk7dGC.jpg" width="400"></div><br>
+<div align="center"><img src="https://i.imgur.com/gOTNnnH.png" width="400"></div><br>
 
 WDS ACF Blocks is bundled with a [Style Lint](https://stylelint.io/), [ESLint](https://eslint.org/), and [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) linting rulesets – plus, it passes both WCAG 2.1AA and Section 508 standards out of the box.
 
@@ -26,11 +21,11 @@ To better manage ACF Field Groups, the plugin supports [synchronized JSON](https
 
 ## 📝 Requirements
 
--   [Node LTS](https://nodejs.org/en/)
--   [Composer](https://getcomposer.org/)
--   [WordPress](https://wordpress.org/)
--   [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/pro/)
--   [wd_s](https://github.com/WebDevStudios/wd_s)
+- [Node LTS](https://nodejs.org/en/)
+- [Composer](https://getcomposer.org/)
+- [WordPress](https://wordpress.org/)
+- [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/pro/)
+- [wd_s](https://github.com/WebDevStudios/wd_s)
 
 _We highly recommend [NVM](https://github.com/nvm-sh/nvm) so you can easily switch between Node versions._
 
@@ -106,31 +101,35 @@ To edit an ACF block in Gutenberg, you need to access the settings. Please follo
 
 Go to the WordPress admin and open the *add new post* or *edit post* screen in Gutenberg.
 
-![image](https://i.imgur.com/pE7CyPe.jpg)
+![image](https://i.imgur.com/4ImtYJU.png)
 
 ### → Step #2
 
-Click on the add (+) block icon on the top left corner of the screen and search for *call to action* to add a new *Call to Action* block to the editor.
+Click on the add (+) block icon on the top left corner of the screen and search for *carousel* to add a new *Carousel* block to the editor.
 
-![image](https://i.imgur.com/ho4XIgC.png)
+![image](https://i.imgur.com/rMusQYi.png)
 
 ### → Step #3
 
-Click on the edit (✏️) icon that is appearing in the toolbar of the block to access the settings.
+Clicking on the block will toggle edit mode to access the settings. Block will always show the preview.
 
-![image](https://i.imgur.com/qVnBD9Q.png)
+![image](https://i.imgur.com/5MTFy7J.gif)
 
 **ACF Block Settings:**
 
-![image](https://i.imgur.com/1x4VK5k.jpg)
+![image](https://i.imgur.com/Qe6HIbD.png)
 
 ## 📚 Developer Documentation
 
 ### → Saving ACF JSON Files
 
-By default, saving the ACF blocks to JSON files filter is commented out in the plugin. You can enable this feature by removing the comments from this line: https://github.com/WebDevStudios/wds-acf-blocks/blob/main/inc/hooks.php#L27
+By default, saving the ACF blocks to JSON files filter is set to save to the current theme. You will need to create the `acf-json` folder on the root of your theme and transfer the existing json files in `acf-json` to that folder. You can change to save in the plugin by changing the `$path` variable to `plugin_dir_path( dirname( __FILE__ ) ) . '/acf-json';` in this line: <https://github.com/WebDevStudios/wds-acf-blocks/blob/main/inc/hooks.php#L27>
 
 To know more about loading and saving of blocks in ACF JSON files, visit the [Saving and Loading Blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/Saving-and-Loading-Blocks) section in the Wiki.
+
+### → Styling ACF Blocks
+
+Styling blocks will be done in the theme and not in the plugin. The `accordion` block has a starter stylesheet that can be copied over to the theme, this contains the base style to make the accordion work and can be modified as needed. The `carousel` block is using the default `glider-js` stylesheet.
 
 ### → Important Wiki Links
 
@@ -141,6 +140,7 @@ Please find extensive developer documentation at the following links:
 - [Block Details](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#block-details)
 - [How to create Gutenberg Blocks with ACF](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#creating-gutenberg-blocks-with-acf)
 - [Saving and Loading Blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/Saving-and-Loading-Blocks)
+- [Glider.js - Carousel](https://nickpiscitelli.github.io/Glider.js/)
 
 ## :octocat: Contributing and Support
 
