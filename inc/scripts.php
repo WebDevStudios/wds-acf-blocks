@@ -37,8 +37,8 @@ function wds_acf_enqueue_gutenberg_block_scripts() {
 		true
 	);
 
-	wp_register_style( 'slick-carousel', plugin_dir_url( dirname( __FILE__ ) ) . 'node_modules/slick-carousel/slick/slick.css', null, '1.8.1' );
-	wp_register_script( 'slick-carousel-js', plugin_dir_url( dirname( __FILE__ ) ) . 'node_modules/slick-carousel/slick/slick.min.js', array( 'jquery', 'wds-acf-block-js' ), '1.8.1', true );
+	// Register Glider-js style.
+	wp_register_style( 'glider-css', plugin_dir_url( dirname( __FILE__ ) ) . 'node_modules/glider-js/glider.min.css', null, '1.7.7' );
 
 	wp_enqueue_script( 'wds-acf-block-js' );
 }
@@ -53,7 +53,7 @@ function wds_acf_enqueue_gutenberg_block_styles() {
 
 	wp_register_style(
 		'wds_acf_gutenberg-style',
-		plugin_dir_url( dirname( __FILE__ ) ) . 'build/style-index.css',
+		get_stylesheet_directory_uri( dirname( __FILE__ ) ) . '/build/index.css',
 		array(),
 		WDS_ACF_VERSION
 	);
@@ -100,8 +100,7 @@ function wds_acf_blocks_acf_enqueue_backend_block_styles() {
 function wds_acf_blocks_acf_enqueue_carousel_scripts() {
 
 	wds_acf_blocks_acf_enqueue_backend_block_styles();
-	wp_enqueue_style( 'slick-carousel' );
-	wp_enqueue_script( 'slick-carousel-js' );
+	wp_enqueue_style( 'glider-css' );
 }
 
 /**

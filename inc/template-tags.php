@@ -583,3 +583,27 @@ function wds_acf_blocks_acf_block_registration_callback( $block ) {
 		include plugin_dir_path( dirname( __FILE__ ) ) . 'template-parts/content-blocks/block-' . $block_slug . '.php';
 	}
 }
+
+/**
+ * Displays the Glider Carousel control.
+ *
+ * @param array $block The block settings.
+ * @author JC Palmes
+ * @since 1.0
+ */
+function wds_acf_blocks_acf_gutenberg_display_carousel_control( $block ) {
+	$total_items = count( $block );
+?>
+	<div class="glider-range-controller">
+		<?php if ( 1 < $total_items ) : ?>
+		<button aria-label="<?php echo esc_attr__( 'Previous', 'wds' ); ?>" class="glider-prev"><?php echo esc_html__( '«', 'wds' ); ?></button>
+		<div class="count">
+			<span class="index"><?php echo esc_html__( '1', 'wds' ); ?></span>
+			<?php echo esc_html( 'of ' . $total_items ); ?>
+		</div><!-- .count -->
+		<button aria-label="<?php echo esc_attr__( 'Next', 'wds' ); ?>" class="glider-next"><?php echo esc_html__( '»', 'wds' ); ?></button>
+		<?php endif; ?>
+	</div><!-- .glider-range-controller-->
+<?php
+}
+

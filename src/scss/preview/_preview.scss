@@ -2,17 +2,11 @@
 // Preview Styles
 //-----------------------------------------
 // stylelint-disable selector-class-pattern
-.block-editor-inserter__preview-content { /* stylelint-disable-line selector-class-pattern */
+.acf-block-preview { /* stylelint-disable-line selector-class-pattern */
 
 	.accordion-block {
-
-		.accordion-item-toggle {
-			font-size: rem(25);
-		}
-	}
-
-	.hero-block-content {
 		max-width: 100%;
 		min-height: unset;
 	}
-}
+
+} // .acf-block-preview

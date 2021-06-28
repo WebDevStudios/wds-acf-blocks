@@ -3,6 +3,7 @@
  * The template used for displaying an accordion block.
  *
  * @package _s
+ * @since June 09, 2021
  */
 
 // Set up fields.
@@ -29,7 +30,7 @@ wds_acf_blocks_display_block_options(
 		<?php endif; ?>
 
 		<?php if ( $text ) : ?>
-			<?php echo wds_acf_blocks_get_the_content( $text ); // phpcs: xss: ok. ?>
+			<?php echo wds_acf_blocks_get_the_content( $text ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		<?php endif; ?>
 
 		<?php if ( $accordion_items ) : ?>
@@ -48,15 +49,17 @@ wds_acf_blocks_display_block_options(
 								<button class="accordion-item-toggle" aria-expanded="false" aria-controls="<?php echo esc_attr( $item_content_id ); ?>">
 									<span class="screen-reader-text"><?php echo sprintf( esc_html( 'Toggle %s', 'wds-acf-blocks' ), esc_html( $accordion_item['accordion_title'] ) ); ?></span>
 									<span class="accordion-item-toggle-icon" aria-hidden="true">+</span>
-								</button>
-							</h3>
-						</div>
-						<div id="<?php echo esc_attr( $item_content_id ); ?>" class="accordion-item-content" aria-hidden="true">
-							<?php echo wds_acf_blocks_get_the_content( $accordion_item['accordion_text'] ); // phpcs: xss: ok. ?>
-						</div>
-					</div>
+								</button><!-- .accordion-item-toggle -->
+							</h3><!-- .accordion-item-title -->
+						</div><!-- .accordion-item-header -->
+						<div id="<?php echo esc_attr( $item_content_id ); ?>" class="accordion-item-body" aria-hidden="true">
+							<div class="accordion-item-content">
+								<?php echo wds_acf_blocks_get_the_content( $accordion_item['accordion_text'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							</div><!-- .accordion-item-content -->
+						</div><!-- .accordion-item-body -->
+					</div><!-- .accordion-item -->
 				<?php endforeach; ?>
-			</div>
+			</div><!-- .accordion -->
 		<?php endif; ?>
-	</div>
-</section>
+	</div><!-- .container -->
+</section><!-- .accordion-block -->

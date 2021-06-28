@@ -17,7 +17,7 @@
 	"homepage": "https://github.com/WebDevStudios/wds-acf-blocks#readme",
 	"main": "src/js/app.js",
 	"dependencies": {
-		"slick-carousel": "^1.8.1"
+		"glider-js": "^1.7.7"
 	},
 	"devDependencies": {
 		"@webdevstudios/js-coding-standards": "~1.1.1",
