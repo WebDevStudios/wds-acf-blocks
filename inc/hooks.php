@@ -73,3 +73,12 @@ function wds_acf_blocks_dependency_check() {
 	<?php
 }
 add_action( 'admin_notices', 'wds_acf_blocks_dependency_check' );
+
+
+/**
+ * Load block assets only if the block exists on the page.
+ *
+ * @author WebDevStudios
+ * @see https://developer.wordpress.org/reference/hooks/should_load_separate_core_block_assets/
+ */
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
