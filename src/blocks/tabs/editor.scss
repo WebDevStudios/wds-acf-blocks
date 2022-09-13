@@ -1,3 +1,28 @@
+//----------------------------------------
+// Module - Tabs Styles, EDITOR
+//----------------------------------------
 .wds-module-tabs {
-	color: #ddd;
+	margin: 4rem auto;
+
+	nav {
+		display: flex;
+		margin-bottom: -1px;
+
+		.tab-title {
+			display: flex;
+			justify-content: center;
+			border: 1px solid #000;
+			padding: .5rem 1.5rem;
+			margin-left: .25rem;
+
+			&.active {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	.tabs-content {
+		border: 1px solid #000;
+		padding: 1.5rem;
+	}
 }

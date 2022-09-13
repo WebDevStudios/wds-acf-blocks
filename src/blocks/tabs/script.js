@@ -1,8 +1,7 @@
 /**
- * File tabs.js
+ * File tabs/script.js
  *
  */
-import './style.scss';
 console.log( 'tabs.js' );
 
 // Make sure everything is loaded first.
