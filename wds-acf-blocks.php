@@ -11,6 +11,9 @@
  * @package wds-acf-blocks
  */
 
+// Define a global version number.
+define( 'WDS_ACF_VERSION', '1.0.0' );
+
 /**
  * Check to see if ACF Pro is active.
  *
@@ -26,7 +29,7 @@ function wds_acf_blocks_has_parent_plugin() {
 		if ( isset( $_GET['activate'] ) && ! wp_verify_nonce( $_GET['activate'] ) ) {
 			add_action( 'admin_notices', 'wds_acf_blocks_child_plugin_notice' );
 			unset( $_GET['activate'] );
-		// If we deactivate the parent plugin while this plugin is still active.
+			// If we deactivate the parent plugin while this plugin is still active.
 		} elseif ( ! isset( $_GET['activate'] ) ) {
 			add_action( 'admin_notices', 'wds_acf_blocks_parent_plugin_notice' );
 			unset( $_GET['activate'] );
@@ -63,14 +66,5 @@ function wds_acf_blocks_parent_plugin_notice() {
 	<?php
 }
 
-// Get our scripts.
-require plugin_dir_path( __FILE__ ) . 'inc/scripts.php';
-
-// Get helper functions and template tags.
-require plugin_dir_path( __FILE__ ) . 'inc/template-tags.php';
-
 // Get our hooks and filters.
 require plugin_dir_path( __FILE__ ) . 'inc/hooks.php';
-
-// Get our queries.
-require plugin_dir_path( __FILE__ ) . 'inc/queries.php';
