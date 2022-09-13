@@ -13,7 +13,7 @@ use function WebDevStudios\wd_s\get_formatted_atts;
 use function WebDevStudios\wd_s\get_block_classes;
 
 $wd_s_defaults = [
-	'class'               => [ 'wds-block', 'cards-repeater' ],
+	'class'               => [ 'wds-block', 'logo-grid' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ! empty( $block['anchor'] ) ? $block['anchor'] : '',
 ];
