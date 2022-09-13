@@ -1,0 +1,32 @@
+{
+	"name": "accordion",
+	"title": "Accordion",
+	"description": "A block used to show an Accordion.",
+	"editorStyle": "file:./accordion-editor.css",
+	"style": "file:./style-accordion.css",
+	"editorScript": "file:./accordion-editor.js",
+	"script": "file:./script.js",
+	"category": "theme",
+	"icon": "table-row-before",
+	"apiVersion": 2,
+	"keywords": [ "accordion", "block" ],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "accordion.php"
+	},
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"color": true,
+		"customClassName": true,
+		"jsx": true
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"_is_preview": "true"
+			}
+		}
+	}
+}

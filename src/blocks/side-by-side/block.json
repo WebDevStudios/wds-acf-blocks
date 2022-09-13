@@ -1,0 +1,32 @@
+{
+	"name": "side-by-side",
+	"title": "Side by Side",
+	"description": "A block used to show side by side content.",
+	"editorStyle": "file:./side-by-side-editor.css",
+	"style": "file:./style-side-by-side.css",
+	"editorScript": "file:./side-by-side-editor.js",
+	"script": "file:./script.js",
+	"category": "theme",
+	"icon": "columns",
+	"apiVersion": 2,
+	"keywords": [ "side by side", "block" ],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "side-by-side.php"
+	},
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"color": true,
+		"customClassName": true,
+		"jsx": true
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"_is_preview": "true"
+			}
+		}
+	}
+}
