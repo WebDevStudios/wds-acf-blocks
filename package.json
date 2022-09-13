@@ -15,71 +15,52 @@
 		"url": "https://github.com/WebDevStudios/wds-acf-blocks/issues"
 	},
 	"homepage": "https://github.com/WebDevStudios/wds-acf-blocks#readme",
-	"main": "src/js/app.js",
-	"dependencies": {
-		"glider-js": "^1.7.7"
+	"engines": {
+		"node": ">=14",
+		"npm": ">=7"
 	},
 	"devDependencies": {
-		"@webdevstudios/js-coding-standards": "~1.1.1",
-		"@wordpress/scripts": "^12.2.0",
-		"stylelint": "^13.7.0",
-		"stylelint-config-wordpress": "^17.0.0",
-		"wp-pot-cli": "^1.5.0"
+		"@wordpress/eslint-plugin": "12.8.0",
+		"@wordpress/prettier-config": "^1.4.0",
+		"@wordpress/scripts": "^23.3.0",
+		"autoprefixer": "^10.4.8",
+		"cross-env": "^7.0.3",
+		"css-loader": "^6.7.1",
+		"eslint-plugin-eslint-comments": "^3.2.0",
+		"eslint-webpack-plugin": "^3.2.0",
+		"mini-css-extract-plugin": "^2.6.1",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.4.14",
+		"postcss-loader": "^7.0.1",
+		"postcss-move-props-to-bg-image-query": "^4.0.0",
+		"postcss-preset-env": "^7.7.2",
+		"prettier": "npm:wp-prettier@^2.6.2",
+		"sass-loader": "^13.0.2",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-webpack-plugin": "^3.3.0",
+		"svg-transform-loader": "^2.0.13",
+		"tailwindcss": "^3.1.7"
 	},
 	"scripts": {
-		"start": "wp-scripts start",
-		"dev": "wp-scripts start",
-		"watch": "wp-scripts start",
-		"build": "wp-scripts build",
-		"lint:css": "wp-scripts lint-style",
+		"build": "cross-env NODE_ENV=production wp-scripts build",
+		"build:pot": "composer run-script pot",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"dev": "npm run watch",
+		"format": "run-p format:*",
+		"format:css": "npx prettier '**/*.scss' --write && npm run lint:css -- --fix",
+		"format:js": "wp-scripts format && npm run lint:js -- --fix",
+		"format:md": "npx markdownlint-cli . --fix",
+		"format:php": "composer run-script format",
+		"lint": "run-p lint:*",
+		"lint:css": "wp-scripts lint-style '**/*.scss'",
 		"lint:js": "wp-scripts lint-js",
-		"lint:php": "composer run lint",
+		"lint:md": "wp-scripts lint-md-docs",
+		"lint:php": "composer run-script lint",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
-		"postinstall": "wp-scripts build && composer install"
-	},
-	"eslintConfig": {
-		"extends": [
-			"plugin:@wordpress/eslint-plugin/esnext",
-			"plugin:@wordpress/eslint-plugin/react",
-			"@webdevstudios/js-coding-standards"
-		],
-		"ignorePatterns": [
-			"build/**",
-			"vendor/**"
-		]
-	},
-	"stylelint": {
-		"extends": "stylelint-config-wordpress/scss",
-		"plugins": [
-			"stylelint-scss"
-		],
-		"ignoreFiles": [
-			"build/**",
-			"vendor/**"
-		],
-		"rules": {
-			"at-rule-no-unknown": [
-				true,
-				{
-					"ignoreAtRules": [
-						"extend",
-						"at-root",
-						"debug",
-						"warn",
-						"error",
-						"if",
-						"else",
-						"for",
-						"each",
-						"while",
-						"mixin",
-						"include",
-						"content",
-						"return",
-						"function"
-					]
-				}
-			]
-		}
+		"postinstall": "composer install --quiet && npm run build",
+		"start": "cross-env NODE_ENV=development wp-scripts start",
+		"watch": "run-p start sync"
 	}
 }
