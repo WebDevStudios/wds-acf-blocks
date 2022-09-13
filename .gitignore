@@ -1,14 +1,33 @@
+# os
+*~
+.DS_*
+.svn/
+.cvs/
+.hg/
+*.bak
+*.swp
+Thumbs.db
+
+# node
+.env
+.env.local
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 node_modules/
+
+# composer
+vendor/
+
 .idea/
 .sass-cache
 *.sublime-project
 .htaccess
 compass_app_log.txt
-*.log
-.DS_Store
 .AppleDouble
 .LSOverride
 vendor/
 .vscode/
 !build
-dist/
