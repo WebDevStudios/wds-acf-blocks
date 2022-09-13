@@ -1,9 +1,7 @@
 /**
- * File accordion.js
+ * File accordion/script.js
  *
  */
-import './style.scss';
-console.log( 'accordion.js' );
 
 // Make sure everything is loaded first.
 if (
