@@ -13,7 +13,7 @@ use function WebDevStudios\wd_s\get_acf_fields;
 use function WebDevStudios\wd_s\get_block_classes;
 
 $wd_s_defaults = [
-	'class'               => [ 'wds-block', 'cards-repeater' ],
+	'class'               => [ 'wds-block', 'quotes' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ! empty( $block['anchor'] ) ? $block['anchor'] : '',
 ];
