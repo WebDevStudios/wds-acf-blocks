@@ -1,0 +1,19 @@
+//----------------------------------------
+// Block - Card Repeater, EDITOR
+//----------------------------------------
+
+.wds-block.cards-repeater {
+	margin: 4rem auto;
+
+	.card-wrap {
+		display: grid;
+		grid-auto-flow: column;
+		gap: 1rem;
+	}
+
+	.wds-module-card {
+		border: 1px solid #000;
+		padding: 1rem;
+	}
+
+}
