@@ -38,11 +38,10 @@
 		"sass-loader": "^13.0.2",
 		"stylelint-config-prettier": "^9.0.3",
 		"stylelint-webpack-plugin": "^3.3.0",
-		"svg-transform-loader": "^2.0.13",
-		"tailwindcss": "^3.1.7"
+		"svg-transform-loader": "^2.0.13"
 	},
 	"scripts": {
-		"build": "cross-env NODE_ENV=production wp-scripts build --webpack-src-dir=src/blocks",
+		"build": "cross-env NODE_ENV=production wp-scripts build --webpack-src-dir=src/blocks --webpack-copy-php",
 		"build:pot": "composer run-script pot",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
@@ -60,7 +59,7 @@
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "composer install --quiet && npm run build",
-		"start": "cross-env NODE_ENV=development wp-scripts start --webpack-src-dir=src/blocks",
+		"start": "cross-env NODE_ENV=development wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php",
 		"watch": "run-p start sync"
 	}
 }
