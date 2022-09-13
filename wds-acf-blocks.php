@@ -68,3 +68,21 @@ function wds_acf_blocks_parent_plugin_notice() {
 
 // Get our hooks and filters.
 require plugin_dir_path( __FILE__ ) . 'inc/hooks.php';
+
+
+/**
+ * Register Blocks
+ *
+ * @return void
+ * @author Jenna Hines
+ * @since  2022-09-13
+ */
+function wds_acf_register_blocks() {
+	$wds_acf_blocks = glob( plugin_dir_path( __FILE__ ) . 'build/*' );
+
+	foreach ( $wds_acf_blocks as $block ) {
+		register_block_type( $block );
+	}
+}
+
+wds_acf_register_blocks();
