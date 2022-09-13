@@ -1,0 +1,19 @@
+//----------------------------------------
+// Block - Side by Side, EDITOR
+//----------------------------------------
+
+.wds-block.side-by-side {
+	margin: 4rem auto;
+
+	display: flex;
+
+	.wds-module-figure,
+	.wds-module-card {
+		width: 50%;
+	}
+
+	.wds-module-card {
+		padding: 1rem;
+	}
+
+}

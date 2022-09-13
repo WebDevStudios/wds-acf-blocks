@@ -13,7 +13,7 @@ use function WebDevStudios\wd_s\get_formatted_atts;
 use function WebDevStudios\wd_s\get_block_classes;
 
 $wd_s_defaults = [
-	'class'               => [ 'wds-block', 'cards-repeater' ],
+	'class'               => [ 'wds-block', 'side-by-side' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ! empty( $block['anchor'] ) ? $block['anchor'] : '',
 ];
@@ -26,13 +26,13 @@ if ( ! empty( $wd_s_block_classes ) ) :
 	$wd_s_defaults['class'] = array_merge( $wd_s_defaults['class'], $wd_s_block_classes );
 endif;
 
+// Pull in the fields from ACF.
+$wd_s_side_by_side = get_acf_fields( [ 'column_order', 'image', 'card' ], $block['id'] );
+
 $wd_s_defaults['class'][] = $wd_s_side_by_side['column_order'];
 
 // Set up element attributes.
 $wd_s_atts = get_formatted_atts( [ 'class', 'id' ], $wd_s_defaults );
-
-// Pull in the fields from ACF.
-$wd_s_side_by_side = get_acf_fields( [ 'column_order', 'image', 'card' ], $block['id'] );
 ?>
 
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
