@@ -84,5 +84,4 @@ function wds_acf_register_blocks() {
 		register_block_type( $block );
 	}
 }
-
-wds_acf_register_blocks();
+add_action( 'acf/init', 'wds_acf_register_blocks' );
