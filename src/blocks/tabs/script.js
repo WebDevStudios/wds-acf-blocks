@@ -2,7 +2,7 @@
  * File tabs/script.js
  *
  */
-console.log( 'tabs.js' );
+import './style.scss';
 
 // Make sure everything is loaded first.
 if (
