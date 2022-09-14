@@ -52,6 +52,7 @@
                     "max": 0,
                     "layout": "row",
                     "button_label": "Add a Tab",
+                    "rows_per_page": 20,
                     "sub_fields": [
                         {
                             "key": "field_624daa0393c37",
@@ -103,7 +104,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/tabs"
+                "value": "abs\/tabs"
             }
         ]
     ],
@@ -116,5 +117,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1661893563
+    "modified": 1663176643
 }

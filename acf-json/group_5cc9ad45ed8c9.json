@@ -52,6 +52,7 @@
                     "max": 0,
                     "layout": "row",
                     "button_label": "Add Accordion Item",
+                    "rows_per_page": 20,
                     "sub_fields": [
                         {
                             "key": "field_5cc9ad460902d",
@@ -103,7 +104,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/accordion"
+                "value": "abs\/accordion"
             }
         ]
     ],
@@ -116,5 +117,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1661800350
+    "modified": 1663176603
 }

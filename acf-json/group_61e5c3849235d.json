@@ -37,6 +37,7 @@
             "max": 3,
             "layout": "row",
             "button_label": "Add Card",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_61e5c3eafdf12",
@@ -150,7 +151,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/cards-repeater"
+                "value": "abs\/cards-repeater"
             }
         ]
     ],
@@ -163,5 +164,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1661797501
+    "modified": 1663176610
 }
