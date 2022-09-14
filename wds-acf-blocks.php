@@ -38,7 +38,7 @@ function wds_acf_blocks_has_parent_plugin() {
 		}
 	}
 }
-add_action( 'admin_init', 'wds_acf_blocks_has_parent_plugin' );
+add_action( 'admin_init', __NAMESPACE__ . '\wds_acf_blocks_has_parent_plugin' );
 
 /**
  * Provide a notice message if the parent plugin isn't active when we try to activate this plugin.
@@ -86,4 +86,4 @@ function wds_acf_register_blocks() {
 		register_block_type( $block );
 	}
 }
-add_action( 'acf/init', 'wds_acf_register_blocks' );
+add_action( 'acf/init', __NAMESPACE__ . '\wds_acf_register_blocks' );

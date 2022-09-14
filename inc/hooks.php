@@ -7,6 +7,8 @@
  * @package wds-acf-blocks
  */
 
+namespace WebDevStudios\abs;
+
 /**
  * Specify the location for saving ACF JSON files.
  *
@@ -22,7 +24,7 @@ function wds_acf_blocks_acf_json_save_point( $path ) {
 
 	return $path;
 }
-add_filter( 'acf/settings/save_json', 'wds_acf_blocks_acf_json_save_point' );
+add_filter( 'acf/settings/save_json', __NAMESPACE__ . '\wds_acf_blocks_acf_json_save_point' );
 
 /**
  * Specify the location for loading ACF JSON files.
@@ -42,7 +44,7 @@ function wds_acf_blocks_acf_json_load_point( $paths ) {
 
 	return $paths;
 }
-add_filter( 'acf/settings/load_json', 'wds_acf_blocks_acf_json_load_point' );
+add_filter( 'acf/settings/load_json', __NAMESPACE__ . '\wds_acf_blocks_acf_json_load_point' );
 
 /**
  * Dependency check to show warning to run `npm install`
@@ -72,7 +74,7 @@ function wds_acf_blocks_dependency_check() {
 	</div>
 	<?php
 }
-add_action( 'admin_notices', 'wds_acf_blocks_dependency_check' );
+add_action( 'admin_notices', __NAMESPACE__ . '\wds_acf_blocks_dependency_check' );
 
 
 /**
