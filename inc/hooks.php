@@ -67,7 +67,7 @@ function wds_acf_blocks_dependency_check() {
 			<?php
 			esc_html_e(
 				'Whoops! You need to run `npm install` in the terminal for the WDS ACF Blocks plugin to work first.',
-				'wds-acf-blocks'
+				'abs'
 			);
 			?>
 		</p>
