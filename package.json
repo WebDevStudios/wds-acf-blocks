@@ -8,6 +8,7 @@
 		"type": "git",
 		"url": "git+https://github.com/WebDevStudios/wds-acf-blocks.git"
 	},
+	"main": "src/index.js",
 	"keywords": [
 		"plugin"
 	],

@@ -1,0 +1,17 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/cards-repeater/editor.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.wds-block.cards-repeater {
+  margin: 4rem auto;
+}
+.wds-block.cards-repeater .card-wrap {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+}
+.wds-block.cards-repeater .wds-module-card {
+  border: 1px solid #000;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=editor.css.map*/
