@@ -1,5 +1,5 @@
 {
-	"name": "side-by-side",
+	"name": "abs/side-by-side",
 	"title": "Side by Side",
 	"description": "A block used to show side by side content.",
 	"editorStyle": "file:./editor.css",

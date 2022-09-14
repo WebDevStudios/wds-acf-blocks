@@ -1,10 +1,10 @@
 {
-	"name": "accordion",
+	"name": "abs/accordion",
 	"title": "Accordion",
 	"description": "A block used to show an Accordion.",
 	"editorStyle": "file:./editor.css",
 	"editorScript": "file:./editor.js",
-	"script": "file:./script.js",
+	"script": "file:./index.js",
 	"category": "theme",
 	"icon": "table-row-before",
 	"apiVersion": 2,

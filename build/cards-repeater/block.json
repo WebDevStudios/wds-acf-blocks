@@ -1,5 +1,5 @@
 {
-  "name": "cards-repeater",
+  "name": "abs/cards-repeater",
   "title": "Cards - Repeater",
   "description": "A block used to display a group of Cards.",
   "editorStyle": "file:./editor.css",

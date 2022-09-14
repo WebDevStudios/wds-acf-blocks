@@ -1,5 +1,5 @@
 {
-  "name": "quotes",
+  "name": "abs/quotes",
   "title": "Quotes",
   "description": "A block used to show quotes.",
   "editorStyle": "file:./editor.css",

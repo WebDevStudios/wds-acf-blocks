@@ -1,5 +1,5 @@
 {
-  "name": "tabs",
+  "name": "abs/tabs",
   "title": "Tabs",
   "description": "A block used to show Tabs and Content.",
   "editorStyle": "file:./editor.css",
