@@ -1,0 +1,16 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/logo-grid/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.wds-block.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.wds-block.logo-grid .acf-innerblocks-container {
+  grid-column: 1/4;
+}
+.wds-block.logo-grid .wds-module-figure {
+  grid-column: span 1/span 1;
+}
+
+/*# sourceMappingURL=style-script.css.map*/
