@@ -2,6 +2,7 @@
  * File accordion/script.js
  *
  */
+import './style.scss';
 
 // Make sure everything is loaded first.
 if (

@@ -3,37 +3,15 @@
 //----------------------------------------
 
 .wds-module-accordion {
-	margin: 4rem auto;
 
 	.accordion-item {
 		border: 1px solid #000;
 		margin-bottom: 1rem;
 	}
 
-	.accordion-title {
-		width: 100%;
-		display: flex;
-		padding: .5rem 1rem;
-		justify-content: space-between;
-
-		&:hover {
-			background: rgb(0 0 0 / 10%)
-		}
-
-		&[aria-expanded='false'] {
-			~div {
-				display: none;
-			}
-		}
-
-		&[aria-expanded='true'] {
-			~div {
-				display: block;
-			}
-		}
-	}
-
+	.accordion-title,
 	.accordion-content {
 		padding: .5rem 1rem;
 	}
+
 }

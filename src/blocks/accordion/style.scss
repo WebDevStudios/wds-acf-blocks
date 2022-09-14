@@ -1,0 +1,33 @@
+//----------------------------------------
+// Module - Accordion Styles, FRONTEND
+//----------------------------------------
+
+.wds-module-accordion {
+
+	.accordion-item {
+		margin-bottom: 1rem;
+	}
+
+	.accordion-title {
+		width: 100%;
+		display: flex;
+		padding: .5rem 1rem;
+		justify-content: space-between;
+
+		&[aria-expanded='false'] {
+			~div {
+				display: none;
+			}
+		}
+
+		&[aria-expanded='true'] {
+			~div {
+				display: block;
+			}
+		}
+	}
+
+	.accordion-content {
+		padding: .5rem 1rem;
+	}
+}

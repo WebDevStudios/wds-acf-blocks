@@ -1,28 +1,11 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/accordion/editor.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.wds-module-accordion {
-  margin: 4rem auto;
-}
 .wds-module-accordion .accordion-item {
   border: 1px solid #000;
   margin-bottom: 1rem;
 }
-.wds-module-accordion .accordion-title {
-  width: 100%;
-  display: flex;
-  padding: 0.5rem 1rem;
-  justify-content: space-between;
-}
-.wds-module-accordion .accordion-title:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
-.wds-module-accordion .accordion-title[aria-expanded=false] ~ div {
-  display: none;
-}
-.wds-module-accordion .accordion-title[aria-expanded=true] ~ div {
-  display: block;
-}
+.wds-module-accordion .accordion-title,
 .wds-module-accordion .accordion-content {
   padding: 0.5rem 1rem;
 }
