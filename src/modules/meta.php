@@ -6,7 +6,7 @@
  *
  * @link https://atomicdesign.bradfrost.com/chapter-2/#atoms
  *
- * @package wd_s
+ * @package abs
  */
 
 /**
@@ -27,13 +27,13 @@
  * ],
  */
 
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
-use function WebDevStudios\wd_s\print_post_author;
-use function WebDevStudios\wd_s\print_post_date;
-use function WebDevStudios\wd_s\print_post_taxonomies;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
+use function WebDevStudios\abs\print_post_author;
+use function WebDevStudios\abs\print_post_date;
+use function WebDevStudios\abs\print_post_taxonomies;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class'            => [ 'wds-module', 'wds-module-meta', 'entry-meta' ],
 	'display_date'     => true,
 	'display_author'   => true,
@@ -43,25 +43,25 @@ $wd_s_defaults = [
 	'taxonomy_args'    => [],
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Set up the meta class.
-$wd_s_atts = get_formatted_atts( [ 'class' ], $wd_s_args );
+$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 ?>
 
-<div <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<div <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<?php
 	// Display the meta.
-	if ( ! empty( $wd_s_args['display_date'] ) ) :
-		print_post_date( $wd_s_args['date_args'] );
+	if ( ! empty( $abs_args['display_date'] ) ) :
+		print_post_date( $abs_args['date_args'] );
 	endif;
 
-	if ( ! empty( $wd_s_args['display_author'] ) ) :
-		print_post_author( $wd_s_args['author_args'] );
+	if ( ! empty( $abs_args['display_author'] ) ) :
+		print_post_author( $abs_args['author_args'] );
 	endif;
 
-	if ( ! empty( $wd_s_args['display_taxonomy'] ) ) :
-		print_post_taxonomies( $wd_s_args['taxonomy_args'] );
+	if ( ! empty( $abs_args['display_taxonomy'] ) ) :
+		print_post_taxonomies( $abs_args['taxonomy_args'] );
 	endif;
 	?>
 </div>

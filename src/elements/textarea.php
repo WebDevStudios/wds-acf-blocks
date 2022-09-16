@@ -6,13 +6,13 @@
  *
  * @link https://atomicdesign.bradfrost.com/chapter-2/#atoms
  *
- * @package wd_s
+ * @package abs
  */
 
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class'       => [ 'wds-element', 'wds-element-textarea' ],
 	'name'        => '',
 	'value'       => '',
@@ -22,15 +22,15 @@ $wd_s_defaults = [
 	'readonly'    => false,
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Add ID for <label> tags.
-if ( $wd_s_args['name'] ) :
-	$wd_s_args['id'] = $wd_s_args['name'];
+if ( $abs_args['name'] ) :
+	$abs_args['id'] = $abs_args['name'];
 endif;
 
 // Set up element attributes.
-$wd_s_atts = get_formatted_atts( [ 'id', 'name', 'placeholder', 'class', 'type', 'disabled', 'required', 'readonly' ], $wd_s_args );
+$abs_atts = get_formatted_atts( [ 'id', 'name', 'placeholder', 'class', 'type', 'disabled', 'required', 'readonly' ], $abs_args );
 
 ?>
-<textarea <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo esc_html( $wd_s_args['value'] ); ?></textarea>
+<textarea <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo esc_html( $abs_args['value'] ); ?></textarea>

@@ -6,26 +6,26 @@
  *
  * @link https://atomicdesign.bradfrost.com/chapter-2/#atoms
  *
- * @package wd_s
+ * @package abs
  */
 
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class'   => [ 'wds-element', 'wds-element-content' ],
 	'id'      => '',
 	'content' => false,
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Make sure element should render.
-if ( $wd_s_args['content'] ) :
+if ( $abs_args['content'] ) :
 
 	// Set up element attributes.
-	$wd_s_atts = get_formatted_atts( [ 'class', 'id' ], $wd_s_args );
+	$abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_args );
 
 	?>
-	<section <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo wp_kses_post( $wd_s_args['content'] ); ?></section>
+	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo wp_kses_post( $abs_args['content'] ); ?></section>
 <?php endif; ?>

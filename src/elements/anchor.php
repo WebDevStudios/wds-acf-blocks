@@ -6,28 +6,28 @@
  *
  * @link https://atomicdesign.bradfrost.com/chapter-2/#atoms
  *
- * @package wd_s
+ * @package abs
  */
 
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class'  => [ 'wds-element', 'wds-element-anchor' ],
 	'text'   => false,
 	'href'   => false,
 	'target' => false,
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Make sure element should render.
-if ( $wd_s_args['href'] && $wd_s_args['text'] ) :
+if ( $abs_args['href'] && $abs_args['text'] ) :
 
 	// Set up element attributes.
-	$wd_s_atts = get_formatted_atts( [ 'href', 'target', 'class' ], $wd_s_args );
+	$abs_atts = get_formatted_atts( [ 'href', 'target', 'class' ], $abs_args );
 
 	?>
-	<a <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo esc_html( $wd_s_args['text'] ); ?></a>
+	<a <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo esc_html( $abs_args['text'] ); ?></a>
 
 <?php endif; ?>

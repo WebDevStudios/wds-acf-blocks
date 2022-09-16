@@ -15,6 +15,7 @@ namespace WebDevStudios\abs;
 
 // Define a global version number.
 define( 'ABS_WDS_ACF_VERSION', '1.0.0' );
+define( 'ABS_ROOT_PATH', plugin_dir_path( __FILE__ ) );
 
 /**
  * Check to see if ACF Pro is active.
@@ -68,9 +69,6 @@ function wds_acf_blocks_parent_plugin_notice() {
 	<?php
 }
 
-// Get our hooks and filters.
-require plugin_dir_path( __FILE__ ) . 'inc/hooks.php';
-
 
 /**
  * Register Blocks
@@ -87,3 +85,29 @@ function wds_acf_register_blocks() {
 	}
 }
 add_action( 'acf/init', __NAMESPACE__ . '\wds_acf_register_blocks' );
+
+/**
+ * Includes helper files
+ *
+ * @return void
+ * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
+ * @since  ???
+ */
+function include_helper_files() {
+	$files = [
+		'inc/helpers/',
+		'inc/'
+	];
+
+	foreach ( $files as $include ) {
+		$include = trailingslashit( ABS_ROOT_PATH ) . $include;
+
+
+		// Loop into the directory for php files.
+		foreach ( glob( $include . '*.php' ) as $file ) {
+			require $file;
+		}
+	}
+}
+
+include_helper_files();

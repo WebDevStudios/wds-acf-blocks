@@ -6,13 +6,13 @@
  *
  * @link https://atomicdesign.bradfrost.com/chapter-2/#atoms
  *
- * @package wd_s
+ * @package abs
  */
 
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class'    => [ 'wds-element', 'wds-element-select' ],
 	'name'     => false,
 	'value'    => false,
@@ -21,19 +21,19 @@ $wd_s_defaults = [
 	'options'  => [],
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Add ID for <label> tags.
-if ( $wd_s_args['name'] ) :
-	$wd_s_args['id'] = $wd_s_args['name'];
+if ( $abs_args['name'] ) :
+	$abs_args['id'] = $abs_args['name'];
 endif;
 
 // Set up element attributes.
-$wd_s_atts = get_formatted_atts( [ 'id', 'name', 'class', 'disabled', 'required' ], $wd_s_args );
+$abs_atts = get_formatted_atts( [ 'id', 'name', 'class', 'disabled', 'required' ], $abs_args );
 
 ?>
-<select <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<?php foreach ( $wd_s_args['options'] as $wd_s_option ) : ?>
-		<option value='<?php echo esc_attr( $wd_s_option['value'] ); ?>' <?php echo $wd_s_args['value'] === $wd_s_option['value'] ? 'selected' : ''; ?>><?php echo esc_attr( $wd_s_option['text'] ); ?></option>
+<select <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<?php foreach ( $abs_args['options'] as $abs_option ) : ?>
+		<option value='<?php echo esc_attr( $abs_option['value'] ); ?>' <?php echo $abs_args['value'] === $abs_option['value'] ? 'selected' : ''; ?>><?php echo esc_attr( $abs_option['text'] ); ?></option>
 	<?php endforeach; ?>
 </select>
