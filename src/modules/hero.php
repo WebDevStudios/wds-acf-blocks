@@ -45,7 +45,7 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 	</div>
 
 	<?php if ( $abs_args['overlay'] ) : ?>
-		<div class="overlay"></div>
+		<div class="overlay" style="background: <?php echo esc_attr( $abs_args['overlay'] ); ?>"></div>
 	<?php endif; ?>
 
 	<div class="container">
