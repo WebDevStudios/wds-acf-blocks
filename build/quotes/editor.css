@@ -1,4 +1,24 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/global-editor.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************/
+.wds-block {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.acf-block-preview .acf-innerblocks-container {
+  @apply py-16 px-8 mb-16 border-2 border-gray-300 border-dashed rounded-md relative;
+}
+.acf-block-preview .acf-innerblocks-container [data-rich-text-placeholder] {
+  @apply text-gray-300;
+}
+.acf-block-preview .acf-innerblocks-container:empty::before {
+  content: "Insert InnerBlocks here";
+  @apply absolute top-8 left-8 block w-full text-gray-300 text-center;
+}
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/quotes/editor.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************************************************/
 
+
+/*# sourceMappingURL=editor.css.map*/

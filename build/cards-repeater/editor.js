@@ -12,6 +12,18 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
+/***/ }),
+
+/***/ "./src/global-editor.scss":
+/*!********************************!*\
+  !*** ./src/global-editor.scss ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
 /***/ })
 
 /******/ 	});
@@ -60,7 +72,9 @@ var __webpack_exports__ = {};
   !*** ./src/blocks/cards-repeater/editor.js ***!
   \*********************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/cards-repeater/editor.scss");
+/* harmony import */ var _global_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../global-editor.scss */ "./src/global-editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/cards-repeater/editor.scss");
+
 
 }();
 /******/ })()
