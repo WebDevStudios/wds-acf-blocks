@@ -1,0 +1,33 @@
+//----------------------------------------
+// Module - Carousel Styles, FRONTEND
+//----------------------------------------
+
+.wds-module-carousel {
+
+	.carousel-item {
+		margin-bottom: 1rem;
+	}
+
+	.carousel-title {
+		width: 100%;
+		display: flex;
+		padding: .5rem 1rem;
+		justify-content: space-between;
+
+		&[aria-expanded='false'] {
+			~div {
+				display: none;
+			}
+		}
+
+		&[aria-expanded='true'] {
+			~div {
+				display: block;
+			}
+		}
+	}
+
+	.carousel-content {
+		padding: .5rem 1rem;
+	}
+}
