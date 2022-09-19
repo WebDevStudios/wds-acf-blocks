@@ -4,29 +4,29 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package wd_s
+ * @package abs
  */
 
-use function WebDevStudios\wd_s\print_element;
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
+use function WebDevStudios\abs\print_element;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class'  => [ 'wds-module', 'wds-module-badges' ],
 	'badges' => [],
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Set up element attributes.
-$wd_s_atts = get_formatted_atts( [ 'class' ], $wd_s_args );
+$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 ?>
-<div <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<div <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<?php
-	foreach ( $wd_s_args['badges'] as $wd_s_badge ) :
+	foreach ( $abs_args['badges'] as $abs_badge ) :
 		print_element(
 			'badge',
-			$wd_s_badge
+			$abs_badge
 		);
 	endforeach;
 	?>

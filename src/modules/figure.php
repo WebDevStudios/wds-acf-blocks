@@ -6,14 +6,14 @@
  *
  * @link https://atomicdesign.bradfrost.com/chapter-2/#molecules
  *
- * @package wd_s
+ * @package abs
  */
 
-use function WebDevStudios\wd_s\print_element;
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
+use function WebDevStudios\abs\print_element;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class'         => [ 'wds-module', 'wds-module-figure' ],
 	'image_class'   => [],
 	'attachment_id' => false,
@@ -25,32 +25,32 @@ $wd_s_defaults = [
 	'caption'       => false,
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
-if ( $wd_s_args['show_caption'] && $wd_s_args['caption'] ) :
-	$wd_s_args['class'][] = 'has-caption';
+if ( $abs_args['show_caption'] && $abs_args['caption'] ) :
+	$abs_args['class'][] = 'has-caption';
 endif;
 
 // Set up element attributes.
-$wd_s_atts = get_formatted_atts( [ 'class' ], $wd_s_args );
+$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 ?>
 
-<figure <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<figure <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<?php
 	print_element(
 		'image',
 		[
-			'attachment_id' => $wd_s_args['attachment_id'],
-			'class'         => $wd_s_args['image_class'],
-			'src'           => $wd_s_args['src'],
-			'size'          => $wd_s_args['size'],
-			'loading'       => $wd_s_args['loading'],
-			'alt'           => $wd_s_args['alt'],
+			'attachment_id' => $abs_args['attachment_id'],
+			'class'         => $abs_args['image_class'],
+			'src'           => $abs_args['src'],
+			'size'          => $abs_args['size'],
+			'loading'       => $abs_args['loading'],
+			'alt'           => $abs_args['alt'],
 		]
 	);
 	?>
 
-	<?php if ( $wd_s_args['show_caption'] && $wd_s_args['caption'] ) : ?>
-		<figcaption><?php echo esc_html( $wd_s_args['caption'] ); ?></figcaption>
+	<?php if ( $abs_args['show_caption'] && $abs_args['caption'] ) : ?>
+		<figcaption><?php echo esc_html( $abs_args['caption'] ); ?></figcaption>
 	<?php endif; ?>
 </figure>

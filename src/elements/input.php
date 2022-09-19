@@ -6,13 +6,13 @@
  *
  * @link https://atomicdesign.bradfrost.com/chapter-2/#atoms
  *
- * @package wd_s
+ * @package abs
  */
 
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class'       => [ 'wds-element', 'wds-element-button' ],
 	'type'        => 'text',
 	'name'        => '',
@@ -23,15 +23,15 @@ $wd_s_defaults = [
 ];
 
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Add ID for <label> tags.
-if ( $wd_s_args['name'] ) :
-	$wd_s_args['id'] = $wd_s_args['name'];
+if ( $abs_args['name'] ) :
+	$abs_args['id'] = $abs_args['name'];
 endif;
 
 // Set up element attributes.
-$wd_s_atts = get_formatted_atts( [ 'id', 'name', 'placeholder', 'class', 'type', 'disabled', 'required', 'value' ], $wd_s_args );
+$abs_atts = get_formatted_atts( [ 'id', 'name', 'placeholder', 'class', 'type', 'disabled', 'required', 'value' ], $abs_args );
 
 ?>
-<input <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>/>
+<input <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>/>

@@ -4,36 +4,36 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package wd_s
+ * @package abs
  */
 
-use function WebDevStudios\wd_s\print_element;
-use function WebDevStudios\wd_s\get_formatted_args;
-use function WebDevStudios\wd_s\get_formatted_atts;
+use function WebDevStudios\abs\print_element;
+use function WebDevStudios\abs\get_formatted_args;
+use function WebDevStudios\abs\get_formatted_atts;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class' => [ 'wds-module', 'wds-module-accordion' ],
 	'items' => [],
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Set up element attributes.
-$wd_s_atts = get_formatted_atts( [ 'class' ], $wd_s_args );
+$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 ?>
 
-<div <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<?php foreach ( $wd_s_args['items'] as $wd_s_key => $wd_s_item ) : ?>
+<div <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<?php foreach ( $abs_args['items'] as $abs_key => $abs_item ) : ?>
 		<div class="accordion-item">
 			<?php
 			print_element(
 				'button',
 				[
 					'class' => [ 'accordion-title' ],
-					'id'    => 'accordion-item-' . $wd_s_key,
-					'title' => $wd_s_item['text'],
+					'id'    => 'accordion-item-' . $abs_key,
+					'title' => $abs_item['text'],
 					'aria'  => [
-						'controls' => 'accordion-content-' . $wd_s_key,
+						'controls' => 'accordion-content-' . $abs_key,
 					],
 					'icon'  => [
 						'color'  => '#000',
@@ -46,16 +46,16 @@ $wd_s_atts = get_formatted_atts( [ 'class' ], $wd_s_args );
 			?>
 
 			<div
-				id="accordion-content-<?php echo esc_attr( $wd_s_key ); ?>"
+				id="accordion-content-<?php echo esc_attr( $abs_key ); ?>"
 				role="region"
-				aria-labelledby="accordion-item-<?php echo esc_attr( $wd_s_key ); ?>"
+				aria-labelledby="accordion-item-<?php echo esc_attr( $abs_key ); ?>"
 			>
 			<?php
 			print_element(
 				'content',
 				[
 					'class'   => [ 'accordion-content' ],
-					'content' => $wd_s_item['content'],
+					'content' => $abs_item['content'],
 				]
 			);
 			?>

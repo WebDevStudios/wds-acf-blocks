@@ -6,29 +6,29 @@
  *
  * @link https://atomicdesign.bradfrost.com/chapter-2/#atoms
  *
- * @package wd_s
+ * @package abs
  */
 
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class' => [ 'wds-element', 'wds-element-blockquote' ],
 	'id'    => '',
 	'cite'  => false,
 	'quote' => false,
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Make sure element should render.
-if ( $wd_s_args['quote'] ) :
+if ( $abs_args['quote'] ) :
 
 	// Set up element attributes.
-	$wd_s_atts = get_formatted_atts( [ 'class', 'id' ], $wd_s_args );
+	$abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_args );
 	?>
 	<blockquote>
-		<p><?php echo esc_html( $wd_s_args['quote'] ); ?></p>
-		<cite><?php echo esc_html( $wd_s_args['cite'] ); ?></cite>
+		<p><?php echo esc_html( $abs_args['quote'] ); ?></p>
+		<cite><?php echo esc_html( $abs_args['cite'] ); ?></cite>
 	</blockquote>
 <?php endif; ?>

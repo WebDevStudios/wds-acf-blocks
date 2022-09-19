@@ -6,14 +6,14 @@
  *
  * @link https://atomicdesign.bradfrost.com/chapter-2/#atoms
  *
- * @package wd_s
+ * @package abs
  */
 
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
-use function WebDevStudios\wd_s\print_svg;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
+use function WebDevStudios\abs\print_svg;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class'         => [ 'wds-element', 'wds-element-badge' ],
 	'id'            => '',
 	'text'          => false,
@@ -24,27 +24,27 @@ $wd_s_defaults = [
 	'icon_position' => 'after', // before, after.
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Make sure element should render.
-if ( $wd_s_args['text'] ) :
+if ( $abs_args['text'] ) :
 
-	if ( ! empty( $wd_s_args['icon'] ) ) :
-		$wd_s_args['class'][] = 'icon';
-		$wd_s_args['class'][] = 'icon-' . $wd_s_args['icon_position'];
+	if ( ! empty( $abs_args['icon'] ) ) :
+		$abs_args['class'][] = 'icon';
+		$abs_args['class'][] = 'icon-' . $abs_args['icon_position'];
 	endif;
 
 	// Set up element attributes.
-	$wd_s_atts = get_formatted_atts( [ 'id', 'href', 'target', 'class', 'type' ], $wd_s_args );
+	$abs_atts = get_formatted_atts( [ 'id', 'href', 'target', 'class', 'type' ], $abs_args );
 
 	?>
-	<<?php echo $wd_s_args['href'] ? 'a' : 'span'; ?> <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php echo esc_html( $wd_s_args['text'] ); ?>
+	<<?php echo $abs_args['href'] ? 'a' : 'span'; ?> <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<?php echo esc_html( $abs_args['text'] ); ?>
 		<?php
-		if ( ! empty( $wd_s_args['icon'] ) ) :
-			print_svg( $wd_s_args['icon'] );
+		if ( ! empty( $abs_args['icon'] ) ) :
+			print_svg( $abs_args['icon'] );
 		endif;
 		?>
-	</<?php echo $wd_s_args['href'] ? 'a' : 'span'; ?>>
+	</<?php echo $abs_args['href'] ? 'a' : 'span'; ?>>
 
 <?php endif; ?>

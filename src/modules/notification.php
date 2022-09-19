@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package wd_s
+ * @package abs
  */
 
 /**
@@ -13,11 +13,11 @@
  * Icon is not necessary if 'dismissible' is true as Close icon will be rendered automatically.
  */
 
-use function WebDevStudios\wd_s\print_element;
-use function WebDevStudios\wd_s\get_formatted_atts;
-use function WebDevStudios\wd_s\get_formatted_args;
+use function WebDevStudios\abs\print_element;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\get_formatted_args;
 
-$wd_s_defaults = [
+$abs_defaults = [
 	'class'       => [ 'wds-module', 'wds-module-notification' ],
 	'text_args'   => [],
 	'icon'        => [],
@@ -28,37 +28,37 @@ $wd_s_defaults = [
 	],
 ];
 
-$wd_s_args = get_formatted_args( $args, $wd_s_defaults );
+$abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Add default classes.
-$wd_s_args['class'][] = $wd_s_args['type']['sticky'] ? 'is-sticky' : '';
-$wd_s_args['class'][] = $wd_s_args['type']['sticky'] ? 'position-' . $wd_s_args['type']['position'] : '';
+$abs_args['class'][] = $abs_args['type']['sticky'] ? 'is-sticky' : '';
+$abs_args['class'][] = $abs_args['type']['sticky'] ? 'position-' . $abs_args['type']['position'] : '';
 
 // Add an id.
-$wd_s_args['id'] = 'notification-banner';
+$abs_args['id'] = 'notification-banner';
 
 // Add the correct role.
-$wd_s_args['role'] = $wd_s_args['dismissible'] ? 'alertdialog' : 'alert';
+$abs_args['role'] = $abs_args['dismissible'] ? 'alertdialog' : 'alert';
 
 // Set up ARIA attributes.
-$wd_s_args['aria']['labelledby'] = 'notification-title';
+$abs_args['aria']['labelledby'] = 'notification-title';
 
 // Set up element attributes.
-$wd_s_atts = get_formatted_atts( [ 'class', 'role', 'aria', 'id' ], $wd_s_args );
+$abs_atts = get_formatted_atts( [ 'class', 'role', 'aria', 'id' ], $abs_args );
 
 // Make sure the notification title has an id for accessibility.
-if ( empty( $wd_s_args['text_args']['id'] ) ) :
-	$wd_s_args['text_args']['id'] = 'notification-title';
+if ( empty( $abs_args['text_args']['id'] ) ) :
+	$abs_args['text_args']['id'] = 'notification-title';
 endif;
 
 ?>
-<aside <?php echo $wd_s_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<aside <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<?php
-	if ( $wd_s_args['text_args'] ) :
-		print_element( 'heading', $wd_s_args['text_args'] );
+	if ( $abs_args['text_args'] ) :
+		print_element( 'heading', $abs_args['text_args'] );
 	endif;
-	if ( $wd_s_args['dismissible'] || $wd_s_args['icon'] ) :
-		if ( $wd_s_args['dismissible'] ) :
+	if ( $abs_args['dismissible'] || $abs_args['icon'] ) :
+		if ( $abs_args['dismissible'] ) :
 			// This is dismissible, so let's render a close button.
 			print_element(
 				'button',
@@ -71,7 +71,7 @@ endif;
 						'width'        => '32px',
 					],
 					'aria' => [
-						'controls' => $wd_s_args['id'],
+						'controls' => $abs_args['id'],
 					],
 				]
 			);
@@ -79,7 +79,7 @@ endif;
 			print_element(
 				'icon',
 				[
-					'svg_args' => $wd_s_args['icon'],
+					'svg_args' => $abs_args['icon'],
 				]
 			);
 		endif;

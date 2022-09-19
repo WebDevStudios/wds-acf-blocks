@@ -74,8 +74,35 @@ function wds_acf_blocks_dependency_check() {
 	</div>
 	<?php
 }
-add_action( 'admin_notices', __NAMESPACE__ . '\wds_acf_blocks_dependency_check' );
+// add_action( 'admin_notices', __NAMESPACE__ . '\wds_acf_blocks_dependency_check' );
 
+/**
+ * Dependency check for ACF 6.0.
+ *
+ * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
+ * @since ??
+ *
+ * @return void Bail early if the asset dependency file does not exist.
+ */
+function wds_acf_blocks_portable_dependency_check() {
+
+	if ( is_portable() ) {
+		return;
+	}
+	?>
+	<div class="notice notice-error">
+		<p>
+			<?php
+			esc_html_e(
+				'Whoops! Looks like ACF 6.0 is not installed. Please install ACF 6.0 or higher to use the WDS ACF Blocks plugin.',
+				'abs'
+			);
+			?>
+		</p>
+	</div>
+	<?php
+}
+add_action( 'admin_notices', __NAMESPACE__ . '\wds_acf_blocks_portable_dependency_check' );
 
 /**
  * Load block assets only if the block exists on the page.
