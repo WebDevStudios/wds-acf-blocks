@@ -3,15 +3,9 @@
 //----------------------------------------
 
 .wds-block.side-by-side {
-	display: flex;
-
-	.wds-module-figure,
-	.wds-module-card {
-		width: 50%;
-	}
 
 	.wds-module-card {
-		padding: 1rem;
+		@apply p-8;
 	}
 
 }
