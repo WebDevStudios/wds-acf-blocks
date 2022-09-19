@@ -1,0 +1,1 @@
+.wds-module-carousel .carousel-item{margin-bottom:1rem}.wds-module-carousel .carousel-title{display:flex;justify-content:space-between;padding:.5rem 1rem;width:100%}.wds-module-carousel .carousel-title[aria-expanded=false]~div{display:none}.wds-module-carousel .carousel-title[aria-expanded=true]~div{display:block}.wds-module-carousel .carousel-content{padding:.5rem 1rem}
