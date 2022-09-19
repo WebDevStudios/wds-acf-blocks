@@ -1,1 +1,0 @@
-import './scss/editor.scss';
