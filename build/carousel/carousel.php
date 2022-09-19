@@ -70,14 +70,26 @@ $abs_heros         = get_acf_fields( [ 'hero' ], $block['id'] );
 
 		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
 		<section class="hero-wrap">
-			<?php
-			foreach ( $abs_heros['hero'] as $abs_hero ) :
-				print_module(
-					'hero',
-					$abs_hero
-				);
-			endforeach;
-			?>
-		</section>
+			<div class="glide">
+				<div data-glide-el="track" class="glide__track carousel-track">
+					<ul class="glide__slides carousel-items">
+						<?php
+						foreach ( $abs_heros['hero'] as $abs_hero ) :
+							echo '<li class="glide__slide carousel-item">';
+								print_module(
+									'hero',
+									$abs_hero
+								);
+							echo '</li><!-- .carousel-item -->';
+						endforeach;
+						?>
+					</ul><!-- .carousel-items -->
+				</div><!-- .carousel-track -->
+				<div class="glide__arrows" data-glide-el="controls">
+					<button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+					<button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+				</div><!-- .glide__arrows -->
+			</div><!-- .glide -->
+		</section><!-- .hero-wrap -->
 	</section>
 <?php endif; ?>
