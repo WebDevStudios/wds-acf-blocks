@@ -62,5 +62,8 @@
 		"postinstall": "composer install --quiet && npm run build",
 		"start": "cross-env NODE_ENV=development wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php",
 		"watch": "run-p start sync"
+	},
+	"dependencies": {
+		"@glidejs/glide": "^3.5.2"
 	}
 }
