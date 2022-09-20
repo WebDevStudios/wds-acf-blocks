@@ -47,27 +47,6 @@ $abs_heros         = get_acf_fields( [ 'hero' ], $block['id'] );
 	</figure>
 <?php elseif ( $abs_heros['hero'] ) : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php
-		if ( ! empty( $abs_block_heading ) ) :
-			print_element(
-				'heading',
-				[
-					'text' => $abs_block_heading['block_heading'],
-				]
-			);
-		endif;
-		?>
-		<?php
-		if ( ! empty( $abs_block_content ) ) :
-			print_element(
-				'content',
-				[
-					'content' => $abs_block_content['block_content'],
-				]
-			);
-		endif;
-		?>
-
 		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
 		<section class="hero-wrap">
 			<div class="glide">

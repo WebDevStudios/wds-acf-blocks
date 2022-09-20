@@ -20,44 +20,6 @@
             "esc_html": 0
         },
         {
-            "key": "field_6328abf21492d",
-            "label": "Block Heading",
-            "name": "block_heading",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6328abf214937",
-            "label": "Block Content",
-            "name": "block_content",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "br"
-        },
-        {
             "key": "field_6328abf214941",
             "label": "Hero",
             "name": "hero",
@@ -221,5 +183,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663621300
+    "modified": 1663715233
 }
