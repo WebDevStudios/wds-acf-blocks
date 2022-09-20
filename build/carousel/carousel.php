@@ -47,27 +47,6 @@ $abs_heros         = get_acf_fields( [ 'hero' ], $block['id'] );
 	</figure>
 <?php elseif ( $abs_heros['hero'] ) : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php
-		if ( ! empty( $abs_block_heading ) ) :
-			print_element(
-				'heading',
-				[
-					'text' => $abs_block_heading['block_heading'],
-				]
-			);
-		endif;
-		?>
-		<?php
-		if ( ! empty( $abs_block_content ) ) :
-			print_element(
-				'content',
-				[
-					'content' => $abs_block_content['block_content'],
-				]
-			);
-		endif;
-		?>
-
 		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
 		<section class="hero-wrap">
 			<div class="glide">
@@ -86,8 +65,8 @@ $abs_heros         = get_acf_fields( [ 'hero' ], $block['id'] );
 					</ul><!-- .carousel-items -->
 				</div><!-- .carousel-track -->
 				<div class="glide__arrows" data-glide-el="controls">
-					<button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-					<button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+					<button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">prev</button>
+					<button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">next</button>
 				</div><!-- .glide__arrows -->
 			</div><!-- .glide -->
 		</section><!-- .hero-wrap -->
