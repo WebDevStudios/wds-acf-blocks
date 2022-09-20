@@ -65,8 +65,8 @@ $abs_heros         = get_acf_fields( [ 'hero' ], $block['id'] );
 					</ul><!-- .carousel-items -->
 				</div><!-- .carousel-track -->
 				<div class="glide__arrows" data-glide-el="controls">
-					<button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-					<button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+					<button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">prev</button>
+					<button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">next</button>
 				</div><!-- .glide__arrows -->
 			</div><!-- .glide -->
 		</section><!-- .hero-wrap -->
