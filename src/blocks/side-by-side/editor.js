@@ -1,2 +1,2 @@
-import '../../global-editor.scss';
+import '../../global/global-editor.scss';
 import './editor.scss';
