@@ -1,4 +1,5 @@
 const blockName = 'logo-grid';
+const fs 	    = require( 'fs' );
 
 const directoryFiles = [
 	`./src/blocks/${blockName}/*.php`,
@@ -7,5 +8,7 @@ const directoryFiles = [
 ];
 
 module.exports = {
+	presets:[  fs.existsSync( themePreset ) ? require(themePreset) : '' ],
 	content: directoryFiles
 };
+
