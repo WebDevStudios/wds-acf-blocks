@@ -1,0 +1,35 @@
+{
+	"name": "abs/hero",
+	"title": "Hero",
+	"description": "A block used to display a Hero.",
+	"editorStyle": "file:./editor.css",
+	"editorScript": "file:./editor.js",
+	"style": "file:./style-script.css",
+	"script": "file:./script.js",
+	"category": "theme",
+	"icon": "cover-image",
+	"apiVersion": 2,
+	"keywords": [ "hero", "block" ],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "hero.php"
+	},
+	"supports": {
+		"align": true,
+		"align_text": true,
+		"align_content": true,
+		"full_height": true,
+		"anchor": true,
+		"color": true,
+		"customClassName": true,
+		"jsx": true
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"_is_preview": "true"
+			}
+		}
+	}
+}
