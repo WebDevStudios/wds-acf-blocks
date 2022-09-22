@@ -15,7 +15,7 @@ namespace WebDevStudios\abs;
 
 // Define a global version number.
 define( 'ABS_WDS_ACF_VERSION', '1.0.0' );
-define( 'ABS_ROOT_PATH', plugin_dir_path( __FILE__ ) );
+define( 'ABS_ROOT_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 
 /**
  * Check to see if ACF Pro is active.
@@ -84,7 +84,8 @@ add_action( 'acf/init', __NAMESPACE__ . '\wds_acf_register_blocks' );
 function include_helper_files() {
 	$files = [
 		'inc/helpers/',
-		'inc/'
+		'wpcli/',
+		'inc/',
 	];
 
 	foreach ( $files as $include ) {
