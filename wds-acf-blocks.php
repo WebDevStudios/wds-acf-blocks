@@ -84,7 +84,7 @@ add_action( 'acf/init', __NAMESPACE__ . '\wds_acf_register_blocks' );
 function include_helper_files() {
 	$files = [
 		'inc/helpers/',
-		'inc/'
+		'inc/',
 	];
 
 	foreach ( $files as $include ) {

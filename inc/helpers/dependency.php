@@ -15,8 +15,8 @@ namespace WebDevStudios\abs;
  */
 function is_portable() {
 
-	if ( ! function_exists( 'acf' ) || 6 > absint( acf()->version )  ) :
-		return false ;
+	if ( ! function_exists( 'acf' ) || 6 > absint( acf()->version ) ) :
+		return false;
 	endif;
 
 	return true;
