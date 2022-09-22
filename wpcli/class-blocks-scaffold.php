@@ -22,44 +22,35 @@ class Blocks_Scaffold {
 	 *
 	 * @var string
 	 */
-	public $name = '';
-
-	/**
-	 * Block Title
-	 *
-	 * @var string
-	 */
-	public $title = '';
-
-	/**
-	 * Block Description
-	 *
-	 * @var string
-	 */
-	public $desc = '';
-
-	/**
-	 * Block Keywords
-	 *
-	 * @var string
-	 */
-	public $keywords = '';
-
-	/**
-	 * Block Icon
-	 *
-	 * @var string
-	 */
-	public $icon = '';
+	private $name = '';
 
 	/**
 	 * Create a new block.
 	 *
+	 * @synopsis <blockname> [--title=<blocktitle>] [--desc=<blockdescription>] [--keyword=<blockkeyword>] [--icon=<blockicon>]
+	 *
+	 * ## OPTIONS
+	 *
+	 * <blockname>
+	 * : The block name. Must only have alphabetical characters.
+	 *
+	 * [--desc=<blockdescription>]
+	 * : The bloc description.
+	 *
+	 * [--keyword=<blockkeyword>]
+	 * : They keyword for the block.
+	 *
+	 * [--icon=<blockicon>]
+	 * : Block Icon.
+	 *
+	 * ## EXAMPLES
+	 *
+	 * wp abs create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keywords="myblock" --icon="table-row-before"
 	 * @since ??
 	 * @param string $name The block name.
-	 * @param array  $args The block args.
+	 * @param array  $assoc_args The block args.
 	 */
-	public function create_portable_block( $name, $args ) {
+	public function create_portable_block( $name, $assoc_args ) {
 		$this->name = esc_html( $name[0] );
 
 		// validate name.
@@ -82,7 +73,7 @@ class Blocks_Scaffold {
 		$this->create_block_dir();
 
 		// create block json.
-		$this->create_block_json();
+		$this->create_block_json( $args );
 
 		// create block renderer.
 		$this->create_block_render_php();
@@ -104,7 +95,7 @@ class Blocks_Scaffold {
 	 *
 	 * @since ??
 	 */
-	public function init_filesystem() {
+	private function init_filesystem() {
 		// File system support.
 		global $wp_filesystem;
 		require_once ABSPATH . '/wp-admin/includes/file.php';
@@ -119,7 +110,7 @@ class Blocks_Scaffold {
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 * @since ??
 	 */
-	public function create_block_dir() {
+	private function create_block_dir() {
 		$dir = ABS_ROOT_PATH . 'src/blocks/' . $this->name;
 
 		if ( ! $this->init_filesystem()->exists( $dir ) ) {
@@ -135,7 +126,7 @@ class Blocks_Scaffold {
 	 * @since ??
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
-	public function create_block_render_php() {
+	private function create_block_render_php() {
 		$dir = ABS_ROOT_PATH . 'wpcli/block-starter/block.php';
 
 		// copy block render file.
@@ -151,7 +142,7 @@ class Blocks_Scaffold {
 	 * @since ??
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
-	public function create_block_tailwind_config() {
+	private function create_block_tailwind_config() {
 		$dir     = ABS_ROOT_PATH . 'wpcli/block-starter/tailwind.config.js';
 		$content = '';
 
@@ -170,10 +161,11 @@ class Blocks_Scaffold {
 	/**
 	 * Create the block json.
 	 *
+	 * @param array $args Block details.
 	 * @since ??
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
-	public function create_block_json() {
+	private function create_block_json( $args ) {
 		$local_file = ABS_ROOT_PATH . 'wpcli/block-starter/block.json';
 		$content    = '';
 
@@ -188,9 +180,9 @@ class Blocks_Scaffold {
 				],
 				[
 					$this->name,
-					$this->title,
-					$this->desc,
-					$this->icon,
+					$args['title'],
+					$args['desc'],
+					$args['icon'],
 				],
 				$content
 			);
@@ -207,7 +199,7 @@ class Blocks_Scaffold {
 	 * @since ??
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
-	public function create_block_editor_assets() {
+	private function create_block_editor_assets() {
 		$assets_js  = ABS_ROOT_PATH . 'wpcli/block-starter/editor.js';
 		$assets_css = ABS_ROOT_PATH . 'wpcli/block-starter/editor.scss';
 
@@ -233,7 +225,7 @@ class Blocks_Scaffold {
 	 * @since ??
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
-	public function create_block_assets() {
+	private function create_block_assets() {
 		$assets_js  = ABS_ROOT_PATH . 'wpcli/block-starter/script.js';
 		$assets_css = ABS_ROOT_PATH . 'wpcli/block-starter/style.scss';
 
