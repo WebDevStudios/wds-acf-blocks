@@ -93,6 +93,9 @@ class Blocks_Scaffold {
 		// create FE assets.
 		$this->create_block_assets();
 
+		// create block php.
+		$this->create_block_tailwind_config();
+
 		WP_CLI::success( $this->name . ' block created.' );
 	}
 
@@ -121,8 +124,6 @@ class Blocks_Scaffold {
 
 		if ( ! $this->init_filesystem()->exists( $dir ) ) {
 			$this->init_filesystem()->mkdir( $dir, 0755 );
-
-			WP_CLI::success( 'Block directory created.' );
 		} else {
 			WP_CLI::error( 'Block directory already exists.', true );
 		}
@@ -142,8 +143,29 @@ class Blocks_Scaffold {
 			WP_CLI::error( 'ERROR :: Could not create render file.', true );
 		}
 
-		WP_CLI::success( 'Block render file created.' );
 	}
+
+	/**
+	 * Create the block tailwind config file.
+	 *
+	 * @since ??
+	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
+	 */
+	public function create_block_tailwind_config() {
+		$dir     = ABS_ROOT_PATH . 'wpcli/block-starter/tailwind.config.js';
+		$content = '';
+
+		if ( $this->init_filesystem()->exists( $dir ) ) {
+			$content = $this->init_filesystem()->get_contents( $dir );
+			$content = str_replace( '{{blockName}}', $this->name, $content );
+		}
+
+		if ( ! $this->init_filesystem()->put_contents( ABS_ROOT_PATH . 'src/blocks/' . $this->name . '/tailwind.config.js', $content ) ) {
+			WP_CLI::error( 'ERROR :: Could not create a block json file.', true );
+		}
+
+	}
+
 
 	/**
 	 * Create the block json.
@@ -177,8 +199,6 @@ class Blocks_Scaffold {
 		if ( ! $this->init_filesystem()->put_contents( ABS_ROOT_PATH . 'src/blocks/' . $this->name . '/block.json', $content ) ) {
 			WP_CLI::error( 'ERROR :: Could not create a block json file.', true );
 		}
-
-		WP_CLI::success( 'Created block json file.' );
 	}
 
 	/**
@@ -205,7 +225,6 @@ class Blocks_Scaffold {
 			WP_CLI::error( 'ERROR :: Could not create editor js file.', true );
 		}
 
-		WP_CLI::success( 'Editor assets created.' );
 	}
 
 	/**
@@ -231,8 +250,6 @@ class Blocks_Scaffold {
 		if ( ! $this->init_filesystem()->copy( $assets_css, ABS_ROOT_PATH . 'src/blocks/' . $this->name . '/style.scss' ) ) {
 			WP_CLI::error( 'ERROR :: Could not create editor js file.', true );
 		}
-
-		WP_CLI::success( 'Block assets created.' );
 
 	}
 
