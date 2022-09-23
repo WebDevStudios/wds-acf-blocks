@@ -12,7 +12,6 @@ namespace WebDevStudios\abs;
  *
  * @author WebDevStudios
  *
- * @param array $classes Array of classes from block defaults.
  * @param array $block Array of block attributes.
  *
  * return array The updated array of classes.

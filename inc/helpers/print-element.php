@@ -16,13 +16,13 @@ namespace WebDevStudios\abs;
  * @param array  $args Args for the block.
  */
 function print_element( $element_name = '', $args = [] ) {
-	if( ! $element_name ) {
+	if ( ! $element_name ) {
 		return;
 	}
 
 	// extract args.
 	if ( ! empty( $args ) ) {
-		extract( $args );
+		extract( $args ); //phpcs:ignore WordPress.PHP.DontExtract.extract_extract -- We can use it here since we know what to expect on the arguments.
 	}
 
 	require ABS_ROOT_PATH . 'src/elements/' . $element_name . '.php';
