@@ -49,5 +49,10 @@ function get_block_classes( $block ) {
 		$abs_block_classes[] = 'has-text-align-' . $block['alignText'];
 	}
 
+	// Get Overlay Color Class
+	if ( ! empty( $block['overlayColor'] ) ) {
+		$abs_block_classes[] = 'has-' . $block['overlayColor'] . '-background-color';
+	}
+
 	return $abs_block_classes;
 }
