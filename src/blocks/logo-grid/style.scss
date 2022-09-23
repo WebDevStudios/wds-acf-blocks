@@ -3,15 +3,13 @@
 //----------------------------------------
 
 .wds-block.logo-grid {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 1rem;
+	@apply grid gap-4 grid-cols-3;
 
 	.acf-innerblocks-container {
-		grid-column: 1 / 4;
+		@apply col-span-full;
 	}
 
 	.wds-module-figure {
-		grid-column: span 1 / span 1;
+		@apply col-span-1;
 	}
 }

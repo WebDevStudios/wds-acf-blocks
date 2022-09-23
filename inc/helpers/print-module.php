@@ -16,13 +16,13 @@ namespace WebDevStudios\abs;
  * @param array  $args Args for the module.
  */
 function print_module( $module_name = '', $args ) {
-	if( ! $module_name ) {
+	if ( ! $module_name ) {
 		return;
 	}
 
 	// extract args.
 	if ( ! empty( $args ) ) {
-		extract( $args );
+		extract( $args ); //phpcs:ignore WordPress.PHP.DontExtract.extract_extract -- We can use it here since we know what to expect on the arguments.
 	}
 
 	require ABS_ROOT_PATH . 'src/modules/' . $module_name . '.php';

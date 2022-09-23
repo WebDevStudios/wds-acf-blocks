@@ -1,2 +1,1 @@
-.wds-block{margin-bottom:4rem;margin-top:4rem}.acf-block-preview .acf-innerblocks-container,.acf-block-preview .acf-innerblocks-container [data-rich-text-placeholder]{@apply text-gray-300}.acf-block-preview .acf-innerblocks-container:empty:before{content:"Insert InnerBlocks here";@apply absolute top-8 left-8 block w-full text-gray-300 text-center}
-.wds-block.cards-repeater .card-wrap{display:grid;gap:1rem;grid-auto-flow:column}.wds-block.cards-repeater .wds-module-card{border:1px solid #000;padding:1rem}
+.wds-block.cards-repeater .wds-module-card{--tw-border-opacity:1;border-color:rgb(0 0 0/var(--tw-border-opacity));border-width:1px;padding:.25rem}

@@ -1,2 +1,1 @@
-.wds-block{margin-bottom:4rem;margin-top:4rem}.acf-block-preview .acf-innerblocks-container,.acf-block-preview .acf-innerblocks-container [data-rich-text-placeholder]{@apply text-gray-300}.acf-block-preview .acf-innerblocks-container:empty:before{content:"Insert InnerBlocks here";@apply absolute top-8 left-8 block w-full text-gray-300 text-center}
-.wds-block.side-by-side{display:flex}.wds-block.side-by-side .wds-module-card,.wds-block.side-by-side .wds-module-figure{width:50%}.wds-block.side-by-side .wds-module-card{padding:1rem}
+.wds-block.side-by-side .wds-module-card{padding:.5rem}

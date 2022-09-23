@@ -3,50 +3,47 @@
 	"version": "1.0.0",
 	"description": "A set of custom Gutenberg blocks built with Advanced Custom Fields Pro.",
 	"author": "WebDevStudios",
-	"license": "GPL-3.0",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"plugin"
+	],
+	"homepage": "https://github.com/WebDevStudios/wds-acf-blocks#readme",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/WebDevStudios/wds-acf-blocks.git"
 	},
-	"main": "src/index.js",
-	"keywords": [
-		"plugin"
-	],
 	"bugs": {
 		"url": "https://github.com/WebDevStudios/wds-acf-blocks/issues"
 	},
-	"homepage": "https://github.com/WebDevStudios/wds-acf-blocks#readme",
 	"engines": {
 		"node": ">=14",
 		"npm": ">=7"
 	},
+	"main": "src/index.js",
 	"devDependencies": {
 		"@wordpress/eslint-plugin": "12.8.0",
 		"@wordpress/prettier-config": "^1.4.0",
 		"@wordpress/scripts": "^23.3.0",
 		"autoprefixer": "^10.4.8",
+		"cssnano": "^5.1.4",
 		"cross-env": "^7.0.3",
-		"css-loader": "^6.7.1",
 		"eslint-plugin-eslint-comments": "^3.2.0",
 		"eslint-webpack-plugin": "^3.2.0",
-		"mini-css-extract-plugin": "^2.6.1",
 		"npm-run-all": "^4.1.5",
-		"postcss": "^8.4.14",
-		"postcss-loader": "^7.0.1",
-		"postcss-move-props-to-bg-image-query": "^4.0.0",
-		"postcss-preset-env": "^7.7.2",
+		"postcss": "^8.4.10",
+		"postcss-cli": "^9.1.0",
+		"postcss-multiple-tailwind": "^1.0.0",
 		"prettier": "npm:wp-prettier@^2.6.2",
-		"sass-loader": "^13.0.2",
 		"stylelint-config-prettier": "^9.0.3",
 		"stylelint-webpack-plugin": "^3.3.0",
-		"svg-transform-loader": "^2.0.13"
+		"svg-transform-loader": "^2.0.13",
+		"tailwindcss": "^3.1.7"
 	},
 	"scripts": {
 		"build": "cross-env NODE_ENV=production wp-scripts build --webpack-src-dir=src/blocks --webpack-copy-php",
 		"build:pot": "composer run-script pot",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
-		"dev": "npm run watch",
 		"format": "run-p format:*",
 		"format:css": "npx prettier '**/*.scss' --write && npm run lint:css -- --fix",
 		"format:js": "wp-scripts format && npm run lint:js -- --fix",
@@ -60,7 +57,6 @@
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "composer install --quiet && npm run build",
-		"start": "cross-env NODE_ENV=development wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php",
-		"watch": "run-p start sync"
+		"start": "cross-env NODE_ENV=development wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php"
 	}
 }

@@ -1,0 +1,32 @@
+{
+	"name": "abs/{{name}}",
+	"title": "{{title}}",
+	"description": "{{description}}",
+	"editorStyle": "file:./editor.css",
+	"editorScript": "file:./editor.js",
+	"style": "file:./style-script.css",
+	"script": "file:./script.js",
+	"category": "theme",
+	"icon": "{{icon}}",
+	"apiVersion": 2,
+	"keywords": [ "{{name}}", "block" ],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "{{name}}.php"
+	},
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"color": true,
+		"customClassName": true,
+		"jsx": true
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"_is_preview": "true"
+			}
+		}
+	}
+}

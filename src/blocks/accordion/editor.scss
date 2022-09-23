@@ -5,13 +5,7 @@
 .wds-module-accordion {
 
 	.accordion-item {
-		border: 1px solid #000;
-		margin-bottom: 1rem;
-	}
-
-	.accordion-title,
-	.accordion-content {
-		padding: .5rem 1rem;
+		@apply border border-black mb-4;
 	}
 
 }
