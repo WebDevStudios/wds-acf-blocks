@@ -8,7 +8,7 @@ const directoryFiles = [
 ];
 
 module.exports = {
-	presets:[  fs.existsSync( themePreset ) ? require(themePreset) : '' ],
+	presets:[  fs.existsSync( global.themePreset ) ? require(global.themePreset) : '' ],
 	content: directoryFiles
 };
 
