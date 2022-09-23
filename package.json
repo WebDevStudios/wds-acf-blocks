@@ -44,7 +44,6 @@
 		"build:pot": "composer run-script pot",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
-		"dev": "npm run watch",
 		"format": "run-p format:*",
 		"format:css": "npx prettier '**/*.scss' --write && npm run lint:css -- --fix",
 		"format:js": "wp-scripts format && npm run lint:js -- --fix",
@@ -58,7 +57,6 @@
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "composer install --quiet && npm run build",
-		"start": "cross-env NODE_ENV=development wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php",
-		"watch": "run-p start sync"
+		"start": "cross-env NODE_ENV=development wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php"
 	}
 }
