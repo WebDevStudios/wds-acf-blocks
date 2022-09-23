@@ -59,7 +59,6 @@
             },
             "choices": {
                 "default": "Default (16:9 aspect ratio, Ideal size: 1600 x 500 pixels)",
-                "full": "Full Height",
                 "slanted": "Slanted"
             },
             "default_value": "default",
@@ -93,7 +92,7 @@
             },
             "default_value": "",
             "enable_opacity": 1,
-            "return_format": "array"
+            "return_format": "string"
         },
         {
             "key": "field_632b791177d00",
@@ -146,5 +145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663793896
+    "modified": 1663954786
 }
