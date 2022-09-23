@@ -3,64 +3,45 @@
 //----------------------------------------
 
 .wds-block.hero {
-	position: relative;
+	@apply relative flex;
 
 	.hero-background {
-		border: none;
-		bottom: 0;
-		box-shadow: none;
-		height: 100%;
-		left: 0;
-		margin: 0;
+		@apply border-none border-0 bottom-0 shadow-none h-full left-0 m-0 max-w-none outline-none p-0 absolute right-0 top-0 w-full z-0;
+
 		max-height: none;
-		max-width: none;
-		outline: none;
-		padding: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
-		width: 100%;
-		z-index: 0;
 
 		img {
-			height: 100%;
-			object-fit: cover;
-			position: absolute;
-			width: 100%;
+			@apply h-full object-cover absolute w-full;
 		}
 	}
 
 	&.has-background {
 		.hero-background {
 			img {
-				opacity: 0.5;
+				@apply opacity-50;
 			}
 		}
 	}
 
 	.hero-content {
-		height: 100%;
-		opacity: 1;
-		position: relative;
-		width: 100%;
-		z-index: 1;
+		@apply h-full opacity-100 relative w-full z-10;
 	}
 
-	.is-vertically-aligned-top {
+	&.is-vertically-aligned-top {
 		.hero-content {
-			align-self: start;
+			@apply self-start;
 		}
 	}
 
-	.is-vertically-aligned-center {
+	&.is-vertically-aligned-center {
 		.hero-content {
-			align-self: center;
+			@apply self-center;
 		}
 	}
 
-	.is-vertically-aligned-bottom {
+	&.is-vertically-aligned-bottom {
 		.hero-content {
-			align-self: end;
+			@apply self-end;
 		}
 	}
 }
