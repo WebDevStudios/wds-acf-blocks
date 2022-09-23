@@ -54,7 +54,7 @@ class Blocks_Scaffold {
 		$this->name = esc_html( $name[0] );
 
 		// validate name.
-		if ( ! preg_match( '/^[a-zA-Z0-9]+$/', $this->name ) ) {
+		if ( ! preg_match( '/^[a-zA-Z0-9\-]+$/', $this->name ) ) {
 			WP_CLI::error( 'Invalid name, Block name must only contain alphabets.', true );
 		}
 
