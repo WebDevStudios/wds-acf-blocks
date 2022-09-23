@@ -33,10 +33,10 @@
                 "id": ""
             },
             "choices": {
-                "default": "Color Background",
+                "color-bg": "Color Background",
                 "image-bg": "Image Background"
             },
-            "default_value": "default",
+            "default_value": "color-bg",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -145,5 +145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663954786
+    "modified": 1663969868
 }
