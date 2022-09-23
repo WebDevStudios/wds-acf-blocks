@@ -19,13 +19,23 @@
 		right: 0;
 		top: 0;
 		width: 100%;
-		z-index: -1;
+		z-index: 0;
 
 		img {
 			height: 100%;
 			object-fit: cover;
 			position: absolute;
 			width: 100%;
+		}
+
+	}
+
+	&.has-background {
+
+		.hero-background {
+			img {
+				opacity: 0.5;
+			}
 		}
 	}
 
