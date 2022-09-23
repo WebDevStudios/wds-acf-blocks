@@ -19,27 +19,32 @@ $abs_defaults = [
 	'full_height'          => true === $block['full_height'] ? 'min-height:100vh;' : '',
 	'allowed_innerblocks'  => [ 'core/heading', 'core/paragraph', 'core/buttons', 'core/spacer' ],
 	'innerblocks_template' => [
-		[ 'core/paragraph',
+		[
+			'core/paragraph',
 			[
 				'placeholder' => 'Eyebrow goes here.',
 				'className'   => 'hero-eyebrow',
 			],
 		],
-		[ 'core/heading',
+		[
+			'core/heading',
 			[
-				'level' => 2,
+				'level'       => 2,
 				'placeholder' => 'Title Goes Here',
 				'className'   => 'hero-title',
 			],
 		],
-		[ 'core/paragraph',
+		[
+			'core/paragraph',
 			[
 				'placeholder' => 'Hero content shows up here.',
 				'className'   => 'hero-content',
 			],
 		],
-		[ 'core/buttons',
-			[ 'core/button',
+		[
+			'core/buttons',
+			[
+				'core/button',
 				[
 					'className' => 'hero-button',
 				],
@@ -74,7 +79,7 @@ $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
 		>
 	</figure>
 
-<?php elseif ( $abs_hero['hero_background_image'] || $abs_hero_bg_color  ) : ?>
+<?php elseif ( $abs_hero['hero_background_image'] || $abs_hero_bg_color ) : ?>
 
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php echo esc_attr( $abs_inline_styles ); ?>>
 

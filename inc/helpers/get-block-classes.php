@@ -33,7 +33,7 @@ function get_block_classes( $block ) {
 		$abs_block_classes[] = 'has-' . $block['textColor'] . '-color';
 	}
 
-    // Get Horizontal Class
+	// Get Horizontal Class
 	if ( ! empty( $block['align'] ) ) {
 		$abs_block_classes[] = 'align' . $block['align'];
 	}
