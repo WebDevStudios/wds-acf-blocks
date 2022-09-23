@@ -16,7 +16,7 @@ namespace WebDevStudios\abs;
 // Define a global version number.
 define( 'ABS_WDS_ACF_VERSION', '1.0.0' );
 define( 'ABS_ROOT_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
-
+define( 'ABS_ROOT_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 /**
  * Check to see if ACF Pro is active.
  *
