@@ -15,7 +15,7 @@
 
 .acf-block-preview .acf-innerblocks-container:empty::before {
 	color: #ddd;
-	content: 'Insert InnerBlocks here';
+	content: 'Drag in InnerBlocks here';
 	left: 50%;
 	position: absolute;
 	text-align: center;
