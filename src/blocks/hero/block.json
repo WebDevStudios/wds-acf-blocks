@@ -21,6 +21,7 @@
 		"full_height": true,
 		"anchor": true,
 		"color": true,
+		"overlayColor": true,
 		"customClassName": true,
 		"jsx": true
 	},
