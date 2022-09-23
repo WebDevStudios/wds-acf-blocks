@@ -1,7 +1,7 @@
 /* Global Block Styles for the Editor */
 .acf-block-preview .acf-innerblocks-container {
 	border: 2px;
-	border-color: #eee;
+	border-color: #ddd;
 	border-style: dashed;
 	border-radius: 8px;
 	min-height: 40px;
@@ -9,13 +9,12 @@
 	position: relative;
 }
 
-.acf-block-preview .acf-innerblocks-container,
 .acf-block-preview .acf-innerblocks-container [data-rich-text-placeholder] {
-	color: #eee;
+	color: #ddd;
 }
 
 .acf-block-preview .acf-innerblocks-container:empty::before {
-	color: #eee;
+	color: #ddd;
 	content: 'Insert InnerBlocks here';
 	left: 50%;
 	position: absolute;
