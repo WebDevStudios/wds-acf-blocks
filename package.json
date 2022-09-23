@@ -3,23 +3,23 @@
 	"version": "1.0.0",
 	"description": "A set of custom Gutenberg blocks built with Advanced Custom Fields Pro.",
 	"author": "WebDevStudios",
-	"license": "GPL-3.0",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"plugin"
+	],
+	"homepage": "https://github.com/WebDevStudios/wds-acf-blocks#readme",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/WebDevStudios/wds-acf-blocks.git"
 	},
-	"main": "src/index.js",
-	"keywords": [
-		"plugin"
-	],
 	"bugs": {
 		"url": "https://github.com/WebDevStudios/wds-acf-blocks/issues"
 	},
-	"homepage": "https://github.com/WebDevStudios/wds-acf-blocks#readme",
 	"engines": {
 		"node": ">=14",
 		"npm": ">=7"
 	},
+	"main": "src/index.js",
 	"devDependencies": {
 		"@wordpress/eslint-plugin": "12.8.0",
 		"@wordpress/prettier-config": "^1.4.0",

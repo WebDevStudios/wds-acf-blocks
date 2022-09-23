@@ -2,7 +2,7 @@
 
 With the advent of Gutenberg in WordPress, Advanced Custom Fields stepped up to help make the process of creating custom blocks easier and faster. This plugin creates a set of custom blocks with basic styles for you to customize in your theme.
 
-<a href="https://webdevstudios.com/contact/"><img src="https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png" alt="WebDevStudios. Your Success is Our Mission."></a>
+[![WebDevStudios. Your Success is Our Mission.](https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png)](https://webdevstudios.com/contact/)
 
 ## 🧱 Available Blocks
 
@@ -11,7 +11,7 @@ This plugin includes the following blocks:
 - Accordion
 - Carousel
 
-<div align="center"><img src="https://i.imgur.com/gOTNnnH.png" width="400"></div><br>
+![image](https://i.imgur.com/gOTNnnH.png)
 
 WDS ACF Blocks is bundled with a [Style Lint](https://stylelint.io/), [ESLint](https://eslint.org/), and [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) linting rulesets – plus, it passes both WCAG 2.1AA and Section 508 standards out of the box.
 
@@ -99,13 +99,13 @@ To edit an ACF block in Gutenberg, you need to access the settings. Please follo
 
 ### → Step #1
 
-Go to the WordPress admin and open the *add new post* or *edit post* screen in Gutenberg.
+Go to the WordPress admin and open the _add new post_ or _edit post_ screen in Gutenberg.
 
 ![image](https://i.imgur.com/4ImtYJU.png)
 
 ### → Step #2
 
-Click on the add (+) block icon on the top left corner of the screen and search for *carousel* to add a new *Carousel* block to the editor.
+Click on the add (+) block icon on the top left corner of the screen and search for _carousel_ to add a new _Carousel_ block to the editor.
 
 ![image](https://i.imgur.com/rMusQYi.png)
 
