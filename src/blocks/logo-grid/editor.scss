@@ -1,17 +1,3 @@
 //----------------------------------------
 // Block - Logo Grid, EDITOR
 //----------------------------------------
-
-.wds-block.logo-grid {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 1rem;
-
-	.acf-innerblocks-container {
-		grid-column: 1 / 4;
-	}
-
-	.wds-module-figure {
-		grid-column: span 1 / span 1;
-	}
-}

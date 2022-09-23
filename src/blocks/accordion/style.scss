@@ -2,32 +2,32 @@
 // Module - Accordion Styles, FRONTEND
 //----------------------------------------
 
+@tailwind components;
+@tailwind utilities;
+
 .wds-module-accordion {
 
 	.accordion-item {
-		margin-bottom: 1rem;
+		@apply mb-4;
 	}
 
 	.accordion-title {
-		width: 100%;
-		display: flex;
-		padding: .5rem 1rem;
-		justify-content: space-between;
+		@apply w-full flex justify-between py-4 px-4;
 
 		&[aria-expanded='false'] {
 			~div {
-				display: none;
+				@apply hidden;
 			}
 		}
 
 		&[aria-expanded='true'] {
 			~div {
-				display: block;
+				@apply block;
 			}
 		}
 	}
 
 	.accordion-content {
-		padding: .5rem 1rem;
+		@apply py-4 px-4;
 	}
 }

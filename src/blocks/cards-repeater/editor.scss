@@ -4,15 +4,8 @@
 
 .wds-block.cards-repeater {
 
-	.card-wrap {
-		display: grid;
-		grid-auto-flow: column;
-		gap: 1rem;
-	}
-
 	.wds-module-card {
-		border: 1px solid #000;
-		padding: 1rem;
+		@apply border border-black p-4;
 	}
 
 }
