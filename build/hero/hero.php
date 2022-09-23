@@ -13,8 +13,12 @@ use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\get_acf_fields;
 use function WebDevStudios\abs\get_block_classes;
 
+// Pull in the fields from ACF.
+$abs_hero          = get_acf_fields( [ 'hero_variation', 'hero_background_style', 'hero_background_image', 'hero_background_color' ], $block['id'] );
+$abs_hero_bg_color = isset( $abs_hero['hero_background_color'] ) ? 'background-color:' . esc_attr( $abs_hero['hero_background_color'] ) . ';' : '';
+
 $abs_defaults = [
-	'class'                => [ 'wds-block', 'hero' ],
+	'class'                => [ 'wds-block', 'hero', $abs_hero['hero_variation'], $abs_hero['hero_background_style'] ],
 	'id'                   => ! empty( $block['anchor'] ) ? $block['anchor'] : '',
 	'full_height'          => true === $block['full_height'] ? 'min-height:100vh;' : '',
 	'allowed_innerblocks'  => [ 'core/heading', 'core/paragraph', 'core/buttons', 'core/spacer' ],
@@ -53,10 +57,6 @@ $abs_defaults = [
 	],
 ];
 
-// Pull in the fields from ACF.
-$abs_hero          = get_acf_fields( [ 'hero_variation', 'hero_background_style', 'hero_background_image', 'hero_background_color' ], $block['id'] );
-$abs_hero_bg_color = isset( $abs_hero['hero_background_color'] ) ? 'background-color:' . esc_attr( $abs_hero['hero_background_color'] ) . ';' : '';
-
 // Get custom classes for the block and/or for block colors.
 $abs_block_classes = [];
 $abs_block_classes = get_block_classes( $block );
@@ -68,6 +68,7 @@ endif;
 
 // Set up element attributes.
 $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
+
 ?>
 
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
