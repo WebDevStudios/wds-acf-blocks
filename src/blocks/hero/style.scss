@@ -28,11 +28,9 @@
 			position: absolute;
 			width: 100%;
 		}
-
 	}
 
 	&.has-background {
-
 		.hero-background {
 			img {
 				opacity: 0.5;
@@ -44,8 +42,25 @@
 		height: 100%;
 		opacity: 1;
 		position: relative;
-	    width: 100%;
-    	z-index: 1;
+		width: 100%;
+		z-index: 1;
 	}
 
+	.is-vertically-aligned-top {
+		.hero-content {
+			align-self: start;
+		}
+	}
+
+	.is-vertically-aligned-center {
+		.hero-content {
+			align-self: center;
+		}
+	}
+
+	.is-vertically-aligned-bottom {
+		.hero-content {
+			align-self: end;
+		}
+	}
 }
