@@ -63,8 +63,6 @@ endif;
 
 // Set up element attributes.
 $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
-
-//echo '<pre>'; var_dump( $block[] ); echo '</pre>'
 ?>
 
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
