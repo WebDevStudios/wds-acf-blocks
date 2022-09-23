@@ -27,21 +27,23 @@
 		@apply h-full opacity-100 relative w-full z-10;
 	}
 
-	&.is-vertically-aligned-top {
-		.hero-content {
-			@apply self-start;
+	&.is-vertically-aligned {
+		&-top {
+			.hero-content {
+				@apply self-start;
+			}
 		}
-	}
 
-	&.is-vertically-aligned-center {
-		.hero-content {
-			@apply self-center;
+		&-center {
+			.hero-content {
+				@apply self-center;
+			}
 		}
-	}
 
-	&.is-vertically-aligned-bottom {
-		.hero-content {
-			@apply self-end;
+		&-bottom {
+			.hero-content {
+				@apply self-end;
+			}
 		}
 	}
 }
