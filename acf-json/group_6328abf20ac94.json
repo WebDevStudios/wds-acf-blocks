@@ -170,7 +170,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "abs\/carousel"
             }
         ]
     ],
@@ -183,5 +183,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663715233
+    "modified": 1664203419
 }
