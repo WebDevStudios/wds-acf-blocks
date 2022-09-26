@@ -33,22 +33,22 @@ function get_block_classes( $block ) {
 		$abs_block_classes[] = 'has-' . $block['textColor'] . '-color';
 	}
 
-	// Get Horizontal Class
+	// Get Horizontal Class.
 	if ( ! empty( $block['align'] ) ) {
 		$abs_block_classes[] = 'align' . $block['align'];
 	}
 
-	// Get Vertical Class (Inner Content Align)
+	// Get Vertical Class (Inner Content Align).
 	if ( ! empty( $block['alignContent'] ) ) {
 		$abs_block_classes[] = 'is-vertically-aligned-' . $block['align_content'];
 	}
 
-	// Get Text Align Class
+	// Get Text Align Class.
 	if ( ! empty( $block['alignText'] ) ) {
 		$abs_block_classes[] = 'has-text-align-' . $block['alignText'];
 	}
 
-	// Get Overlay Color Class
+	// Get Overlay Color Class.
 	if ( ! empty( $block['overlayColor'] ) ) {
 		$abs_block_classes[] = 'has-' . $block['overlayColor'] . '-background-color';
 	}
