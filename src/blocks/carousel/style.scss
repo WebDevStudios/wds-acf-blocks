@@ -6,17 +6,18 @@ $glide-modifier-separator: '-';
 @import '../../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
 
 .carousel {
+	--carousel-height: 600px;
 
 	.wds-module-hero {
 
 		@apply my-40 mx-auto p-0 relative w-full overflow-hidden;
 
-		height: 600px;
+		height: var(--carousel-height);
 
 		.background {
 			@apply bg-left-top bg-cover m-0 p-0 overflow-hidden absolute w-full -z-10;
 
-			height: 600px;
+			height: var(--carousel-height);
 
 			img {
 				@apply w-full h-full object-cover;
@@ -32,7 +33,13 @@ $glide-modifier-separator: '-';
 			.hero-content {
 				@apply flex flex-col items-center justify-center text-white relative w-full z-20 p-20;
 
-				min-height: 600px;
+				min-height: var(--carousel-height);
+			}
+		}
+
+		&.has-text-color {
+			.hero-content {
+				@apply text-inherit;
 			}
 		}
 	}
