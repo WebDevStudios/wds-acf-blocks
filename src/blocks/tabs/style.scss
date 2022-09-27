@@ -4,14 +4,10 @@
 .wds-module-tabs {
 
 	nav {
-		display: flex;
-		margin-bottom: -1px;
+		@apply flex -mb-1;
 
 		.tab-title {
-			display: flex;
-			justify-content: center;
-			padding: .5rem 1.5rem;
-			margin-left: .25rem;
+			@apply flex justify-center py-4 px-12 ml-2;
 		}
 	}
 

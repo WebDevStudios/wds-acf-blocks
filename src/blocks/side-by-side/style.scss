@@ -3,15 +3,19 @@
 //----------------------------------------
 
 .wds-block.side-by-side {
-	display: flex;
+	@apply flex flex-wrap;
 
 	&.card-first {
-		flex-direction: row-reverse;
+		@apply flex-row-reverse;
+	}
+
+	.acf-innerblocks-container {
+		@apply w-full;
 	}
 
 	.wds-module-figure,
 	.wds-module-card {
-		width: 50%;
+		@apply w-1/2;
 	}
 
 }
