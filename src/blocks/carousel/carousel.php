@@ -33,9 +33,7 @@ endif;
 $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
 
 // Pull in the fields from ACF.
-$abs_block_heading = get_acf_fields( [ 'block_heading' ], $block['id'] );
-$abs_block_content = get_acf_fields( [ 'block_content' ], $block['id'] );
-$abs_heros         = get_acf_fields( [ 'hero' ], $block['id'] );
+$abs_heros = get_acf_fields( [ 'overlay', 'hero' ], $block['id'] );
 ?>
 
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
@@ -55,19 +53,28 @@ $abs_heros         = get_acf_fields( [ 'hero' ], $block['id'] );
 						<?php
 						foreach ( $abs_heros['hero'] as $abs_hero ) :
 							echo '<li class="glide-slide carousel-item">';
+
+								$abs_hero['class']   = $abs_block_classes;
+								$abs_hero['overlay'] = $abs_heros['overlay'];
+
 								print_module(
 									'hero',
 									$abs_hero
 								);
+
 							echo '</li><!-- .carousel-item -->';
 						endforeach;
 						?>
 					</ul><!-- .carousel-items -->
 				</div><!-- .carousel-track -->
-				<div class="glide-arrows" data-glide-el="controls">
-					<button class="glide-arrow glide-arrow-left" data-glide-dir="&lt;">prev</button>
-					<button class="glide-arrow glide-arrow-right" data-glide-dir="&gt;">next</button>
-				</div><!-- .glide-arrows -->
+
+				<?php if ( $abs_defaults['show_arrows'] ) : ?>
+					<div class="glide-arrows" data-glide-el="controls">
+						<button class="glide-arrow glide-arrow-left" data-glide-dir="&lt;">prev</button>
+						<button class="glide-arrow glide-arrow-right" data-glide-dir="&gt;">next</button>
+					</div><!-- .glide-arrows -->
+				<?php endif; ?>
+
 			</div><!-- .glide -->
 		</section><!-- .hero-wrap -->
 	</section>

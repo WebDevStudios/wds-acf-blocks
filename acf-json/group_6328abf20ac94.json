@@ -20,6 +20,24 @@
             "esc_html": 0
         },
         {
+            "key": "field_6328d85130a01",
+            "label": "Overlay",
+            "name": "overlay",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "parent_repeater": "field_6328abf214941"
+        },
+        {
             "key": "field_6328abf214941",
             "label": "Hero",
             "name": "hero",
@@ -40,24 +58,6 @@
             "button_label": "Add Hero",
             "rows_per_page": 20,
             "sub_fields": [
-                {
-                    "key": "field_6328d85130a01",
-                    "label": "Overlay",
-                    "name": "overlay",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "enable_opacity": 1,
-                    "return_format": "string",
-                    "parent_repeater": "field_6328abf214941"
-                },
                 {
                     "key": "field_6328abf228a40",
                     "label": "Image",
@@ -183,5 +183,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664203419
+    "modified": 1664303245
 }
