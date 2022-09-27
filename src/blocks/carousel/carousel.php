@@ -16,6 +16,7 @@ use function WebDevStudios\abs\get_block_classes;
 $abs_defaults = [
 	'class'               => [ 'wds-block', 'carousel' ],
 	'show_arrows'         => true,
+	'show_bullets'        => true,
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ! empty( $block['anchor'] ) ? $block['anchor'] : '',
 ];
@@ -36,14 +37,20 @@ $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
 $abs_heros = get_acf_fields( [ 'overlay', 'hero' ], $block['id'] );
 ?>
 
-<?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
+<?php
+if ( ! empty( $block['data']['_is_preview'] ) ) :
+	;
+	?>
 	<figure>
 		<img
 			src="<?php echo esc_url( get_theme_file_uri( 'build/images/block-previews/carousel-preview.jpg' ) ); ?>"
 			alt="<?php esc_html_e( 'Preview of the Carousel Block', 'abs' ); ?>"
 		>
 	</figure>
-<?php elseif ( $abs_heros['hero'] ) : ?>
+	<?php
+elseif ( $abs_heros['hero'] ) :
+	;
+	?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
 		<section class="hero-wrap">
@@ -70,9 +77,19 @@ $abs_heros = get_acf_fields( [ 'overlay', 'hero' ], $block['id'] );
 
 				<?php if ( $abs_defaults['show_arrows'] ) : ?>
 					<div class="glide-arrows" data-glide-el="controls">
-						<button class="glide-arrow glide-arrow-left" data-glide-dir="&lt;">prev</button>
-						<button class="glide-arrow glide-arrow-right" data-glide-dir="&gt;">next</button>
+						<button class="glide-arrow glide-arrow-left" data-glide-dir="&lt;" aria-label="Previous Slide"></button>
+						<button class="glide-arrow glide-arrow-right" data-glide-dir="&gt;" aria-label="Next Slide"></button>
 					</div><!-- .glide-arrows -->
+				<?php endif; ?>
+
+				<?php if ( $abs_defaults['show_bullets'] ) : ?>
+					<div class="glide-bullets" data-glide-el="controls[nav]">
+						<?php
+						foreach ( $abs_heros['hero'] as $key => $abs_hero ) :
+							echo '<button class="glide-bullet" data-glide-dir="=' . esc_attr( $key ) . '"></button>';
+						endforeach;
+						?>
+					</div><!-- .glide-bullets -->
 				<?php endif; ?>
 
 			</div><!-- .glide -->

@@ -3,7 +3,7 @@
  *
  */
 import './style.scss';
-import Glide from '@glidejs/glide';
+import Glide, { Controls, Keyboard, Swipe } from '@glidejs/glide/dist/glide.modular.esm'
 
 // Make sure everything is loaded first.
 if (
@@ -45,5 +45,7 @@ function wdsCarousel() {
 				active: 'glide-bullet-active'
 			}
 		}
-	}).mount();
+
+	}).mount({ Controls, Keyboard, Swipe });
+
 }
