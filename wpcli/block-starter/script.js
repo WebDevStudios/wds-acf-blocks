@@ -1,9 +1,9 @@
 /**
  * Block script.
  *
- * @package abs
+ * @package
  * @since ??
  */
- import './style.scss';
+import './style.scss';
 
- // add JS here.
+// add JS here.
