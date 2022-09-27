@@ -53,7 +53,7 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 					echo 'hidden'; }
 				?>
 			>
-				<?php echo esc_html( $abs_item['content'] ); ?>
+				<?php echo wp_kses_post( $abs_item['content'] ); ?>
 			</div>
 		<?php endforeach; ?>
 	</div>
