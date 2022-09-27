@@ -50,11 +50,11 @@ $abs_heros         = get_acf_fields( [ 'hero' ], $block['id'] );
 		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
 		<section class="hero-wrap">
 			<div class="glide">
-				<div data-glide-el="track" class="glide__track carousel-track">
-					<ul class="glide__slides carousel-items">
+				<div data-glide-el="track" class="glide-track carousel-track">
+					<ul class="glide-slides carousel-items">
 						<?php
 						foreach ( $abs_heros['hero'] as $abs_hero ) :
-							echo '<li class="glide__slide carousel-item">';
+							echo '<li class="glide-slide carousel-item">';
 								print_module(
 									'hero',
 									$abs_hero
@@ -64,10 +64,10 @@ $abs_heros         = get_acf_fields( [ 'hero' ], $block['id'] );
 						?>
 					</ul><!-- .carousel-items -->
 				</div><!-- .carousel-track -->
-				<div class="glide__arrows" data-glide-el="controls">
-					<button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">prev</button>
-					<button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">next</button>
-				</div><!-- .glide__arrows -->
+				<div class="glide-arrows" data-glide-el="controls">
+					<button class="glide-arrow glide-arrow-left" data-glide-dir="&lt;">prev</button>
+					<button class="glide-arrow glide-arrow-right" data-glide-dir="&gt;">next</button>
+				</div><!-- .glide-arrows -->
 			</div><!-- .glide -->
 		</section><!-- .hero-wrap -->
 	</section>

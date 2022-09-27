@@ -21,5 +21,29 @@ if (
  *
  */
 function wdsCarousel() {
-	new Glide( '.glide' ).mount();
+	new Glide( '.glide', {
+		type: 'carousel',
+		classes: {
+			swipeable: 'glide-swipeable',
+			dragging: 'glide-dragging',
+			direction: {
+				ltr: 'glide-ltr',
+				rtl: 'glide-rtl'
+			},
+			type: {
+				slider: 'glide-slider',
+				carousel: 'glide-carousel'
+			},
+			slide: {
+				clone: 'glide-slide-clone',
+				active: 'glide-slide-active'
+			},
+			arrow: {
+				disabled: 'glide-arrow-disabled'
+			},
+			nav: {
+				active: 'glide-bullet-active'
+			}
+		}
+	}).mount();
 }

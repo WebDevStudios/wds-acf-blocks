@@ -1,6 +1,8 @@
 //----------------------------------------
 // Module - Carousel Styles, FRONTEND
 //----------------------------------------
+$glide-element-separator: '-';
+$glide-modifier-separator: '-';
 @import '../../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
 
 .carousel {
@@ -59,10 +61,6 @@
 
 		.carousel-items {
 			list-style: none;
-
-			.carousel-item {
-
-			}
 		}
 	}
 
