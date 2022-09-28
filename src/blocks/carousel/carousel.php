@@ -71,10 +71,40 @@ elseif ( $abs_carousels['slides'] ) :
 					?>
 				</ul><!-- .carousel-items -->
 
-				<?php if ( $abs_defaults['show_arrows'] ) : ?>
-					<button class="swiper-button-prev" aria-label="Previous Slide"></button>
-					<button class="swiper-button-next" aria-label="Next Slide"></button>
-				<?php endif; ?>
+				<?php
+				if ( $abs_defaults['show_arrows'] ) :
+					print_element(
+						'button',
+						[
+							'class' => [ 'carousel-button swiper-button-prev' ],
+							'aria'  => [
+								'label' => 'Previous Slide',
+							],
+							'icon'  => [
+								'icon'   => 'chevron-left',
+								'height' => '50px',
+								'width'  => '50px',
+							],
+						]
+					);
+
+					print_element(
+						'button',
+						[
+							'class' => [ 'carousel-button swiper-button-next' ],
+							'aria'  => [
+								'label' => 'Next Slide',
+							],
+							'icon'  => [
+								'icon'   => 'chevron-right',
+								'height' => '50px',
+								'width'  => '50px',
+							],
+						]
+					);
+
+				endif;
+				?>
 
 				<?php if ( $abs_defaults['show_pagination'] ) : ?>
 					<div class="swiper-pagination"></div>
