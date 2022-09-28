@@ -2,16 +2,18 @@
 // Module - Accordion Styles, FRONTEND
 //----------------------------------------
 
-@tailwind components;
-@tailwind utilities;
-
 .wds-module-accordion {
 	.accordion-item {
-		@apply mb-4;
+		@apply mb-8 rounded-md border border-gray-300;
 	}
 
 	.accordion-title {
-		@apply w-full flex justify-between items-center py-4 px-4;
+		@apply mb-0 px-24 py-12 flex w-full justify-between items-center rounded-none;
+
+		&:hover,
+		&:focus {
+			@apply bg-gray-200;
+		}
 
 		&[aria-expanded='false'] {
 			~ div {
@@ -25,12 +27,12 @@
 			}
 
 			svg {
-				@apply rotate-180;
+				@apply rotate-180 transform transition-all;
 			}
 		}
 	}
 
 	.accordion-content {
-		@apply py-4 px-4;
+		@apply px-24 py-12;
 	}
 }
