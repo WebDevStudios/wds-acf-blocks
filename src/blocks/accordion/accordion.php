@@ -2,7 +2,7 @@
 /**
  * BLOCK - Renders an Accordion
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/block-editor/
  *
  * @package abs
  */
