@@ -3,7 +3,7 @@
  *
  */
 import './style.scss';
-import Glide, { Controls, Keyboard, Swipe } from '@glidejs/glide/dist/glide.modular.esm'
+import Swiper,  { Navigation, Pagination, A11y, Keyboard, Lazy } from 'swiper';
 
 // Make sure everything is loaded first.
 if (
@@ -21,31 +21,20 @@ if (
  *
  */
 function wdsCarousel() {
-	new Glide( '.glide', {
-		type: 'carousel',
-		classes: {
-			swipeable: 'glide-swipeable',
-			dragging: 'glide-dragging',
-			direction: {
-				ltr: 'glide-ltr',
-				rtl: 'glide-rtl'
-			},
-			type: {
-				slider: 'glide-slider',
-				carousel: 'glide-carousel'
-			},
-			slide: {
-				clone: 'glide-slide-clone',
-				active: 'glide-slide-active'
-			},
-			arrow: {
-				disabled: 'glide-arrow-disabled'
-			},
-			nav: {
-				active: 'glide-bullet-active'
-			}
-		}
-
-	}).mount({ Controls, Keyboard, Swipe });
-
+	new Swiper( '.swiper', {
+		modules: [ Navigation, Pagination, A11y, Keyboard, Lazy ],
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		loop: true,
+		a11y: true,
+		preloadImages: false,
+		lazy: true,
+		keyboard: true
+	});
 }

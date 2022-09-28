@@ -16,7 +16,7 @@ use function WebDevStudios\abs\get_block_classes;
 $abs_defaults = [
 	'class'               => [ 'wds-block', 'carousel' ],
 	'show_arrows'         => true,
-	'show_bullets'        => true,
+	'show_pagination'     => true,
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ! empty( $block['anchor'] ) ? $block['anchor'] : '',
 ];
@@ -54,42 +54,32 @@ elseif ( $abs_heros['hero'] ) :
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
 		<section class="hero-wrap">
-			<div class="glide">
-				<div data-glide-el="track" class="glide-track carousel-track">
-					<ul class="glide-slides carousel-items">
-						<?php
-						foreach ( $abs_heros['hero'] as $abs_hero ) :
-							echo '<li class="glide-slide carousel-item">';
+			<div class="swiper">
+				<ul class="swiper-wrapper carousel-items">
+					<?php
+					foreach ( $abs_heros['hero'] as $abs_hero ) :
+						echo '<li class="swiper-slide carousel-item">';
 
-								$abs_hero['class']   = $abs_block_classes;
-								$abs_hero['overlay'] = $abs_heros['overlay'];
+							$abs_hero['class']   = $abs_block_classes;
+							$abs_hero['overlay'] = $abs_heros['overlay'];
 
-								print_module(
-									'hero',
-									$abs_hero
-								);
+							print_module(
+								'hero',
+								$abs_hero
+							);
 
-							echo '</li><!-- .carousel-item -->';
-						endforeach;
-						?>
-					</ul><!-- .carousel-items -->
-				</div><!-- .carousel-track -->
+						echo '</li><!-- .carousel-item -->';
+					endforeach;
+					?>
+				</ul><!-- .carousel-items -->
 
 				<?php if ( $abs_defaults['show_arrows'] ) : ?>
-					<div class="glide-arrows" data-glide-el="controls">
-						<button class="glide-arrow glide-arrow-left" data-glide-dir="&lt;" aria-label="Previous Slide"></button>
-						<button class="glide-arrow glide-arrow-right" data-glide-dir="&gt;" aria-label="Next Slide"></button>
-					</div><!-- .glide-arrows -->
+					<button class="swiper-button-prev" aria-label="Previous Slide"></button>
+					<button class="swiper-button-next" aria-label="Next Slide"></button>
 				<?php endif; ?>
 
-				<?php if ( $abs_defaults['show_bullets'] ) : ?>
-					<div class="glide-bullets" data-glide-el="controls[nav]">
-						<?php
-						foreach ( $abs_heros['hero'] as $key => $abs_hero ) :
-							echo '<button class="glide-bullet" data-glide-dir="=' . esc_attr( $key ) . '"></button>';
-						endforeach;
-						?>
-					</div><!-- .glide-bullets -->
+				<?php if ( $abs_defaults['show_pagination'] ) : ?>
+					<div class="swiper-pagination"></div>
 				<?php endif; ?>
 
 			</div><!-- .glide -->

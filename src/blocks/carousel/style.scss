@@ -1,10 +1,11 @@
 //----------------------------------------
 // Module - Carousel Styles, FRONTEND
 //----------------------------------------
-$glide-element-separator: '-';
-$glide-modifier-separator: '-';
-@import '../../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
-@import '../../../node_modules/@glidejs/glide/src/assets/sass/glide.theme';
+$themeColor: theme('colors.gray.400');
+@import '../../../node_modules/swiper/swiper';
+@import '../../../node_modules/swiper/modules/navigation/navigation';
+@import '../../../node_modules/swiper/modules/pagination/pagination';
+@import '../../../node_modules/swiper/modules/a11y/a11y';
 
 .carousel {
 	--carousel-height: 600px;
@@ -45,25 +46,8 @@ $glide-modifier-separator: '-';
 		}
 	}
 
-	.carousel-track {
-
-		.carousel-items {
-			@apply list-none;
-		}
-	}
-
-	.glide-arrow {
-		@apply bg-no-repeat bg-center;
-	}
-
-	.glide-arrow-left {
-		@apply left-16;
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='white' d='M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z'/%3E%3C/svg%3E");
-	}
-
-	.glide-arrow-right {
-		@apply right-16;
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='white' d='M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z'/%3E%3C/svg%3E");
+	.carousel-items {
+		@apply list-none;
 	}
 
 }
