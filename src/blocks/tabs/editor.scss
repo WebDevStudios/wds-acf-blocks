@@ -2,11 +2,9 @@
 // Module - Tabs Styles, EDITOR
 //----------------------------------------
 .wds-module-tabs {
-
 	nav {
-
 		.tab-title {
-			@apply border border-black
+			@apply border border-black;
 		}
 	}
 

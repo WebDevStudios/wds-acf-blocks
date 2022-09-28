@@ -45,8 +45,8 @@ function wdsAccordion() {
 	 */
 	function toggleAccordion( event ) {
 		const target = event.target,
-			accordionItem = target.closest( '.accordion-item' ),
-			isOpen = target.getAttribute( 'aria-expanded' ) === 'true',
+			accordionItem = target.closest( '.accordion-title' ),
+			isOpen = accordionItem.getAttribute( 'aria-expanded' ) === 'true',
 			ariaValue = isOpen ? 'false' : 'true';
 
 		if ( ! isOpen ) {
@@ -55,6 +55,6 @@ function wdsAccordion() {
 			accordionItem.classList.remove( showClass );
 		}
 
-		target.setAttribute( 'aria-expanded', ariaValue );
+		accordionItem.setAttribute( 'aria-expanded', ariaValue );
 	}
 }
