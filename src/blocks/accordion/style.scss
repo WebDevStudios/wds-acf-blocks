@@ -6,23 +6,26 @@
 @tailwind utilities;
 
 .wds-module-accordion {
-
 	.accordion-item {
 		@apply mb-4;
 	}
 
 	.accordion-title {
-		@apply w-full flex justify-between py-4 px-4;
+		@apply w-full flex justify-between items-center py-4 px-4;
 
 		&[aria-expanded='false'] {
-			~div {
+			~ div {
 				@apply hidden;
 			}
 		}
 
 		&[aria-expanded='true'] {
-			~div {
+			~ div {
 				@apply block;
+			}
+
+			svg {
+				@apply rotate-180;
 			}
 		}
 	}
