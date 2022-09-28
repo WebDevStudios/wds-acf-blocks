@@ -3,7 +3,7 @@
  *
  */
 import './style.scss';
-import Swiper,  { Navigation, Pagination, A11y, Keyboard, Lazy } from 'swiper';
+import Swiper, { Navigation, Pagination, A11y, Keyboard, Lazy } from 'swiper';
 
 // Make sure everything is loaded first.
 if (
@@ -35,6 +35,6 @@ function wdsCarousel() {
 		a11y: true,
 		preloadImages: false,
 		lazy: true,
-		keyboard: true
-	});
+		keyboard: true,
+	} );
 }
