@@ -1,7 +1,7 @@
 //----------------------------------------
 // Module - Carousel Styles, FRONTEND
 //----------------------------------------
-$themeColor: theme('colors.gray.400');
+$themeColor: theme( 'colors.gray.400' );
 @import '../../../node_modules/swiper/swiper';
 @import '../../../node_modules/swiper/modules/navigation/navigation';
 @import '../../../node_modules/swiper/modules/pagination/pagination';
@@ -14,12 +14,12 @@ $themeColor: theme('colors.gray.400');
 
 		@apply my-40 mx-auto p-0 relative w-full overflow-hidden;
 
-		height: var(--carousel-height);
+		height: var( --carousel-height );
 
 		.background {
 			@apply bg-left-top bg-cover m-0 p-0 overflow-hidden absolute w-full -z-10;
 
-			height: var(--carousel-height);
+			height: var( --carousel-height );
 
 			img {
 				@apply w-full h-full object-cover;
@@ -35,7 +35,7 @@ $themeColor: theme('colors.gray.400');
 			.carousel-slide-content {
 				@apply flex flex-col items-center justify-center text-white relative w-full z-20 py-20 px-48;
 
-				min-height: var(--carousel-height);
+				min-height: var( --carousel-height );
 			}
 		}
 
@@ -49,5 +49,4 @@ $themeColor: theme('colors.gray.400');
 	.carousel-items {
 		@apply list-none;
 	}
-
 }
