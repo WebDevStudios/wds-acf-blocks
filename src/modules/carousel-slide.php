@@ -49,7 +49,7 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 	<?php endif; ?>
 
 	<div class="container">
-		<div class="hero-content">
+		<div class="carousel-slide-content">
 			<?php
 			// Eyebrow.
 			if ( $abs_args['eyebrow'] ) :
