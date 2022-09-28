@@ -39,8 +39,8 @@
         },
         {
             "key": "field_6328abf214941",
-            "label": "Hero",
-            "name": "hero",
+            "label": "Slides",
+            "name": "slides",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -55,7 +55,7 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Hero",
+            "button_label": "Add Slide",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -183,5 +183,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664303245
+    "modified": 1664395956
 }

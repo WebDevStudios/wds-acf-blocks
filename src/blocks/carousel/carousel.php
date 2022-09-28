@@ -34,12 +34,11 @@ endif;
 $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
 
 // Pull in the fields from ACF.
-$abs_carousels = get_acf_fields( [ 'overlay', 'hero' ], $block['id'] );
+$abs_carousels = get_acf_fields( [ 'overlay', 'slides' ], $block['id'] );
 ?>
 
 <?php
 if ( ! empty( $block['data']['_is_preview'] ) ) :
-	;
 	?>
 	<figure>
 		<img
@@ -48,24 +47,23 @@ if ( ! empty( $block['data']['_is_preview'] ) ) :
 		>
 	</figure>
 	<?php
-elseif ( $abs_carousels['hero'] ) :
-	;
+elseif ( $abs_carousels['slides'] ) :
 	?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
-		<section class="hero-wrap">
+		<section class="carousel-wrap">
 			<div class="swiper">
 				<ul class="swiper-wrapper carousel-items">
 					<?php
-					foreach ( $abs_carousels['hero'] as $abs_hero ) :
+					foreach ( $abs_carousels['slides'] as $abs_slide ) :
 						echo '<li class="swiper-slide carousel-item">';
 
-							$abs_hero['class']   = $abs_block_classes;
-							$abs_hero['overlay'] = $abs_carousels['overlay'];
+							$abs_slide['class']   = $abs_block_classes;
+							$abs_slide['overlay'] = $abs_carousels['overlay'];
 
 							print_module(
 								'hero',
-								$abs_hero
+								$abs_slide
 							);
 
 						echo '</li><!-- .carousel-item -->';
@@ -82,7 +80,7 @@ elseif ( $abs_carousels['hero'] ) :
 					<div class="swiper-pagination"></div>
 				<?php endif; ?>
 
-			</div><!-- .glide -->
-		</section><!-- .hero-wrap -->
+			</div><!-- .swiper -->
+		</section><!-- .carousel-wrap -->
 	</section>
 <?php endif; ?>
