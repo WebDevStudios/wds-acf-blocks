@@ -62,7 +62,7 @@ elseif ( $abs_carousels['slides'] ) :
 							$abs_slide['overlay'] = $abs_carousels['overlay'];
 
 							print_module(
-								'hero',
+								'carousel-slide',
 								$abs_slide
 							);
 
