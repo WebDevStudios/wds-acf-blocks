@@ -20,13 +20,16 @@
 		"npm": ">=7"
 	},
 	"main": "src/index.js",
+	"dependencies": {
+		"swiper": "^8.4.2"
+	},
 	"devDependencies": {
 		"@wordpress/eslint-plugin": "12.8.0",
 		"@wordpress/prettier-config": "^1.4.0",
 		"@wordpress/scripts": "^23.3.0",
 		"autoprefixer": "^10.4.8",
-		"cssnano": "^5.1.4",
 		"cross-env": "^7.0.3",
+		"cssnano": "^5.1.4",
 		"eslint-plugin-eslint-comments": "^3.2.0",
 		"eslint-webpack-plugin": "^3.2.0",
 		"npm-run-all": "^4.1.5",
@@ -58,8 +61,5 @@
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "composer install --quiet && npm run build",
 		"start": "cross-env NODE_ENV=development wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php"
-	},
-	"dependencies": {
-		"swiper": "^8.4.2"
 	}
 }
