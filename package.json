@@ -20,6 +20,9 @@
 		"npm": ">=7"
 	},
 	"main": "src/index.js",
+	"dependencies": {
+		"swiper": "^8.4.2"
+	},
 	"devDependencies": {
 		"@wordpress/eslint-plugin": "12.8.0",
 		"@wordpress/prettier-config": "^1.4.0",

@@ -27,6 +27,7 @@ $abs_defaults = [
 		'controls' => '',
 		'disabled' => false,
 		'expanded' => false,
+		'label'    => false,
 	],
 ];
 

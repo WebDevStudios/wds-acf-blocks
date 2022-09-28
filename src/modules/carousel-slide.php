@@ -1,6 +1,6 @@
 <?php
 /**
- * MODULE - Hero.
+ * MODULE - Carousel Slide.
  * Modules are analagous to 'Molecules' in Brad Frost's Atomic Design Methodology.
  *
  * @link https://atomicdesign.bradfrost.com/chapter-2/#molecules
@@ -13,7 +13,7 @@ use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\get_formatted_args;
 
 $abs_defaults = [
-	'class'         => [ 'wds-module', 'wds-module-hero' ],
+	'class'         => [ 'wds-module', 'wds-module-carousel-slide' ],
 	'attachment_id' => false,
 	'overlay'       => false,
 	'eyebrow'       => false,
@@ -49,7 +49,7 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 	<?php endif; ?>
 
 	<div class="container">
-		<div class="hero-content">
+		<div class="carousel-slide-content">
 			<?php
 			// Eyebrow.
 			if ( $abs_args['eyebrow'] ) :

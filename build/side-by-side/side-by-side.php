@@ -2,7 +2,7 @@
 /**
  * BLOCK - Renders a Side-by-Side section
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/block-editor/
  *
  * @package abs
  */
