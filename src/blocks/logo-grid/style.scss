@@ -3,7 +3,10 @@
 //----------------------------------------
 
 .wds-block.logo-grid {
-	@apply grid gap-4 grid-cols-3;
+
+	.container {
+		@apply grid gap-4 grid-cols-3;
+	}
 
 	.acf-innerblocks-container {
 		@apply col-span-full;

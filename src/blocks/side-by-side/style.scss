@@ -3,9 +3,12 @@
 //----------------------------------------
 
 .wds-block.side-by-side {
-	@apply flex flex-wrap;
 
-	&.card-first {
+	.container {
+		@apply flex flex-wrap;
+	}
+
+	&.card-first .container {
 		@apply flex-row-reverse;
 	}
 
