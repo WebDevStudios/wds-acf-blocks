@@ -17,7 +17,7 @@ $themeColor: theme( 'colors.gray.400' );
 		height: var( --carousel-height );
 
 		.background {
-			@apply bg-left-top bg-cover m-0 p-0 overflow-hidden absolute w-full -z-10;
+			@apply bg-left-top bg-cover m-0 p-0 overflow-hidden absolute w-full;
 
 			height: var( --carousel-height );
 
