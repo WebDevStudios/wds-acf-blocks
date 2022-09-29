@@ -23,7 +23,7 @@ $abs_defaults = [
 
 
 // Get custom classes for the block and/or for block colors.
-$abs_block_classes = [];
+$abs_block_classes = [ 'container' ];
 $abs_block_classes = get_block_classes( $block );
 
 if ( ! empty( $abs_block_classes ) ) :
@@ -107,7 +107,7 @@ elseif ( $abs_carousels['slides'] ) :
 				?>
 
 				<?php if ( $abs_defaults['show_pagination'] ) : ?>
-					<div class="swiper-pagination"></div>
+					<div class="container swiper-pagination"></div>
 				<?php endif; ?>
 
 			</div><!-- .swiper -->

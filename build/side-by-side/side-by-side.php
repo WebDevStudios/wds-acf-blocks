@@ -44,18 +44,20 @@ $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
 	</figure>
 <?php else : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php
-		echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		<div class="container">
+			<?php
+			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
 
-		print_module(
-			'figure',
-			$abs_side_by_side['image']
-		);
+			print_module(
+				'figure',
+				$abs_side_by_side['image']
+			);
 
-		print_module(
-			'card',
-			$abs_side_by_side['card']
-		);
-		?>
+			print_module(
+				'card',
+				$abs_side_by_side['card']
+			);
+			?>
+		</div>
 	</section>
 <?php endif; ?>

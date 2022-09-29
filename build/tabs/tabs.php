@@ -42,10 +42,12 @@ $abs_tabs = get_acf_fields( [ 'tab_items' ], $block['id'] );
 	</figure>
 <?php elseif ( $abs_tabs['tab_items']['items'] ) : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php
-		echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		<div class="container">
+			<?php
+			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
 
-		print_module( 'tabs', $abs_tabs['tab_items'] );
-		?>
+			print_module( 'tabs', $abs_tabs['tab_items'] );
+			?>
+		</div>
 	</section>
 <?php endif; ?>

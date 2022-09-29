@@ -42,16 +42,18 @@ $abs_cards = get_acf_fields( [ 'card' ], $block['id'] );
 	</figure>
 <?php elseif ( $abs_cards['card'] ) : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
-		<section class="card-wrap">
-			<?php
-			foreach ( $abs_cards['card'] as $abs_card ) :
-				print_module(
-					'card',
-					$abs_card
-				);
-			endforeach;
-			?>
-		</section>
+		<div class="container">
+			<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
+			<section class="card-wrap">
+				<?php
+				foreach ( $abs_cards['card'] as $abs_card ) :
+					print_module(
+						'card',
+						$abs_card
+					);
+				endforeach;
+				?>
+			</section>
+		</div>
 	</section>
 <?php endif; ?>

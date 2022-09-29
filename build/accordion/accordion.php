@@ -43,10 +43,12 @@ $abs_accordion = get_acf_fields( [ 'accordion_items' ], $block['id'] );
 	</figure>
 <?php elseif ( $abs_accordion['accordion_items']['items'] ) : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php
-		echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		<div class="container">
+			<?php
+			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
 
-		print_module( 'accordion', $abs_accordion['accordion_items'] );
-		?>
+			print_module( 'accordion', $abs_accordion['accordion_items'] );
+			?>
+		</div>
 	</section>
 <?php endif; ?>

@@ -42,14 +42,16 @@ $abs_logo_grid = get_acf_fields( [ 'logos' ], $block['id'] );
 	</figure>
 <?php elseif ( $abs_logo_grid['logos'] ) : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php
-		echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
-		foreach ( $abs_logo_grid['logos'] as $abs_logo ) :
-			print_module(
-				'figure',
-				$abs_logo
-			);
-		endforeach;
-		?>
+		<div class="container">
+			<?php
+			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+			foreach ( $abs_logo_grid['logos'] as $abs_logo ) :
+				print_module(
+					'figure',
+					$abs_logo
+				);
+			endforeach;
+			?>
+		</div>
 	</section>
 <?php endif; ?>
