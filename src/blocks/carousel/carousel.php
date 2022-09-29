@@ -107,7 +107,9 @@ elseif ( $abs_carousels['slides'] ) :
 				?>
 
 				<?php if ( $abs_defaults['show_pagination'] ) : ?>
-					<div class="container swiper-pagination"></div>
+					<div class="container">
+						<div class="swiper-pagination"></div>
+					</div>
 				<?php endif; ?>
 
 			</div><!-- .swiper -->
