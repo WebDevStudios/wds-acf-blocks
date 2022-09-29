@@ -7,6 +7,10 @@
 		@apply mb-8 rounded-md border border-gray-300;
 	}
 
+	.accordion-item:last-child {
+		@apply mb-0;
+	}
+
 	.accordion-title {
 		@apply mb-0 px-24 py-12 flex w-full justify-between items-center rounded-none;
 
