@@ -23,3 +23,7 @@
 	transform: translate( -50%, -50% );
 	width: 100%;
 }
+
+html :where(.wp-block):not(.is-selected) {
+	max-width: none;
+}
