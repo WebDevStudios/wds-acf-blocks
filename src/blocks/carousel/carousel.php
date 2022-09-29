@@ -50,7 +50,9 @@ if ( ! empty( $block['data']['_is_preview'] ) ) :
 elseif ( $abs_carousels['slides'] ) :
 	?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
+		<div class="container">
+			<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
+		</div>
 		<section class="carousel-wrap">
 			<div class="swiper">
 				<ul class="swiper-wrapper carousel-items">
