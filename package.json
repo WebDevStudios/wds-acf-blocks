@@ -46,8 +46,6 @@
 		"tailwindcss": "^3.1.7"
 	},
 	"scripts": {
-		"build": "cross-env NODE_ENV=production wp-scripts build --webpack-src-dir=src/blocks --webpack-copy-php",
-		"global": "cross-env NODE_ENV=production wp-scripts build --config webpack.global.js",
 		"build:pot": "composer run-script pot",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
@@ -64,6 +62,11 @@
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "composer install --quiet && npm run build",
-		"start": "cross-env NODE_ENV=development wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php"
+		"blocks": "cross-env NODE_ENV=production wp-scripts build --webpack-src-dir=src/blocks --webpack-copy-php",
+		"global": "cross-env NODE_ENV=production wp-scripts build --config webpack.global.js",
+		"build": "npm-run-all blocks global",
+		"blocks:watch": "cross-env NODE_ENV=production wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php",
+		"global:watch": "cross-env NODE_ENV=production wp-scripts start --config webpack.global.js",
+		"start": "npm-run-all --parallel blocks:watch global:watch"
 	}
 }

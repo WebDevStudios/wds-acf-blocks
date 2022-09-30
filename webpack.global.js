@@ -1,4 +1,3 @@
-const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 
 /**
@@ -8,7 +7,8 @@ const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
  */
 module.exports = {
 	entry: {
-		index: './assets/index.js',
+		admin: './assets/admin.js',
+		frontend: './assets/frontend.js',
 	},
 	module: {
 		rules: [
