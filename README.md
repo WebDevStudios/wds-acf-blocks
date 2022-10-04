@@ -78,6 +78,9 @@ To build the production version, execute this command:
 ```bash
 npm run build
 ```
+### Building the blocks 
+The build directory for the blocks are ignored and not being tracked by git. 
+Make sure you push the build folder to your site with the help of CD/CI pipelines or manually because the blocks will not work without the build folder.
 
 ### 🛠 Linting Commands
 
