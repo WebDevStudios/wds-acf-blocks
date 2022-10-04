@@ -29,4 +29,5 @@ compass_app_log.txt
 .AppleDouble
 .LSOverride
 vendor/
-!build
+build/
+dist/

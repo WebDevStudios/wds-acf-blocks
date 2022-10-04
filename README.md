@@ -29,6 +29,18 @@ To better manage ACF Field Groups, the plugin supports [synchronized JSON](https
 
 _We highly recommend [NVM](https://github.com/nvm-sh/nvm) so you can easily switch between Node versions._
 
+## Create a Block with WP-CLI
+To create a block with WPCLI you can just use this command. 
+
+```bash
+wp abs create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keywords="myblock" --icon="table-row-before"
+```
+**Parameters:**
+- Title : The title of the block
+- Desc : The description of the block
+- Keywords : Block keywords
+- Icon : The icon of the block
+
 ## 💻 Development
 
 ### 🚀 Installation
@@ -56,7 +68,7 @@ npm install
 To watch for changes during development, run the following command:
 
 ```bash
-npm run dev
+npm run start
 ```
 
 ![image](https://i.imgur.com/n2FEkhB.jpg)
