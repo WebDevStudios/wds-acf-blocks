@@ -4,7 +4,7 @@
 	"description": "A block used to show quotes.",
 	"editorStyle": "file:./editor.css",
 	"editorScript": "file:./editor.js",
-	"category": "abs",
+	"category": "WDS",
 	"icon": "format-quote",
 	"apiVersion": 2,
 	"keywords": [ "quotes", "block" ],

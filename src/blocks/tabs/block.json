@@ -6,7 +6,7 @@
 	"editorScript": "file:./editor.js",
 	"style": "file:./style-script.css",
 	"script": "file:./script.js",
-	"category": "theme",
+	"category": "WDS",
 	"icon": "open-folder",
 	"apiVersion": 2,
 	"keywords": [ "tabs", "block" ],

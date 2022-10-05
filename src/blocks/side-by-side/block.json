@@ -6,7 +6,7 @@
 	"editorScript": "file:./editor.js",
 	"style": "file:./style-script.css",
 	"script": "file:./script.js",
-	"category": "theme",
+	"category": "WDS",
 	"icon": "columns",
 	"apiVersion": 2,
 	"keywords": [ "side by side", "block" ],
