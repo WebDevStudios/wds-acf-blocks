@@ -1,1 +1,2 @@
-import './admin-styles.scss';
+// Entry point for Webpack compilation.
+import './global-styles/admin-styles.scss';

@@ -1,9 +1,7 @@
 const fs = require( 'fs' );
 
+const directoryFiles = [ `./assets/editor-styles/*.scss` ];
 
-const directoryFiles = [
-	`./assets/editor-styles/*.scss`,
-];
 module.exports = {
 	presets: [
 		fs.existsSync( global.themePreset )
@@ -12,10 +10,10 @@ module.exports = {
 	],
 	content: directoryFiles,
 	theme: {
-	  extend: {},
+		extend: {},
 	},
 	variants: {
-	  extend: {},
+		extend: {},
 	},
 	plugins: [],
-  }
+};

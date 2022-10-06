@@ -25,7 +25,5 @@ module.exports = {
 			},
 		],
 	},
-	plugins: [
-		new MiniCssExtractPlugin(),
-	],
+	plugins: [ new MiniCssExtractPlugin() ],
 };
