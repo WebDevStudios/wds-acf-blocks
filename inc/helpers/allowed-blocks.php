@@ -18,6 +18,7 @@ namespace WebDevStudios\abs;
  */
 function allowed_blocks( $abs_allowed_blocks ) {
 
+	// This is meant to overwrite the default set of allowed blocks.
 	$abs_allowed_blocks = [
 		'core/heading',
 		'core/paragraph',
