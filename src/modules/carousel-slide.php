@@ -20,7 +20,6 @@ $abs_defaults = [
 	'heading'       => false,
 	'content'       => false,
 	'button'        => false,
-	'attachment_id' => false,
 ];
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
