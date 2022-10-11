@@ -1,14 +1,16 @@
 //----------------------------------------
 // Block - Tabs Styles, EDITOR
 //----------------------------------------
-.wds-module-tabs {
-	nav {
-		.tab-title {
-			@apply border border-black;
+.wds-block-tabs {
+	.wds-module-tabs {
+		nav {
+			.tab-title {
+				@apply border border-black;
+			}
 		}
-	}
 
-	.tabs-content {
-		@apply border border-black p-12 relative z-10 bg-white;
+		.tabs-content {
+			@apply border border-black p-12 relative z-10 bg-white;
+		}
 	}
 }

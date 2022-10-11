@@ -13,7 +13,7 @@ use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\get_block_classes;
 
 $abs_defaults = [
-	'class'               => [ 'wds-block', 'accordion' ],
+	'class'               => [ 'wds-block', 'wds-block-accordion' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ! empty( $block['anchor'] ) ? $block['anchor'] : '',
 ];

@@ -1,9 +1,10 @@
 //----------------------------------------
 // Block - Accordion Styles, EDITOR
 //----------------------------------------
-
-.wds-module-accordion {
-	.accordion-item {
-		@apply border border-black mb-4;
+.wds-block-accordion {
+	.wds-module-accordion {
+		.accordion-item {
+			@apply border border-black mb-4;
+		}
 	}
 }

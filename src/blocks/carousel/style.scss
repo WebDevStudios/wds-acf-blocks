@@ -7,11 +7,10 @@ $themeColor: theme( 'colors.gray.400' );
 @import '../../../node_modules/swiper/modules/pagination/pagination';
 @import '../../../node_modules/swiper/modules/a11y/a11y';
 
-.carousel {
+.wds-block-carousel {
 	--carousel-height: 600px;
 
 	.wds-module-carousel-slide {
-
 		@apply my-40 mx-auto p-0 relative w-full overflow-hidden;
 
 		height: var( --carousel-height );
@@ -31,7 +30,6 @@ $themeColor: theme( 'colors.gray.400' );
 		}
 
 		.container {
-
 			.carousel-slide-content {
 				@apply flex flex-col items-center justify-center text-white relative w-full z-20 py-20 px-48;
 
