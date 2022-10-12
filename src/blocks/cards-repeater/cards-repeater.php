@@ -36,7 +36,7 @@ $abs_cards = get_acf_fields( [ 'card' ], $block['id'] );
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
 	<figure>
 		<img
-			src="<?php echo esc_url( get_theme_file_uri( 'build/images/block-previews/cards-repeater-preview.jpg' ) ); ?>"
+			src="<?php echo esc_url( get_theme_file_uri( 'assets/images/block-previews/cards-repeater-preview.jpg' ) ); ?>"
 			alt="<?php esc_html_e( 'Preview of the Manual Cards Block', 'abs' ); ?>"
 		>
 	</figure>

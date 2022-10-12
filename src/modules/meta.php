@@ -2,9 +2,9 @@
 /**
  * MODULE - Meta.
  *
- * Module are analagous to 'Atoms' in Brad Frost's Atomic Design Methodology.
+ * Modules are analagous to 'Molecules' in Brad Frost's Atomic Design Methodology.
  *
- * @link https://atomicdesign.bradfrost.com/chapter-2/#atoms
+ * @link https://atomicdesign.bradfrost.com/chapter-2/#molecules
  *
  * @package abs
  */
@@ -45,7 +45,7 @@ $abs_defaults = [
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
-// Set up the meta class.
+// Set up element attributes.
 $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 ?>
 

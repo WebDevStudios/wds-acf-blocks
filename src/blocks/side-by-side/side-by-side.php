@@ -38,7 +38,7 @@ $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
 	<figure>
 		<img
-			src="<?php echo esc_url( get_theme_file_uri( 'build/images/block-previews/side-by-side-preview.jpg' ) ); ?>"
+			src="<?php echo esc_url( get_theme_file_uri( 'assets/images/block-previews/side-by-side-preview.jpg' ) ); ?>"
 			alt="<?php esc_html_e( 'Preview of the Side by Side Block', 'abs' ); ?>"
 		>
 	</figure>

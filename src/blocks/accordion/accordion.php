@@ -37,7 +37,7 @@ $abs_accordion = get_acf_fields( [ 'accordion_items' ], $block['id'] );
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
 	<figure>
 		<img
-			src="<?php echo esc_url( get_theme_file_uri( 'build/images/block-previews/accordion-preview.jpg' ) ); ?>"
+			src="<?php echo esc_url( get_theme_file_uri( 'assets/images/block-previews/accordion-preview.jpg' ) ); ?>"
 			alt="<?php esc_html_e( 'Preview of the Accordion Block', 'abs' ); ?>"
 		>
 	</figure>
