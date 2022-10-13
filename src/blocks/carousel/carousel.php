@@ -43,15 +43,15 @@ $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
 $abs_carousels = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_acf_fields( [ 'overlay', 'slides' ], $block['id'] );
 ?>
 
-<?php
-if ( ! empty( $block['data']['_is_preview'] ) ) :
-	?>
+<?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
 	<figure>
 		<img
 			src="<?php echo esc_url( get_theme_file_uri( 'build/images/block-previews/carousel-preview.jpg' ) ); ?>"
 			alt="<?php esc_html_e( 'Preview of the Carousel Block', 'abs' ); ?>"
 		>
 	</figure>
+<?php elseif ( $abs_carousels['slides'] ) : ?>
+	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php
 		if ( ! empty( $abs_defaults['allowed_innerblocks'] ) ) :
 			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
