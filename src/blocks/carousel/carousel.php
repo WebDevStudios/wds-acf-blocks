@@ -20,8 +20,13 @@ $abs_defaults = [
 	'show_pagination'     => true,
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ( isset( $block ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : '',
+	'fields'              => [], // Fields passed via the print_block() function.
 ];
 
+// Parse the $args if we're rendering this with print_block() from a theme.
+if ( ! empty( $args ) ) :
+	$abs_defaults = get_formatted_args( $args, $abs_defaults );
+endif;
 
 // Get custom classes for the block and/or for block colors.
 $abs_block_classes = [];
@@ -34,8 +39,8 @@ endif;
 // Set up element attributes.
 $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
 
-// Pull in the fields from ACF.
-$abs_carousels = get_acf_fields( [ 'overlay', 'slides' ], $block['id'] );
+// Pull in the fields from ACF, if we've not pulled them in using print_block().
+$abs_carousels = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_acf_fields( [ 'overlay', 'slides' ], $block['id'] );
 ?>
 
 <?php
