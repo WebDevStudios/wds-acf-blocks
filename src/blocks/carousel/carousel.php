@@ -7,11 +7,12 @@
  * @package abs
  */
 
-use function WebDevStudios\abs\print_module;
-use function WebDevStudios\abs\print_element;
-use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\get_acf_fields;
 use function WebDevStudios\abs\get_block_classes;
+use function WebDevStudios\abs\get_formatted_args;
+use function WebDevStudios\abs\get_formatted_atts;
+use function WebDevStudios\abs\print_element;
+use function WebDevStudios\abs\print_module;
 
 $abs_defaults = [
 	'class'               => [ 'wds-block', '.wds-block-carousel' ],
