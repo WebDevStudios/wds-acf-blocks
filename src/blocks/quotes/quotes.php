@@ -49,7 +49,11 @@ $abs_quotes = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get
 	</figure>
 <?php elseif ( $abs_quotes['quotes'] ) : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
+		<?php
+		if ( ! empty( $abs_defaults['allowed_innerblocks'] ) ) :
+			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		endif;
+		?>
 		<?php foreach ( $abs_quotes['quotes'] as $abs_quote ) : ?>
 			<div class="quote">
 				<?php
