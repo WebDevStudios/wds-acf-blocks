@@ -12,8 +12,8 @@ namespace WebDevStudios\abs;
  *
  * @author WebDevStudios
  *
- * @param string $element_name The name of the block.
- * @param array  $args Args for the block.
+ * @param string $element_name The name of the element.
+ * @param array  $args Args for the element.
  */
 function print_element( $element_name = '', $args = [] ) {
 	if ( ! $element_name ) {
