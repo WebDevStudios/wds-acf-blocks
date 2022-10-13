@@ -49,7 +49,11 @@ $abs_cards = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_
 	</figure>
 <?php elseif ( $abs_cards['card'] ) : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />'; ?>
+		<?php
+		if ( ! empty( $abs_defaults['allowed_innerblocks'] ) ) :
+			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		endif;
+		?>
 		<section class="card-wrap">
 			<?php
 			foreach ( $abs_cards['card'] as $abs_card ) :

@@ -50,7 +50,9 @@ $abs_accordion = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : 
 <?php elseif ( $abs_accordion['accordion_items']['items'] ) : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php
-		echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		if ( ! empty( $abs_defaults['allowed_innerblocks'] ) ) :
+			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		endif;
 
 		print_module( 'accordion', $abs_accordion['accordion_items'] );
 		?>

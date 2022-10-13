@@ -14,7 +14,7 @@ use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\print_module;
 
 $abs_defaults = [
-	'class'               => [ 'wds-block', '.wds-block-side-by-side' ],
+	'class'               => [ 'wds-block', 'wds-block-side-by-side' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ( isset( $block ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : '',
 	'fields'              => [], // Fields passed via the print_block() function.
@@ -52,7 +52,9 @@ $abs_side_by_side = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields']
 <?php else : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php
-		echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		if ( ! empty( $abs_defaults['allowed_innerblocks'] ) ) :
+			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		endif;
 
 		print_module(
 			'figure',

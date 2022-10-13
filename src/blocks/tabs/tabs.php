@@ -50,7 +50,9 @@ $abs_tabs = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_a
 <?php elseif ( $abs_tabs['tab_items']['items'] ) : ?>
 	<section <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php
-		echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		if ( ! empty( $abs_defaults['allowed_innerblocks'] ) ) :
+			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
+		endif;
 
 		print_module( 'tabs', $abs_tabs['tab_items'] );
 		?>
