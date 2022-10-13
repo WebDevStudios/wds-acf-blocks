@@ -19,7 +19,7 @@ $abs_defaults = [
 	'show_arrows'         => true,
 	'show_pagination'     => true,
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
-	'id'                  => ! empty( $block['anchor'] ) ? $block['anchor'] : '',
+	'id'                  => ( isset( $block ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : '',
 ];
 
 

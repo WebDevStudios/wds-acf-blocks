@@ -16,7 +16,7 @@ use function WebDevStudios\abs\print_element;
 $abs_defaults = [
 	'class'               => [ 'wds-block', 'wds-block-quotes' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
-	'id'                  => ! empty( $block['anchor'] ) ? $block['anchor'] : '',
+	'id'                  => ( isset( $block ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : '',
 ];
 
 // Get custom classes for the block and/or for block colors.
