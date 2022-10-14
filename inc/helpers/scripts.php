@@ -28,6 +28,6 @@ add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\admin_scripts_styles' );
 function frontend_scripts_styles() {
 
 	// Enqueue global plugin styles for the Frontend.
-	wp_enqueue_style( 'abs-fe-styles', ABS_ROOT_URL . '/dist/frontend.css', [], ABS_WDS_ACF_VERSION );
+	wp_enqueue_style( 'abs-frontend-styles', ABS_ROOT_URL . '/dist/frontend.css', [], ABS_WDS_ACF_VERSION );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\frontend_scripts_styles' );
