@@ -30,7 +30,7 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 <div <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<?php
 	// Button.
-	if ( $abs_args['button_args'] ) :
+	if ( ! empty( $abs_args['button_args']['button'] ) ) :
 		// Simplify this array.
 		$abs_button_args = $abs_args['button_args']['button'];
 
