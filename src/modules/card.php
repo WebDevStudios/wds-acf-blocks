@@ -84,7 +84,14 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 
 	// Button.
 	if ( $abs_args['button'] ) :
-		print_element( 'button', $abs_args['button'] );
+		print_element(
+			'button',
+			[
+				'title'  => $abs_args['button']['title'],
+				'href'   => $abs_args['button']['url'],
+				'target' => $abs_args['button']['target'],
+			]
+		);
 	endif;
 	?>
 </div>
