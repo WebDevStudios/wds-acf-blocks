@@ -29,8 +29,7 @@ if ( ! empty( $args ) ) :
 endif;
 
 // Get custom classes for the block and/or for block colors.
-$abs_block_classes = [];
-$abs_block_classes = get_block_classes( $block );
+$abs_block_classes = isset( $block ) ? get_block_classes( $block ) : [];
 
 if ( ! empty( $abs_block_classes ) ) :
 	$abs_defaults['class'] = array_merge( $abs_defaults['class'], $abs_block_classes );

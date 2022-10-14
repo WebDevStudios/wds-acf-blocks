@@ -12,7 +12,6 @@ use function WebDevStudios\abs\get_block_classes;
 use function WebDevStudios\abs\get_formatted_args;
 use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\print_element;
-
 $abs_defaults = [
 	'class'               => [ 'wds-block', 'wds-block-quotes' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
@@ -26,8 +25,7 @@ if ( ! empty( $args ) ) :
 endif;
 
 // Get custom classes for the block and/or for block colors.
-$abs_block_classes = [];
-$abs_block_classes = get_block_classes( $block );
+$abs_block_classes = isset( $block ) ? get_block_classes( $block ) : [];
 
 if ( ! empty( $abs_block_classes ) ) :
 	$abs_defaults['class'] = array_merge( $abs_defaults['class'], $abs_block_classes );
@@ -38,6 +36,7 @@ $abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
 
 // Pull in the fields from ACF, if we've not pulled them in using print_block().
 $abs_quotes = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_acf_fields( [ 'quotes' ], $block['id'] );
+
 ?>
 
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
