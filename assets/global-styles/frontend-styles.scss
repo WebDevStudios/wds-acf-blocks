@@ -1,0 +1,11 @@
+.wds-block {
+	.acf-innerblocks-container {
+		[class*='wp-block-'] {
+			@apply inline;
+		}
+	}
+
+	.wds-block-grid > * {
+		@apply col-span-12;
+	}
+}
