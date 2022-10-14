@@ -4,6 +4,8 @@
 	"description": "A block used to show quotes.",
 	"editorStyle": "file:./editor.css",
 	"editorScript": "file:./editor.js",
+	"style": "file:./style-script.css",
+	"script": "file:./script.js",
 	"category": "WDS",
 	"icon": "format-quote",
 	"apiVersion": 2,
