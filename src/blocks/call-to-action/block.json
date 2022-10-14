@@ -1,0 +1,32 @@
+{
+	"name": "abs/call-to-action",
+	"title": "Call to Action",
+	"description": "",
+	"editorStyle": "file:./editor.css",
+	"editorScript": "file:./editor.js",
+	"style": "file:./style-script.css",
+	"script": "file:./script.js",
+	"category": "WDS",
+	"icon": "megaphone",
+	"apiVersion": 2,
+	"keywords": [ "call-to-action", "block" ],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "call-to-action.php"
+	},
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"color": true,
+		"customClassName": true,
+		"jsx": true
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"_is_preview": "true"
+			}
+		}
+	}
+}
