@@ -3,9 +3,9 @@
 		[class*='wp-block-'] {
 			@apply inline;
 		}
-	}
 
-	.wds-block-grid > * {
-		@apply col-span-12;
+		&:empty {
+			@apply hidden;
+		}
 	}
 }
