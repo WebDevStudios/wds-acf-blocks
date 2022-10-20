@@ -1,1 +1,10 @@
 // Frontend styles.
+.wds-block-call-to-action {
+	.acf-innerblocks-container {
+		@apply col-start-2 col-span-10;
+	}
+
+	.wds-module-cta {
+		@apply col-start-2 col-span-10;
+	}
+}

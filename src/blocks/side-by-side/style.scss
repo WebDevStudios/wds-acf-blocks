@@ -6,15 +6,17 @@
 	@apply flex flex-wrap;
 
 	&.card-first {
-		@apply flex-row-reverse;
+		.wds-module-card {
+			@apply order-1;
+		}
 	}
 
 	.acf-innerblocks-container {
-		@apply w-full;
+		@apply col-span-12;
 	}
 
 	.wds-module-figure,
 	.wds-module-card {
-		@apply w-1/2;
+		@apply col-span-6;
 	}
 }

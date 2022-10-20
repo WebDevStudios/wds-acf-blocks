@@ -14,7 +14,7 @@ use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\print_module;
 
 $abs_defaults = [
-	'class'               => [ 'wds-block', 'wds-block-side-by-side' ],
+	'class'               => [ 'wds-block', 'wds-block-side-by-side', 'wds-block-grid' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ( isset( $block ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : '',
 	'fields'              => [], // Fields passed via the print_block() function.
