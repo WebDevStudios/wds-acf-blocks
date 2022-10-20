@@ -1,6 +1,6 @@
 const fs = require( 'fs' );
 
-const directoryFiles = [ `./assets/editor-styles/*.scss` ];
+const directoryFiles = [ `./assets/global-styles/*.scss` ];
 
 module.exports = {
 	presets: [
