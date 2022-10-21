@@ -7,16 +7,28 @@
 		@apply container;
 	}
 
+	.wds-module-call-to-action {
+		@screen tablet-portrait {
+			@apply wds-grid;
+		}
+	}
+
 	.center-content {
 		@apply col-span-12 text-center;
 	}
 
 	.right-content,
 	.left-content {
-		@apply col-span-9;
+		@screen tablet-portrait {
+			@apply col-span-9;
+		}
 	}
 
 	.right-content {
-		@apply col-start-3;
+		@apply col-start-1;
+
+		@screen tablet-portrait {
+			@apply col-start-4;
+		}
 	}
 }
