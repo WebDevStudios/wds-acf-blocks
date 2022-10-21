@@ -53,7 +53,6 @@ $abs_carousels = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : 
 					foreach ( $abs_carousels['slides'] as $abs_slide ) :
 						echo '<li class="swiper-slide carousel-item">';
 
-							$abs_slide['class']   = $abs_block_classes;
 							$abs_slide['overlay'] = $abs_carousels['overlay'];
 
 							print_module(
