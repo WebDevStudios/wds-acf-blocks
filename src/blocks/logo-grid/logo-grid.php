@@ -46,7 +46,7 @@ $abs_logo_grid = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : 
 			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
 		endif;
 		?>
-		<div class="wds-block-grid">
+		<div class="wds-grid">
 			<?php
 			foreach ( $abs_logo_grid['logos'] as $abs_logo ) :
 				print_module(

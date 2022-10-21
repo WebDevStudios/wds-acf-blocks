@@ -44,7 +44,7 @@ $abs_call_to_action = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields
 		endif;
 
 		// Add the grid to the modules.
-		$abs_call_to_action['class'][] = 'wds-block-grid';
+		$abs_call_to_action['class'][] = 'wds-grid';
 		print_module( 'call-to-action-' . esc_attr( $abs_call_to_action['layout'] ), $abs_call_to_action );
 		?>
 	</section>

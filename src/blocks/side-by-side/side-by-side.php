@@ -43,7 +43,7 @@ $abs_side_by_side = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields']
 			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
 		endif;
 		?>
-		<div class="wds-block-grid">
+		<div class="wds-grid">
 			<?php
 			print_module(
 				'figure',

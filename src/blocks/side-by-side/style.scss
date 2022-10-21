@@ -5,7 +5,7 @@
 .wds-block-side-by-side {
 	@apply container;
 
-	.wds-block-grid {
+	.wds-grid {
 		> * {
 			@apply col-span-6;
 		}
