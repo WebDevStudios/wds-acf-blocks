@@ -3,10 +3,14 @@
 //----------------------------------------
 
 .wds-block-logo-grid {
-	@apply grid gap-4 grid-cols-3;
+	@apply container;
 
 	.acf-innerblocks-container {
 		@apply col-span-full;
+	}
+
+	.wds-block-grid {
+		@apply grid-cols-4 gap-32;
 	}
 
 	.wds-module-figure {

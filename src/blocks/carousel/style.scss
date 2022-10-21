@@ -8,6 +8,7 @@ $themeColor: theme( 'colors.gray.400' );
 @import '../../../node_modules/swiper/modules/a11y/a11y';
 
 .wds-block-carousel {
+	@apply container;
 	--carousel-height: 600px;
 
 	.wds-module-carousel-slide {
@@ -29,7 +30,7 @@ $themeColor: theme( 'colors.gray.400' );
 			@apply w-full h-full absolute z-10;
 		}
 
-		.container {
+		.carousel-slide-container {
 			.carousel-slide-content {
 				@apply flex flex-col items-center justify-center text-white relative w-full z-20 py-20 px-48;
 

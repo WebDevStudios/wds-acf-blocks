@@ -3,18 +3,15 @@
 //----------------------------------------
 
 .wds-block-side-by-side {
-	@apply flex flex-wrap;
+	@apply container;
 
-	&.card-first {
-		@apply flex-row-reverse;
-	}
+	.wds-block-grid {
+		> * {
+			@apply col-span-6;
+		}
 
-	.acf-innerblocks-container {
-		@apply w-full;
-	}
-
-	.wds-module-figure,
-	.wds-module-card {
-		@apply w-1/2;
+		.card-first {
+			@apply -order-1;
+		}
 	}
 }

@@ -1,1 +1,19 @@
-// Frontend styles.
+//----------------------------------------
+// Block - Call to Action Styles, FRONTEND
+//----------------------------------------
+.wds-block-call-to-action {
+	@apply container;
+
+	.center-content {
+		@apply col-span-12 text-center;
+	}
+
+	.right-content,
+	.left-content {
+		@apply col-span-9;
+	}
+
+	.right-content {
+		@apply col-start-3;
+	}
+}

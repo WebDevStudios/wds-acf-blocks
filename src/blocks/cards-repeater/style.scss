@@ -3,7 +3,9 @@
 //----------------------------------------
 
 .wds-block-cards-repeater {
+	@apply container;
+
 	.card-wrap {
-		@apply grid grid-flow-col gap-4;
+		@apply grid-cols-3;
 	}
 }
