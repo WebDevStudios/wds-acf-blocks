@@ -6,6 +6,7 @@
             "key": "field_5d6949aea1e5d",
             "label": "",
             "name": "",
+            "aria-label": "",
             "type": "message",
             "instructions": "",
             "required": 0,
@@ -23,6 +24,7 @@
             "key": "field_5cc9ad46008cd",
             "label": "Accordion Items",
             "name": "accordion_items",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -36,8 +38,9 @@
             "sub_fields": [
                 {
                     "key": "field_61e5c029c2786",
-                    "label": "Accordion Items",
+                    "label": "Items",
                     "name": "items",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "Add accordion items to your block. Each accordion requires Title and Text.",
                     "required": 0,
@@ -47,10 +50,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "collapsed": "",
+                    "layout": "row",
+                    "pagination": 0,
                     "min": 0,
                     "max": 0,
-                    "layout": "row",
+                    "collapsed": "",
                     "button_label": "Add Accordion Item",
                     "rows_per_page": 20,
                     "sub_fields": [
@@ -58,6 +62,7 @@
                             "key": "field_5cc9ad460902d",
                             "label": "Accordion Item Title",
                             "name": "text",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "Set the title of the individual accordion. Clicking\/Tapping on this will expand and collapse the accordion.",
                             "required": 1,
@@ -78,6 +83,7 @@
                             "key": "field_61f4274477bcc",
                             "label": "Accordion Item Content",
                             "name": "content",
+                            "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
                             "required": 1,
@@ -117,5 +123,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663176603
+    "modified": 1666356598
 }
