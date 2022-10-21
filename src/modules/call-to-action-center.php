@@ -14,7 +14,7 @@ use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\get_formatted_args;
 
 $abs_defaults = [
-	'class'       => [ 'wds-module', 'wds-module-cta' ],
+	'class'       => [ 'wds-module', 'wds-module-call-to-action' ],
 	'eyebrow'     => false,
 	'heading'     => false,
 	'content'     => false,
