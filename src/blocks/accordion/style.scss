@@ -2,6 +2,8 @@
 // Block - Accordion Styles, FRONTEND
 //----------------------------------------
 .wds-block-accordion {
+	@apply container;
+
 	.wds-module-accordion {
 		.accordion-item {
 			@apply mb-8 rounded-md border border-gray-300;

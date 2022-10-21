@@ -3,7 +3,13 @@
 //----------------------------------------
 
 .wds-block-cards-repeater {
+	@apply container;
+
 	.card-wrap {
-		@apply grid grid-flow-col gap-4;
+		@apply grid-cols-1;
+
+		@screen tablet-portrait {
+			@apply grid-cols-3;
+		}
 	}
 }

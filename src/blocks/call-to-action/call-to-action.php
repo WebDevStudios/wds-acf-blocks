@@ -8,39 +8,28 @@
  */
 
 use function WebDevStudios\abs\get_acf_fields;
-use function WebDevStudios\abs\get_block_classes;
-use function WebDevStudios\abs\get_formatted_args;
-use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\print_module;
+use function WebDevStudios\abs\setup_block_defaults;
+
+$abs_block = isset( $block ) ? $block : '';
+$abs_args  = isset( $args ) ? $args : '';
 
 $abs_defaults = [
 	'class'               => [ 'wds-block', 'wds-block-call-to-action' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
-	'id'                  => ( isset( $block ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : '',
+	'id'                  => ( isset( $abs_block ) && ! empty( $abs_block['anchor'] ) ) ? $abs_block['anchor'] : '',
 	'fields'              => [], // Fields passed via the print_block() function.
 ];
 
-// Parse the $args if we're rendering this with print_block() from a theme.
-if ( ! empty( $args ) ) :
-	$abs_defaults = get_formatted_args( $args, $abs_defaults );
-endif;
-
-// Get custom classes for the block and/or for block colors.
-$abs_block_classes = [];
-$abs_block_classes = isset( $block ) ? get_block_classes( $block ) : '';
-
-if ( ! empty( $abs_block_classes ) ) :
-	$abs_defaults['class'] = array_merge( $abs_defaults['class'], $abs_block_classes );
-endif;
+// Returns updated $abs_defaults array with classes from Gutenberg or from the print_block() function.
+// Returns formatted attriutes as $abs_atts array.
+[ $abs_defaults, $abs_atts ] = setup_block_defaults( $abs_args, $abs_defaults, $abs_block );
 
 // Pull in the fields from ACF, if we've not pulled them in using print_block().
-$abs_call_to_action = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_acf_fields( [ 'eyebrow', 'heading', 'content', 'button_args', 'layout' ], $block['id'] );
-
-// Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
+$abs_call_to_action = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_acf_fields( [ 'eyebrow', 'heading', 'content', 'button_args', 'layout' ], $abs_block['id'] );
 ?>
 
-<?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
+<?php if ( ! empty( $abs_block['data']['_is_preview'] ) ) : ?>
 	<figure>
 		<img
 			src="<?php echo esc_url( get_theme_file_uri( 'build/images/block-previews/call-to-action-preview.jpg' ) ); ?>"

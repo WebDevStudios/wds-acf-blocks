@@ -1,25 +1,16 @@
-/* Global Block Styles for the Editor */
-.acf-block-preview .acf-innerblocks-container {
-	border: 2px;
-	border-color: #ddd;
-	border-style: dashed;
-	border-radius: 8px;
-	min-height: 40px;
-	padding: 16px;
-	position: relative;
-}
+//----------------------------------------
+// Global block styles, Admin.
+//----------------------------------------
+.acf-block-preview {
+	.acf-innerblocks-container {
+		@apply border-2 border-gray-300 border-dashed rounded-md mb-8 min-h-[40px] p-16 relative;
 
-.acf-block-preview .acf-innerblocks-container [data-rich-text-placeholder] {
-	color: #ddd;
-}
+		&[data-rich-text-placeholder] {
+			@apply text-gray-300;
+		}
 
-.acf-block-preview .acf-innerblocks-container:empty::before {
-	color: #ddd;
-	content: 'Drag in InnerBlocks here';
-	left: 50%;
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	transform: translate( -50%, -50% );
-	width: 100%;
+		&:empty::before {
+			@apply text-gray-300 content-['Drag_in_InnerBlocks_here'] left-1/2 absolute text-center top-1/2 w-full -translate-y-1/2 -translate-x-1/2;
+		}
+	}
 }

@@ -3,10 +3,22 @@
 //----------------------------------------
 
 .wds-block-logo-grid {
-	@apply grid gap-4 grid-cols-3;
+	@apply container;
 
 	.acf-innerblocks-container {
 		@apply col-span-full;
+	}
+
+	.wds-grid {
+		@apply grid-cols-2 gap-32;
+
+		@screen tablet-portrait {
+			@apply grid-cols-4;
+		}
+
+		@screen tablet-landscape {
+			@apply grid-cols-6;
+		}
 	}
 
 	.wds-module-figure {

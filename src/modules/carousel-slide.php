@@ -47,7 +47,7 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 		<div class="overlay" style="background: <?php echo esc_attr( $abs_args['overlay'] ); ?>"></div>
 	<?php endif; ?>
 
-	<div class="container">
+	<div class="carousel-slide-container">
 		<div class="carousel-slide-content">
 			<?php
 			// Eyebrow.

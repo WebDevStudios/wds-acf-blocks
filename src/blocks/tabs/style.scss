@@ -2,6 +2,8 @@
 // Block - Tabs Styles, FRONTEND
 //----------------------------------------
 .wds-block-tabs {
+	@apply container;
+
 	.wds-module-tabs {
 		@apply my-32;
 

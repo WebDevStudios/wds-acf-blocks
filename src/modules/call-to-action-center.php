@@ -14,7 +14,7 @@ use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\get_formatted_args;
 
 $abs_defaults = [
-	'class'       => [ 'wds-module', 'wds-module-cta' ],
+	'class'       => [ 'wds-module', 'wds-module-call-to-action' ],
 	'eyebrow'     => false,
 	'heading'     => false,
 	'content'     => false,
@@ -28,50 +28,52 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 
 ?>
 <div <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<?php
-	// Eyebrow.
-	if ( $abs_args['eyebrow'] ) :
-		print_element(
-			'eyebrow',
-			[
-				'text' => $abs_args['eyebrow'],
-			]
-		);
-	endif;
+	<div class="center-content">
+		<?php
+		// Eyebrow.
+		if ( $abs_args['eyebrow'] ) :
+			print_element(
+				'eyebrow',
+				[
+					'text' => $abs_args['eyebrow'],
+				]
+			);
+		endif;
 
-	// Heading.
-	if ( $abs_args['heading'] ) :
-		print_element(
-			'heading',
-			[
-				'text' => $abs_args['heading'],
-			]
-		);
-	endif;
+		// Heading.
+		if ( $abs_args['heading'] ) :
+			print_element(
+				'heading',
+				[
+					'text' => $abs_args['heading'],
+				]
+			);
+		endif;
 
-	// Content.
-	if ( $abs_args['content'] ) :
-		print_element(
-			'content',
-			[
-				'content' => $abs_args['content'],
-			]
-		);
-	endif;
+		// Content.
+		if ( $abs_args['content'] ) :
+			print_element(
+				'content',
+				[
+					'content' => $abs_args['content'],
+				]
+			);
+		endif;
 
-	// Button.
-	if ( ! empty( $abs_args['button_args']['button'] ) ) :
-		// Simplify this array.
-		$abs_button_args = $abs_args['button_args']['button'];
+		// Button.
+		if ( ! empty( $abs_args['button_args']['button'] ) ) :
+			// Simplify this array.
+			$abs_button_args = $abs_args['button_args']['button'];
 
-		print_element(
-			'button',
-			[
-				'title'  => $abs_button_args['title'],
-				'href'   => $abs_button_args['url'],
-				'target' => $abs_button_args['target'],
-			]
-		);
-	endif;
-	?>
+			print_element(
+				'button',
+				[
+					'title'  => $abs_button_args['title'],
+					'href'   => $abs_button_args['url'],
+					'target' => $abs_button_args['target'],
+				]
+			);
+		endif;
+		?>
+	</div>
 </div>

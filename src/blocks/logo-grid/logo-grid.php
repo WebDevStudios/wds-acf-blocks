@@ -12,6 +12,10 @@ use function WebDevStudios\abs\get_block_classes;
 use function WebDevStudios\abs\get_formatted_args;
 use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\print_module;
+use function WebDevStudios\abs\setup_block_defaults;
+
+$abs_block = isset( $block ) ? $block : '';
+$abs_args  = isset( $args ) ? $args : '';
 
 $abs_defaults = [
 	'class'               => [ 'wds-block', 'wds-block-logo-grid' ],
@@ -20,20 +24,9 @@ $abs_defaults = [
 	'fields'              => [], // Fields passed via the print_block() function.
 ];
 
-// Parse the $args if we're rendering this with print_block() from a theme.
-if ( ! empty( $args ) ) :
-	$abs_defaults = get_formatted_args( $args, $abs_defaults );
-endif;
-
-// Get custom classes for the block and/or for block colors.
-$abs_block_classes = isset( $block ) ? get_block_classes( $block ) : [];
-
-if ( ! empty( $abs_block_classes ) ) :
-	$abs_defaults['class'] = array_merge( $abs_defaults['class'], $abs_block_classes );
-endif;
-
-// Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_defaults );
+// Returns updated $abs_defaults array with classes from Gutenberg or from the print_block() function.
+// Returns formatted attriutes as $abs_atts array.
+[ $abs_defaults, $abs_atts ] = setup_block_defaults( $abs_args, $abs_defaults, $abs_block );
 
 // Pull in the fields from ACF, if we've not pulled them in using print_block().
 $abs_logo_grid = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_acf_fields( [ 'logos' ], $block['id'] );
@@ -52,12 +45,16 @@ $abs_logo_grid = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : 
 		if ( ! empty( $abs_defaults['allowed_innerblocks'] ) ) :
 			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
 		endif;
-		foreach ( $abs_logo_grid['logos'] as $abs_logo ) :
-			print_module(
-				'figure',
-				$abs_logo
-			);
-		endforeach;
 		?>
+		<div class="wds-grid">
+			<?php
+			foreach ( $abs_logo_grid['logos'] as $abs_logo ) :
+				print_module(
+					'figure',
+					$abs_logo
+				);
+			endforeach;
+			?>
+		</div>
 	</section>
 <?php endif; ?>
