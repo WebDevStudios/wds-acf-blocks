@@ -43,6 +43,8 @@ $abs_call_to_action = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields
 			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
 		endif;
 
+		// Add the grid to the modules.
+		$abs_call_to_action['class'][] = 'wds-block-grid';
 		print_module( 'call-to-action-' . esc_attr( $abs_call_to_action['layout'] ), $abs_call_to_action );
 		?>
 	</section>

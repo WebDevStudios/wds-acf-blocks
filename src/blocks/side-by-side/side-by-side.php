@@ -42,16 +42,21 @@ $abs_side_by_side = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields']
 		if ( ! empty( $abs_defaults['allowed_innerblocks'] ) ) :
 			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
 		endif;
-
-		print_module(
-			'figure',
-			$abs_side_by_side['image']
-		);
-
-		print_module(
-			'card',
-			$abs_side_by_side['card']
-		);
 		?>
+		<div class="wds-block-grid">
+			<?php
+			print_module(
+				'figure',
+				$abs_side_by_side['image']
+			);
+
+			// Add column_order class to card.
+			$abs_side_by_side['card']['class'][] = $abs_side_by_side['column_order'];
+			print_module(
+				'card',
+				$abs_side_by_side['card']
+			);
+			?>
+		</div>
 	</section>
 <?php endif; ?>

@@ -43,7 +43,7 @@ $abs_cards = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_
 			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
 		endif;
 		?>
-		<section class="card-wrap">
+		<section class="card-wrap wds-block-grid">
 			<?php
 			foreach ( $abs_cards['card'] as $abs_card ) :
 				print_module(
