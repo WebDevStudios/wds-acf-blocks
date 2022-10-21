@@ -2,7 +2,10 @@
 // Block - Call to Action Styles, FRONTEND
 //----------------------------------------
 .wds-block-call-to-action {
-	@apply container;
+	.wds-module-call-to-action,
+	.acf-innerblocks-container {
+		@apply container;
+	}
 
 	.center-content {
 		@apply col-span-12 text-center;
