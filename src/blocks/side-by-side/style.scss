@@ -7,7 +7,11 @@
 
 	.wds-grid {
 		> * {
-			@apply col-span-6;
+			@apply col-span-12;
+
+			@screen tablet-portrait {
+				@apply col-span-6;
+			}
 		}
 
 		.card-first {

@@ -10,7 +10,15 @@
 	}
 
 	.wds-grid {
-		@apply grid-cols-4 gap-32;
+		@apply grid-cols-2 gap-32;
+
+		@screen tablet-portrait {
+			@apply grid-cols-4;
+		}
+
+		@screen tablet-landscape {
+			@apply grid-cols-6;
+		}
 	}
 
 	.wds-module-figure {
