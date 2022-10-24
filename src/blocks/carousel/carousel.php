@@ -35,7 +35,7 @@ $abs_carousels = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : 
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
 	<figure>
 		<img
-			src="<?php echo esc_url( plugin_dir_url( __DIR__ ) . '../assets/images/block-previews/carousel-preview.jpg' ) ); ?>"
+			src="<?php echo esc_url( plugin_dir_url( __DIR__ ) . '../assets/images/block-previews/carousel-preview.jpg' ); ?>"
 			alt="<?php esc_html_e( 'Preview of the Carousel Block', 'abs' ); ?>"
 		>
 	</figure>
