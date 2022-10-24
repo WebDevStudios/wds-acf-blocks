@@ -3,20 +3,20 @@
  * Plugin Name: WDS ACF Blocks
  * Description: A set of custom Gutenberg blocks built lovingly with Advanced Custom Fields.
  * Author: WebDevStudios
- * Version: 1.0.0
+ * Version: 2.0.0
  * Text Domain: wds-acf-blocks
  * Domain Path: /dist/languages/
  *
- * @since 1.0
  * @package wds-acf-blocks
  */
 
 namespace WebDevStudios\abs;
 
 // Define a global version number.
-define( 'ABS_WDS_ACF_VERSION', '1.0.0' );
+define( 'ABS_WDS_ACF_VERSION', '2.0.0' );
 define( 'ABS_ROOT_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'ABS_ROOT_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
+
 /**
  * Check to see if ACF Pro is active.
  *
@@ -63,7 +63,7 @@ function wds_acf_blocks_parent_plugin_notice() {
  *
  * @return void
  * @author Jenna Hines
- * @since  2022-09-13
+ * @since  2.0.0
  */
 function wds_acf_register_blocks() {
 	$wds_acf_blocks = glob( plugin_dir_path( __FILE__ ) . 'build/*' );
@@ -79,7 +79,7 @@ add_action( 'acf/init', __NAMESPACE__ . '\wds_acf_register_blocks' );
  *
  * @return void
  * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
- * @since  ???
+ * @since  2.0.0
  */
 function include_helper_files() {
 	$files = [
@@ -97,5 +97,4 @@ function include_helper_files() {
 		}
 	}
 }
-
 include_helper_files();

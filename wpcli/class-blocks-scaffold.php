@@ -46,7 +46,7 @@ class Blocks_Scaffold {
 	 * ## EXAMPLES
 	 *
 	 * wp abs create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keywords="myblock" --icon="table-row-before"
-	 * @since ??
+ 	 * @since  2.0.0
 	 * @param string $name The block name.
 	 * @param array  $assoc_args The block args.
 	 */
@@ -93,7 +93,7 @@ class Blocks_Scaffold {
 	/**
 	 * Init file system.
 	 *
-	 * @since ??
+	 * @since 2.0.0
 	 */
 	private function init_filesystem() {
 		// File system support.
@@ -108,7 +108,7 @@ class Blocks_Scaffold {
 	 * Create the block directory.
 	 *
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
-	 * @since ??
+	 * @since 2.0.0
 	 */
 	private function create_block_dir() {
 		$dir = ABS_ROOT_PATH . 'src/blocks/' . $this->name;
@@ -123,7 +123,7 @@ class Blocks_Scaffold {
 	/**
 	 * Create the block render file.
 	 *
-	 * @since ??
+	 * @since 2.0.0
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
 	private function create_block_render_php() {
@@ -139,7 +139,7 @@ class Blocks_Scaffold {
 	/**
 	 * Create the block tailwind config file.
 	 *
-	 * @since ??
+	 * @since 2.0.0
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
 	private function create_block_tailwind_config() {
@@ -162,7 +162,7 @@ class Blocks_Scaffold {
 	 * Create the block json.
 	 *
 	 * @param array $args Block details.
-	 * @since ??
+	 * @since 2.0.0
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
 	private function create_block_json( $args ) {
@@ -196,7 +196,7 @@ class Blocks_Scaffold {
 	/**
 	 * Create the block editor styles.
 	 *
-	 * @since ??
+	 * @since 2.0.0
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
 	private function create_block_editor_assets() {
@@ -222,7 +222,7 @@ class Blocks_Scaffold {
 	/**
 	 * Create the block main styles.
 	 *
-	 * @since ??
+	 * @since 2.0.0
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
 	private function create_block_assets() {
