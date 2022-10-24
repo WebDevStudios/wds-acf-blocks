@@ -18,7 +18,7 @@ namespace WebDevStudios\abs;
  */
 function allowed_blocks( $abs_allowed_blocks ) {
 
-	// This is meant to overwrite the default set of allowed blocks.
+	// Defines the default set of allowed blocks.
 	$abs_allowed_blocks = [
 		'core/heading',
 		'core/paragraph',
@@ -44,7 +44,7 @@ function allowed_blocks( $abs_allowed_blocks ) {
 }
 
 // Filter changed at WordPress 5.8.
-// See https://developer.wordpress.org/block-editor/reference-guides/filters/block-filters/#allowed_block_types_all .
+// See https://developer.wordpress.org/block-editor/reference-guides/filters/block-filters/#allowed_block_types_all.
 $abs_block_filter_name = 'allowed_block_types_all';
 
 add_filter( $abs_block_filter_name, __NAMESPACE__ . '\allowed_blocks', 99 );
