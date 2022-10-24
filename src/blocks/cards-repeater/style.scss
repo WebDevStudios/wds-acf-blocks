@@ -6,10 +6,13 @@
 	@apply container;
 
 	.card-wrap {
-		@apply grid-cols-1;
+		@apply wds-grid;
 
-		@screen tablet-portrait {
-			@apply grid-cols-3;
+		.wds-module-card {
+			@apply col-span-12;
+			@screen tablet-portrait {
+				@apply col-span-4;
+			}
 		}
 	}
 }
