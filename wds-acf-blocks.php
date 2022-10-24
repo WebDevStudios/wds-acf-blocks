@@ -4,10 +4,9 @@
  * Description: A set of custom Gutenberg blocks built lovingly with Advanced Custom Fields.
  * Author: WebDevStudios
  * Version: 2.0.0
- * Text Domain: wds-acf-blocks
- * Domain Path: /dist/languages/
+ * Text Domain: abs
  *
- * @package wds-acf-blocks
+ * @package abs
  */
 
 namespace WebDevStudios\abs;
