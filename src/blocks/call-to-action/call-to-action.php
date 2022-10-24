@@ -32,7 +32,7 @@ $abs_call_to_action = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields
 <?php if ( ! empty( $abs_block['data']['_is_preview'] ) ) : ?>
 	<figure>
 		<img
-			src="<?php echo esc_url( get_theme_file_uri( 'build/images/block-previews/call-to-action-preview.jpg' ) ); ?>"
+			src="<?php echo esc_url( plugin_dir_url( __DIR__ ) . '../assets/images/block-previews/call-to-action-preview.jpg' ); ?>"
 			alt="<?php esc_html_e( 'Preview of the Call to Action Block', 'abs' ); ?>"
 		>
 	</figure>
