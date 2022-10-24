@@ -2,161 +2,71 @@
 
 With the advent of Gutenberg in WordPress, Advanced Custom Fields stepped up to help make the process of creating custom blocks easier and faster. This plugin creates a set of custom blocks with basic styles for you to customize in your theme.
 
-[![WebDevStudios. Your Success is Our Mission.](https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png)](https://webdevstudios.com/contact/)
-
-## 🧱 Available Blocks
-
 This plugin includes the following blocks:
 
-- Accordion
-- Carousel
+-   Accordion
+-   Call to Action
+-   Cards (Repeater, up to 3)
+-   Carousel
+-   Logo Grid
+-   Quotes
+-   Side-by-Side
+-   Tabs
 
-![image](https://i.imgur.com/gOTNnnH.png)
-
-WDS ACF Blocks is bundled with a [Style Lint](https://stylelint.io/), [ESLint](https://eslint.org/), and [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) linting rulesets – plus, it passes both WCAG 2.1AA and Section 508 standards out of the box.
+WDS ACF Blocks is bundled with [Style Lint](https://stylelint.io/), [ESLint](https://eslint.org/), and [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) linting rulesets – plus, it passes both WCAG 2.1AA and Section 508 standards out of the box. This plugin uses WP Scripts to handle the build process for the blocks. It uses
 
 To better manage ACF Field Groups, the plugin supports [synchronized JSON](https://www.advancedcustomfields.com/resources/synchronized-json/) for Advanced Custom Fields.
 
-👉 Please visit the [WDS ACF Blocks Wiki](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks) to learn more about the [features of the blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#block-features) and how you can [create Gutenberg Blocks with ACF](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#creating-gutenberg-blocks-with-acf).
+<a href="https://webdevstudios.com/contact/"><img src="https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png" alt="WebDevStudios. WordPress for big brands."></a>
 
-## 📝 Requirements
+## Getting Started
 
-- [Node LTS](https://nodejs.org/en/)
-- [Composer](https://getcomposer.org/)
-- [WordPress](https://wordpress.org/)
-- [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/pro/)
-- [abs](https://github.com/WebDevStudios/abs)
+### Prerequisites
 
-_We highly recommend [NVM](https://github.com/nvm-sh/nvm) so you can easily switch between Node versions._
+Because the plugin compiles and bundles assets via NPM scripts, basic knowledge of the command line and the following dependencies are required: [Node LTS](https://nodejs.org) and NPM.
 
-## Create a Block with WP-CLI
-To create a block with WPCLI you can just use this command. 
+#### IMPORTANT
 
-```bash
-wp abs create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keywords="myblock" --icon="table-row-before"
-```
-**Parameters:**
-- Title : The title of the block
-- Desc : The description of the block
-- Keywords : Block keywords
-- Icon : The icon of the block
+This plugin relies entirely on Advanced Custom Fields _Pro_ for WordPress. The Pro version is _required_, along with a version _greater_ than 6.0 - it will not work with any ACF 5.x version. Additonally, while the WebDevStudios theme wd*s is \_not* required, it is highly recommended to get started with this plugin.
 
-## 💻 Development
+## Who this plugin is for
 
-### 🚀 Installation
+It is important to be aware of who this plugin is designed for - this is squarely aimed at developers who want to **use it as a starter** to scaffold out a lot of blocks _quickly_ for a project. This is ideal for that case, but it is entirely dependant on your ability to build scaffold them all yourself, along with the styling.
 
-Clone the repository into `wp-content/plugins` of a WordPress website:
+This is **not a 'drop in', do-it-all plugin for your next blog** - you'll have to understand PHP, JS, SCSS (and probably a good amount of Tailwind), and a complex build process to use this plugin.
+
+The good news is that this plugin was designed to drastically speed up your workflow, keep your blocks consistent and keep your code DRY. If you're a developer - or a small team of developers - this plugin is for you.
+
+## Installation
+
+1. From the command line, change directories to your new theme directory:
 
 ```bash
-git clone git@github.com:WebDevStudios/wds-acf-blocks.git
+cd /plugin/wds-acf-blocks
 ```
 
-From the command line, change directories:
+2. Install plugin dependencies and trigger an initial build:
 
 ```bash
-cd wds-acf-blocks
+npm i
 ```
 
-Install plugin dependencies and trigger an initial build:
+### NPM Scripts
 
-```bash
-npm install
-```
+From the command line, type any of the following to perform an action:
 
-### 🚦 Workflow
+`npm run build` - Compile and build all assets .
 
-To watch for changes during development, run the following command:
+`npm run start` - Automatically compile the SCSS & Tailwind to CSS; minifies the JS. This will also
 
-```bash
-npm run start
-```
+## Getting Started
 
-![image](https://i.imgur.com/n2FEkhB.jpg)
+Start by doing a find and replace within the plugin to update the namespace and functioon prefix. Currently, this is set to `abs` (*A*CF *B*lock *S*tarter). The namespace and prefix need to match or you will get linting errors. Be careful when doing this as "abs" is also matched within the words `absolute`, `tabs`, `abstract`, etc.
 
-To build the production version, execute this command:
+The safest method is to do a search for `\abs` and `$abs_` and replace those with your new namespace.
 
-```bash
-npm run build
-```
-### Building the blocks 
-The build directory for the blocks are ignored and not being tracked by git. 
-Make sure you push the build folder to your site with the help of CD/CI pipelines or manually because the blocks will not work without the build folder.
+We are additionally using a `CompanyName\ProjectName` style namespace - in our case, `WebDevStudios\abs`. To maintain consistency, you should consider using a similar structure - ie: `AcmeWidgets\acme`.
 
-### 🛠 Linting Commands
+## Contributing and Support
 
-Linting rules for JavaScript and SCSS are defined in [package.json](package.json) from line number 40 to 84.
-
-**Lint JS:**
-
-```bash
-npm run lint:js
-```
-
-**Lint SCSS:**
-
-```bash
-npm run lint:css
-```
-
-**Lint PHP:**
-
-The PHPCS ruleset is defined in [.phpcs.xml.dist](.phpcs.xml.dist). To lint PHP via composer, run the following command:
-
-```bash
-composer run lint
-```
-
-👉 **Important:** This plugin uses [@wordpress/scripts](https://www.npmjs.com/package/@wordpress/scripts) to lint and compile JavaScript and SCSS.
-
-## ✏️ Editing an ACF Block in Gutenberg
-
-To edit an ACF block in Gutenberg, you need to access the settings. Please follow these three simple steps to access the block settings:
-
-### → Step #1
-
-Go to the WordPress admin and open the _add new post_ or _edit post_ screen in Gutenberg.
-
-![image](https://i.imgur.com/4ImtYJU.png)
-
-### → Step #2
-
-Click on the add (+) block icon on the top left corner of the screen and search for _carousel_ to add a new _Carousel_ block to the editor.
-
-![image](https://i.imgur.com/rMusQYi.png)
-
-### → Step #3
-
-Clicking on the block will toggle edit mode to access the settings. Block will always show the preview.
-
-![image](https://i.imgur.com/5MTFy7J.gif)
-
-**ACF Block Settings:**
-
-![image](https://i.imgur.com/Qe6HIbD.png)
-
-## 📚 Developer Documentation
-
-### → Saving ACF JSON Files
-
-By default, saving the ACF blocks to JSON files filter is set to save to the current theme. You will need to create the `acf-json` folder on the root of your theme and transfer the existing json files in `acf-json` to that folder. You can change to save in the plugin by changing the `$path` variable to `plugin_dir_path( dirname( __FILE__ ) ) . '/acf-json';` in this line: <https://github.com/WebDevStudios/wds-acf-blocks/blob/main/inc/hooks.php#L27>
-
-To know more about loading and saving of blocks in ACF JSON files, visit the [Saving and Loading Blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/Saving-and-Loading-Blocks) section in the Wiki.
-
-### → Styling ACF Blocks
-
-Styling blocks will be done in the theme and not in the plugin. The `accordion` block has a starter stylesheet that can be copied over to the theme, this contains the base style to make the accordion work and can be modified as needed. The `carousel` block is using the default `glider-js` stylesheet.
-
-### → Important Wiki Links
-
-Please find extensive developer documentation at the following links:
-
-- [WDS ACF Blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks)
-- [Block Features](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#block-features)
-- [Block Details](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#block-details)
-- [How to create Gutenberg Blocks with ACF](https://github.com/WebDevStudios/wds-acf-blocks/wiki/WDS-ACF-Blocks#creating-gutenberg-blocks-with-acf)
-- [Saving and Loading Blocks](https://github.com/WebDevStudios/wds-acf-blocks/wiki/Saving-and-Loading-Blocks)
-- [Glider.js - Carousel](https://nickpiscitelli.github.io/Glider.js/)
-
-## :octocat: Contributing and Support
-
-Your contributions and [support tickets](https://github.com/WebDevStudios/wds-acf-blocks/issues) are welcome. Please see our [guidelines](https://github.com/WebDevStudios/wds-acf-blocks/blob/master/.github/CONTRIBUTING.md) before submitting a pull request.
+Your contributions and [support tickets](https://github.com/WebDevStudios/wds-acf-gutenberg/issues) are welcome. Please see our [guidelines](https://github.com/WebDevStudios/wds-acf-gutenberg/blob/master/.github/CONTRIBUTING.md) before submitting a pull request.
