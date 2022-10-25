@@ -55,7 +55,7 @@ class Blocks_Scaffold {
 
 		// validate name.
 		if ( ! preg_match( '/^[a-zA-Z0-9\-]+$/', $this->name ) ) {
-			WP_CLI::error( 'Invalid name, Block name must only contain alphabets.', true );
+			WP_CLI::error( 'Invalid name, Block name must only contain upper and lowercase letters.', true );
 		}
 
 		// Merge with default args.
