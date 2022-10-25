@@ -1,5 +1,6 @@
 {
 	"name": "wds_acf_blocks",
+	"version": "2.0.0",
 	"description": "A set of custom Gutenberg blocks built with Advanced Custom Fields Pro.",
 	"author": "WebDevStudios",
 	"license": "GPL-2.0-or-later",
