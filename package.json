@@ -60,7 +60,7 @@
 		"lint:php": "composer run-script lint",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
-		"postinstall": "composer install --quiet && npm run build",
+		"postinstall": "npm run build",
 		"blocks": "cross-env NODE_ENV=production wp-scripts build --webpack-src-dir=src/blocks --webpack-copy-php",
 		"global": "cross-env NODE_ENV=production wp-scripts build --config webpack.global.js",
 		"build": "npm-run-all blocks global",
