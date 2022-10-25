@@ -53,3 +53,11 @@ add_filter( 'acf/settings/load_json', __NAMESPACE__ . '\wds_acf_blocks_acf_json_
  * @see https://developer.wordpress.org/reference/hooks/should_load_separate_core_block_assets/
  */
 add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+
+/**
+ * Disable the custom color picker as we don't support the classes it adds.
+ *
+ * @author WebDevStudios
+ * @see https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#disabling-custom-colors-in-block-color-palettes
+ */
+add_theme_support( 'disable-custom-colors' );
