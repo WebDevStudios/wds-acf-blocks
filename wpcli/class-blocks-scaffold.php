@@ -8,6 +8,7 @@
 namespace WebDevStudios\abs;
 
 // Import wpcli.
+
 use \WP_CLI as WP_CLI;
 
 /**
@@ -46,7 +47,7 @@ class Blocks_Scaffold {
 	 * ## EXAMPLES
 	 *
 	 * wp abs create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keywords="myblock" --icon="table-row-before"
- 	 * @since  2.0.0
+	 * @since  2.0.0
 	 * @param string $name The block name.
 	 * @param array  $assoc_args The block args.
 	 */
