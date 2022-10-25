@@ -32,7 +32,7 @@ $abs_tabs = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_a
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
 	<figure>
 		<img
-			src="<?php echo esc_url( get_theme_file_uri( 'assets/images/block-previews/tabs-preview.jpg' ) ); ?>"
+			src="<?php echo esc_url( plugin_dir_url( __DIR__ ) . '../assets/images/block-previews/tabs-preview.jpg' ); ?>"
 			alt="<?php esc_html_e( 'Preview of the Tabs Block', 'abs' ); ?>"
 		>
 	</figure>

@@ -51,7 +51,7 @@ add_action( 'admin_init', __NAMESPACE__ . '\wds_acf_blocks_has_parent_plugin' );
 function wds_acf_blocks_parent_plugin_notice() {
 	?>
 	<div class="error">
-		<p><?php esc_html_e( 'WDS ACF Blocks has been deactivated because Advanced Custom Fields Pro has been deactivated. Advanced Custom Fields Pro must be active in order for you to use WDS ACF Blocks.', 'abs' ); ?></p>
+		<p><?php esc_html_e( 'WDS ACF Blocks has been deactivated because Advanced Custom Fields Pro 6.0+ has been deactivated. Advanced Custom Fields Pro 6.0+ must be active in order for you to use WDS ACF Blocks.', 'abs' ); ?></p>
 	</div>
 	<?php
 }

@@ -8,9 +8,6 @@
  */
 
 use function WebDevStudios\abs\get_acf_fields;
-use function WebDevStudios\abs\get_block_classes;
-use function WebDevStudios\abs\get_formatted_args;
-use function WebDevStudios\abs\get_formatted_atts;
 use function WebDevStudios\abs\print_module;
 use function WebDevStudios\abs\setup_block_defaults;
 
@@ -35,7 +32,7 @@ $abs_logo_grid = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : 
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
 	<figure>
 		<img
-			src="<?php echo esc_url( get_theme_file_uri( 'assets/images/block-previews/logo-grid-preview.jpg' ) ); ?>"
+			src="<?php echo esc_url( plugin_dir_url( __DIR__ ) . '../assets/images/block-previews/logo-grid-preview.jpg' ); ?>"
 			alt="<?php esc_html_e( 'Preview of the Logo Grid Block', 'abs' ); ?>"
 		>
 	</figure>
