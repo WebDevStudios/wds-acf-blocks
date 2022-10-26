@@ -1,6 +1,5 @@
 const blockName = 'accordion';
-const fs        = require( 'fs' );
-
+const fs = require( 'fs' );
 
 const directoryFiles = [
 	`./src/blocks/${ blockName }/*.php`,
