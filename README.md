@@ -27,7 +27,7 @@ Because the plugin compiles and bundles assets via NPM scripts, basic knowledge 
 
 #### IMPORTANT
 
-This plugin relies entirely on Advanced Custom Fields _Pro_ for WordPress. The Pro version is _required_, along with a version _greater_ than 6.0 - it will not work with any ACF 5.x version. Additonally, while the WebDevStudios theme wd*s is \_not* required, it is highly recommended to get started with this plugin.
+This plugin relies entirely on Advanced Custom Fields _Pro_ for WordPress. The Pro version is _required_, along with a version _greater_ than 6.0 - it will not work with any ACF 5.x version. Additonally, the WebDevStudios theme `wd_s` is _required_ - there are dependencies in the theme that this plugin relies on.
 
 ## Who this plugin is for
 
@@ -39,13 +39,13 @@ The good news is that this plugin was designed to drastically speed up your work
 
 ## Installation
 
-1. From the command line, change directories to your new theme directory:
+1) From the command line, change directories to your new theme directory:
 
 ```bash
 cd /plugin/wds-acf-blocks
 ```
 
-2. Install plugin dependencies and trigger an initial build:
+2) Install plugin dependencies and trigger an initial build:
 
 ```bash
 npm i
@@ -55,17 +55,19 @@ npm i
 
 From the command line, type any of the following to perform an action:
 
-`npm run build` - Compile and build all assets .
+`npm run build` - Compile and build all assets.
 
-`npm run start` - Automatically compile the SCSS & Tailwind to CSS; minifies the JS. This will also
+`npm run start` - Automatically compile the SCSS & Tailwind to CSS; minifies the JS. This will also build all the blocks using WP Scripts.
 
-## Getting Started
+## Find and Replace
 
 Start by doing a find and replace within the plugin to update the namespace and functioon prefix. Currently, this is set to `abs` (*A*CF *B*lock *S*tarter). The namespace and prefix need to match or you will get linting errors. Be careful when doing this as "abs" is also matched within the words `absolute`, `tabs`, `abstract`, etc.
 
 The safest method is to do a search for `\abs` and `$abs_` and replace those with your new namespace.
 
 We are additionally using a `CompanyName\ProjectName` style namespace - in our case, `WebDevStudios\abs`. To maintain consistency, you should consider using a similar structure - ie: `AcmeWidgets\acme`.
+
+This requires the `wd_s` theme, but it's probably already been renamed to something else. Make sure that you update the path inside the `postcss.config.js` file that is looking for the Tailwind config inside the `wd_s` theme.
 
 ## Contributing and Support
 
