@@ -1,3 +1,12 @@
+-   [Home](Home.md)
+-   [Philosophy](Philosophy.md)
+-   [Functions](Functions.md)
+-   [Blocks](Blocks.md)
+-   [Modules](Modules.md)
+-   [Elements](Elements.md)
+-   [Scripts](Scripts.md)
+-   [WP-CLI](WP-CLI.md)
+
 # Elements
 
 Elements are the smallest componets on the atomic level designs. They are rendered by the `print_element()` function. They are the building blocks of the modules and blocks.

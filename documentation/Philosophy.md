@@ -1,15 +1,24 @@
+-   [Home](Home.md)
+-   [Philosophy](Philosophy.md)
+-   [Functions](Functions.md)
+-   [Blocks](Blocks.md)
+-   [Modules](Modules.md)
+-   [Elements](Elements.md)
+-   [Scripts](Scripts.md)
+-   [WP-CLI](WP-CLI.md)
+
 # Philosophy
 
 The main idea around the WDS ACF Blocks Plugin (internally called the ACF Block Starter) is to abstract repetitive development tasks into template parts. These template parts would receive a structured array of data, allowing them to render to the frontend.
 
 This method was adopted in order to accomplish the following:
 
-- eliminate inconsistencies among different members of a team working on the same project
-- formalize a method by which blocks are built, structured, and rendered - and by proxy, how their internal DOM structure is rendered
-- simplifies development by encapsulating all development within a constrained set of methods and functions
-- introduce a naming convention by which all future block development would ahdere to
-- encapsulate all enqueued block files into a single location
-- by virute of the above goals, this would hopefully speed up development while, at the same time, making it easier to build blocks quickly with more consistency and less overlap
+-   eliminate inconsistencies among different members of a team working on the same project
+-   formalize a method by which blocks are built, structured, and rendered - and by proxy, how their internal DOM structure is rendered
+-   simplifies development by encapsulating all development within a constrained set of methods and functions
+-   introduce a naming convention by which all future block development would ahdere to
+-   encapsulate all enqueued block files into a single location
+-   by virute of the above goals, this would hopefully speed up development while, at the same time, making it easier to build blocks quickly with more consistency and less overlap
 
 ## Blocks, Modules and Elements, oh my!
 
@@ -23,12 +32,12 @@ To that end, we came up with: Blocks, Modules and Elements. Read on to learn how
 
 Blocks are the building block ;) of this system. They are somewhat analagous to Organisms in that they can be composed of many modules and/or elements. They can have logic (if necessary). What the block handles:
 
-- it defines the classes for the block, including any applied within Gutenberg
-- it adds an ID from the Gutenberg input field, if set
-  - the Classes and ID are subsequently automatically inlined as an attribute string into the `<section>`, which is typically the block's root DOM element
-- it determines which Inner Blocks are allowed and where they are rendered
-- it retrieves the associated ACF Fields and adds them to a block array
-  - it then passes this array down to whichever modules or elements it uses to render the block
+-   it defines the classes for the block, including any applied within Gutenberg
+-   it adds an ID from the Gutenberg input field, if set
+    -   the Classes and ID are subsequently automatically inlined as an attribute string into the `<section>`, which is typically the block's root DOM element
+-   it determines which Inner Blocks are allowed and where they are rendered
+-   it retrieves the associated ACF Fields and adds them to a block array
+    -   it then passes this array down to whichever modules or elements it uses to render the block
 
 ## Modules
 

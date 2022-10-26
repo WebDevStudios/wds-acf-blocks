@@ -1,3 +1,12 @@
+-   [Home](Home.md)
+-   [Philosophy](Philosophy.md)
+-   [Functions](Functions.md)
+-   [Blocks](Blocks.md)
+-   [Modules](Modules.md)
+-   [Elements](Elements.md)
+-   [Scripts](Scripts.md)
+-   [WP-CLI](WP-CLI.md)
+
 # Scripts
 
 ## Block Level Scripts

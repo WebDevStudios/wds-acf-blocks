@@ -1,3 +1,12 @@
+-   [Home](Home.md)
+-   [Philosophy](Philosophy.md)
+-   [Functions](Functions.md)
+-   [Blocks](Blocks.md)
+-   [Modules](Modules.md)
+-   [Elements](Elements.md)
+-   [Scripts](Scripts.md)
+-   [WP-CLI](WP-CLI.md)
+
 # Create a boilerplate block using WP CLI
 
 With WP CLI you can create blocks easily and quickly. This is a great way to create blocks for your project. Use the following command to scaffold a block.
@@ -8,7 +17,7 @@ wp abs create_portable_block myblock --title="This is myblock" --desc="This bloc
 
 ## Parameters:
 
-- Title : The title of the block
-- Desc : The description of the block
-- Keywords : Block keywords
-- Icon : The icon of the block
+-   Title : The title of the block
+-   Desc : The description of the block
+-   Keywords : Block keywords
+-   Icon : The icon of the block

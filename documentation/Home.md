@@ -1,16 +1,25 @@
+-   [Home](Home.md)
+-   [Philosophy](Philosophy.md)
+-   [Functions](Functions.md)
+-   [Blocks](Blocks.md)
+-   [Modules](Modules.md)
+-   [Elements](Elements.md)
+-   [Scripts](Scripts.md)
+-   [WP-CLI](WP-CLI.md)
+
 # Overview
 
 If you have the latest version of [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/pro/) - ACF 6.0+ is required for this plugin to work correctly - then you can take advantage of our ACF Blocks system. ACF blocks are a great way to visually manage blocks of content throughout your website.
 
 ## Available Blocks
 
-- [Accordion](#accordion)
-- [Cards (Repeater)](#cards-repeater)
-- [Carousel](#carousel)
-- [Logo Grid](#logo-grid)
-- [Quotes](#quotes)
-- [Side-by-Side](#side-by-side)
-- [Tabs](#tabs)
+-   [Accordion](#accordion)
+-   [Cards (Repeater)](#cards-repeater)
+-   [Carousel](#carousel)
+-   [Logo Grid](#logo-grid)
+-   [Quotes](#quotes)
+-   [Side-by-Side](#side-by-side)
+-   [Tabs](#tabs)
 
 ## How the Blocks are defined and registered
 
@@ -20,15 +29,15 @@ The blocks in the WDS ACF Blocks plugin use the new (WordPress 5.8 onwards) `blo
 
 Each ACF Block supports the following:
 
-- Background color (using Gutenberg's background color control)
-- Text color (using Gutenberg's text color control)
-- Inner Blocks (if allowed in the block options)
+-   Background color (using Gutenberg's background color control)
+-   Text color (using Gutenberg's text color control)
+-   Inner Blocks (if allowed in the block options)
 
 These options are in addition to native Gutenberg settings like:
 
-- Custom CSS classes
-- HTML Anchor (AKA custom element ID)
-- Drag-n-Drop sorting
+-   Custom CSS classes
+-   HTML Anchor (AKA custom element ID)
+-   Drag-n-Drop sorting
 
 ## Recommendations and Best Practices
 
@@ -216,12 +225,12 @@ The Accordion Block allows for adding several accordion items to a block to be d
 
 The Cards Repeater Block uses a repeater to allow you to add as many cards as you wish to a block. The Elements supported for each card are:
 
-- Image
-- Eyebrow
-- Heading
-- Meta
-- Content
-- Button
+-   Image
+-   Eyebrow
+-   Heading
+-   Meta
+-   Content
+-   Button
 
 ### Carousel
 
@@ -229,11 +238,11 @@ The Carousel Block allows you to create up to 12 slides in a carousel. This uses
 
 Each Carousel Slide uses the `carousel-slide` module. This module is expecting the following fields, which will be passed down to the corresponding elements:
 
-- Image
-- Eyebrow
-- Heading
-- Content
-- Button
+-   Image
+-   Eyebrow
+-   Heading
+-   Content
+-   Button
 
 The overlay is handled by the `overlay` field at the top level; it will apply to all slides in the carousel, if set.
 

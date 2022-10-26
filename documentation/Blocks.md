@@ -1,3 +1,12 @@
+-   [Home](Home.md)
+-   [Philosophy](Philosophy.md)
+-   [Functions](Functions.md)
+-   [Blocks](Blocks.md)
+-   [Modules](Modules.md)
+-   [Elements](Elements.md)
+-   [Scripts](Scripts.md)
+-   [WP-CLI](WP-CLI.md)
+
 # Blocks
 
 The file & folder structure for a block is as follows:
@@ -35,24 +44,24 @@ A block will use most (but perhaps not all) of the above functions to render - t
 
 Put simply, each of the functions will perform a task that is indicated by their names.
 
-- `print_module` will print a module
-- `print_element` will print an element
-- `get_acf_fields` will return the values of passed in ACF Fields (in the form of an array)
-- `setup_block_defaults` will return `$abs_defaults` as an updated array and `$abs_atts` as a formatted string, using the following functions:
-  - `get_block_classes` will return classes for the block from Gutenberg for the following:
-    - `$block['className']`
-    - `$block['backgroundColor']`
-    - `$block['textColor']`
-  - `get_formatted_atts` will return a string of attributes
+-   `print_module` will print a module
+-   `print_element` will print an element
+-   `get_acf_fields` will return the values of passed in ACF Fields (in the form of an array)
+-   `setup_block_defaults` will return `$abs_defaults` as an updated array and `$abs_atts` as a formatted string, using the following functions:
+    -   `get_block_classes` will return classes for the block from Gutenberg for the following:
+        -   `$block['className']`
+        -   `$block['backgroundColor']`
+        -   `$block['textColor']`
+    -   `get_formatted_atts` will return a string of attributes
 
 ## Block Defaults
 
 Each block sets up it's own consistent defaults. This is an array composed (typipcally) of the following key/value pairs.
 
-- class => array of classes
-- allowed_innerblocks => array of blocks allowed inside this block
-- id => int; set by the Gutenberg control in the admin
-- fields => array of fields, if block is being rendered by `print_block()`
+-   class => array of classes
+-   allowed_innerblocks => array of blocks allowed inside this block
+-   id => int; set by the Gutenberg control in the admin
+-   fields => array of fields, if block is being rendered by `print_block()`
 
 This array looks like this:
 
