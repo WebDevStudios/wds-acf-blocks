@@ -65,12 +65,16 @@ From the command line, type any of the following to perform an action:
 
 Start by doing a find and replace within the plugin to update the namespace and functioon prefix. Currently, this is set to `abs` (for *A*CF *B*lock *S*tarter). The namespace and prefix need to match or you will get linting errors. Be careful when doing this as "abs" is also matched within the words `absolute`, `tabs`, `abstract`, etc.
 
-The safest method is to do a search for `\abs` and `$abs_` and replace those with your new namespace.
+The safest method is to do a search for `\abs` and `$abs_` and replace those with your new namespace and function prefix, respectively.
 
 We are additionally using a `CompanyName\ProjectName` style namespace - in our case, `WebDevStudios\abs`. To maintain consistency, you should consider using a similar structure - ie: `AcmeWidgets\acme`.
 
-This requires the `wd_s` theme, but it's probably already been renamed to something else. Make sure that you update the path inside the `postcss.config.js` file that is looking for the Tailwind config inside the `wd_s` theme.
+---
+
+**This requires the `wd_s` theme, but it's probably already been renamed to something else. Make sure that you update the path inside the `postcss.config.js` file that is looking for the Tailwind config inside the `wd_s` theme.**
+
+---
 
 ## Contributing and Support
 
-Your contributions and [support tickets](https://github.com/WebDevStudios/wds-acf-gutenberg/issues) are welcome. Please see our [guidelines](https://github.com/WebDevStudios/wds-acf-gutenberg/blob/master/.github/CONTRIBUTING.md) before submitting a pull request.
+Your contributions and [support tickets](https://github.com/WebDevStudios/wds-acf-blocks/issues) are welcome. Please see our [guidelines](https://github.com/WebDevStudios/wds-acf-blocks/blob/main/.github/CONTRIBUTING.md) before submitting a pull request.
