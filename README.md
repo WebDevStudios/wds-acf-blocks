@@ -17,7 +17,7 @@ WDS ACF Blocks is bundled with [Style Lint](https://stylelint.io/), [ESLint](htt
 
 To better manage ACF Field Groups, the plugin supports [synchronized JSON](https://www.advancedcustomfields.com/resources/synchronized-json/) for Advanced Custom Fields.
 
-<a href="https://webdevstudios.com/contact/"><img src="https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png" alt="WebDevStudios. WordPress for big brands."></a>
+[![Image](https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png)](https://webdevstudios.com/contact/)
 
 ## Getting Started
 
@@ -39,13 +39,15 @@ The good news is that this plugin was designed to drastically speed up your work
 
 ## Installation
 
-1) From the command line, change directories to your new theme directory:
+Follow these steps:
+
+From the command line, change directories to your new plugin directory:
 
 ```bash
-cd /plugin/wds-acf-blocks
+cd /plugins/wds-acf-blocks
 ```
 
-2) Install plugin dependencies and trigger an initial build:
+Install plugin dependencies and trigger an initial build:
 
 ```bash
 npm i
@@ -61,7 +63,7 @@ From the command line, type any of the following to perform an action:
 
 ## Find and Replace
 
-Start by doing a find and replace within the plugin to update the namespace and functioon prefix. Currently, this is set to `abs` (*A*CF *B*lock *S*tarter). The namespace and prefix need to match or you will get linting errors. Be careful when doing this as "abs" is also matched within the words `absolute`, `tabs`, `abstract`, etc.
+Start by doing a find and replace within the plugin to update the namespace and functioon prefix. Currently, this is set to `abs` (for *A*CF *B*lock *S*tarter). The namespace and prefix need to match or you will get linting errors. Be careful when doing this as "abs" is also matched within the words `absolute`, `tabs`, `abstract`, etc.
 
 The safest method is to do a search for `\abs` and `$abs_` and replace those with your new namespace.
 
