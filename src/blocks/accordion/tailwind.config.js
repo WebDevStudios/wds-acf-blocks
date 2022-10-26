@@ -1,5 +1,6 @@
 const blockName = 'accordion';
-const fs = require( 'fs' );
+const fs        = require( 'fs' );
+
 
 const directoryFiles = [
 	`./src/blocks/${ blockName }/*.php`,
@@ -9,9 +10,9 @@ const directoryFiles = [
 
 module.exports = {
 	presets: [
-		fs.existsSync( global.themePreset )
-			? require( global.themePreset )
-			: '',
+		fs.existsSync( process.env.activePreset )
+			? require( process.env.activePreset )
+			: require( process.env.fallbackPreset ),
 	],
 	content: directoryFiles,
 };

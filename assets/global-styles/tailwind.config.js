@@ -4,9 +4,9 @@ const directoryFiles = [ `./assets/editor-styles/*.scss` ];
 
 module.exports = {
 	presets: [
-		fs.existsSync( global.themePreset )
-			? require( global.themePreset )
-			: '',
+		fs.existsSync( process.env.activePreset )
+			? require( process.env.activePreset )
+			: require( process.env.fallbackPreset ),
 	],
 	content: directoryFiles,
 	theme: {

@@ -1,9 +1,4 @@
-const path = require( 'path' );
-global.themePreset = path.join(
-	__dirname,
-	'./../../themes/wd_s/wds.preset.js'
-);
-global.appRoot = path.resolve( __dirname );
+require('dotenv').config();
 
 module.exports = {
 	plugins: {
