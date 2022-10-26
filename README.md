@@ -2,6 +2,12 @@
 
 With the advent of Gutenberg in WordPress, Advanced Custom Fields stepped up to help make the process of creating custom blocks easier and faster. This plugin creates a set of custom blocks with basic styles for you to customize in your theme.
 
+## Documentation
+
+You'll find information around installation and getting started below. [For more detailed documentation, go here](./documentation/Home.md).
+
+## Included Blocks
+
 This plugin includes the following blocks:
 
 -   Accordion
