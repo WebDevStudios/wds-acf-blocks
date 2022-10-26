@@ -18,7 +18,7 @@ This method was adopted in order to accomplish the following:
 -   simplifies development by encapsulating all development within a constrained set of methods and functions
 -   introduce a naming convention by which all future block development would ahdere to
 -   encapsulate all enqueued block files into a single location
--   by virute of the above goals, this would hopefully speed up development while, at the same time, making it easier to build blocks quickly with more consistency and less overlap
+-   by virtue of the above goals, this would hopefully speed up development, while at the same time making it easier to build blocks quickly with more consistency and less overlap
 
 ## Blocks, Modules and Elements, oh my!
 
