@@ -58,7 +58,7 @@
 		"format:php": "composer run-script format",
 		"lint": "run-p lint:*",
 		"lint:css": "wp-scripts lint-style '**/*.scss'",
-		"lint:js": "wp-scripts lint-js",
+		"lint:js": "wp-scripts lint-js --fix",
 		"lint:md": "wp-scripts lint-md-docs",
 		"lint:php": "composer run-script lint",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
