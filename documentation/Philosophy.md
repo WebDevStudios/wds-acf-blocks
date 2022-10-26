@@ -24,7 +24,7 @@ This method was adopted in order to accomplish the following:
 
 In order to achieve the above goals, the plan was to follow Brad Frost's [Atomic Design methodology](https://atomicdesign.bradfrost.com/table-of-contents/). Shortly after moving in this direction, a couple issues came up that made us shift the paradigm slightly.
 
-One of the issues was that the naming convention that Brad uses are rigid and don't feel well coupled to the WordPress template architecture. Organisms, in WordPress, could be a nav... or a template part. Is it both? Where is the line drawn between these things? The other issue is that WordPress already has _it's own_ paradigm - Templates, Template Parts, Blocks. We decided to focus on Blocks and loosely drape the concepts of Atomic Design over the Block model.
+One of the issues was that the naming convention that Brad Frost uses is rigid and don't feel well coupled to the WordPress architecture. Organisms, in WordPress, could be a nav... or a template part. Is it both? Where is the line drawn between these things? The other issue is that WordPress already has _it's own_ paradigm - Templates, Template Parts, Blocks. We decided to focus on Blocks and loosely drape the concepts of Atomic Design over the Block model.
 
 To that end, we came up with: Blocks, Modules and Elements. Read on to learn how they fit together.
 
