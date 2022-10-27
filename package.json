@@ -21,6 +21,8 @@
 	},
 	"main": "src/index.js",
 	"dependencies": {
+		"dotenv": "^16.0.3",
+		"request": "^2.88.2",
 		"swiper": "^8.4.2"
 	},
 	"devDependencies": {
@@ -38,12 +40,11 @@
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.4.10",
 		"postcss-cli": "^9.1.0",
-		"postcss-multiple-tailwind": "^1.0.0",
 		"prettier": "npm:wp-prettier@^2.6.2",
 		"stylelint-config-prettier": "^9.0.3",
 		"stylelint-webpack-plugin": "^3.3.0",
 		"svg-transform-loader": "^2.0.13",
-		"tailwindcss": "^3.1.7"
+		"tailwindcss": "^3.2.1"
 	},
 	"scripts": {
 		"build:pot": "composer run-script pot",
@@ -62,7 +63,7 @@
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "npm run build",
-		"blocks": "cross-env NODE_ENV=production wp-scripts build --webpack-src-dir=src/blocks --webpack-copy-php",
+		"blocks": "node envConf.js && cross-env NODE_ENV=production wp-scripts build --webpack-src-dir=src/blocks --webpack-copy-php",
 		"global": "cross-env NODE_ENV=production wp-scripts build --config webpack.global.js",
 		"build": "npm-run-all blocks global",
 		"blocks:watch": "cross-env NODE_ENV=production wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php",
