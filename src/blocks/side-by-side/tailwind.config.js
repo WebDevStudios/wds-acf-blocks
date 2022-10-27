@@ -1,3 +1,5 @@
+require('../../../postcss.config');
+
 const blockName = 'side-by-side';
 
 const directoryFiles = [
@@ -5,9 +7,8 @@ const directoryFiles = [
 	`./src/blocks/${ blockName }/*.scss`,
 	`./src/blocks/${ blockName }/*.js`,
 ];
-console.log(global.themePreset)
 
 module.exports = {
-	presets: [require('../../../../../themes/wd_s/tailwind.config.js')],
+	presets: [require(globalThemePreset)],
 	content: directoryFiles,
 };
