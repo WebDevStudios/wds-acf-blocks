@@ -1,5 +1,4 @@
-const { globalThemePreset } = require('../../../postcss.config');
-
+const { globalThemePreset } = require( '../../../postcss.config' );
 const blockName = 'call-to-action';
 
 const directoryFiles = [
