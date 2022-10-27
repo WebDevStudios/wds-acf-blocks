@@ -1,17 +1,13 @@
 const blockName = 'side-by-side';
-const fs = require( 'fs' );
 
 const directoryFiles = [
 	`./src/blocks/${ blockName }/*.php`,
 	`./src/blocks/${ blockName }/*.scss`,
 	`./src/blocks/${ blockName }/*.js`,
 ];
+console.log(global.themePreset)
 
 module.exports = {
-	presets: [
-		fs.existsSync( process.env.activePreset )
-			? require( process.env.activePreset )
-			: require( process.env.fallbackPreset ),
-	],
+	presets: [require('../../../../../themes/wd_s/tailwind.config.js')],
 	content: directoryFiles,
 };

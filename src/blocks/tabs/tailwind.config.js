@@ -1,5 +1,4 @@
 const blockName = 'tabs';
-const fs = require( 'fs' );
 
 const directoryFiles = [
 	`./src/blocks/${ blockName }/*.php`,

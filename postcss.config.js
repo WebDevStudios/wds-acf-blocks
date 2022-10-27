@@ -1,12 +1,6 @@
-const fs = require( 'fs' );
-require( 'dotenv' ).config();
-
 module.exports = {
 	plugins: {
-		tailwindcss: {config: fs.existsSync( process.env.activePreset )
-			? require( process.env.activePreset )
-			: require( process.env.fallbackPreset )
-		},
+		tailwindcss: {config: require( './../../themes/wd_s/wds.preset.js' ) },
 		autoprefixer: { grid: true },
 		...( process.env.NODE_ENV === 'production'
 			? {
