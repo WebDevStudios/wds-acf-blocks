@@ -1,13 +1,6 @@
--   [Home](Home.md)
--   [Philosophy](Philosophy.md)
--   [Functions](Functions.md)
--   [Blocks](Blocks.md)
--   [Modules](Modules.md)
--   [Elements](Elements.md)
--   [Scripts](Scripts.md)
--   [WP-CLI](WP-CLI.md)
-
 # Functions
+
+[Documentation Navigation](#documentation-navigation)
 
 This is a brief overview to provide extra detail for some of the functions used inside the WDS ACF Blocks Plugin.
 
@@ -61,7 +54,7 @@ Called by the `allowed_block_types_all` hook. This allows you to define which bl
 -   `core/spacer`
 -   `core/table`
 
-See https://developer.wordpress.org/block-editor/reference-guides/filters/block-filters/#allowed_block_types_all.
+[Read the WordPress Developer Docs](https://developer.wordpress.org/block-editor/reference-guides/filters/block-filters/#allowed_block_types_all)
 
 ## `register_block_category`
 
@@ -77,3 +70,14 @@ Expected arguments:
 Returns:
 
 -   imploded string of passed attributes
+
+## Documentation Navigation
+
+-   [Overview](Home.md)
+-   [Philosophy](Philosophy.md)
+-   [Functions](Functions.md)
+-   [Blocks](Blocks.md)
+-   [Modules](Modules.md)
+-   [Elements](Elements.md)
+-   [Scripts](Scripts.md)
+-   [WP-CLI](WP-CLI.md)

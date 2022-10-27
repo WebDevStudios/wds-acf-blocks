@@ -1,5 +1,6 @@
+const { globalThemePreset } = require('../../../postcss.config');
+
 const blockName = 'call-to-action';
-const fs = require( 'fs' );
 
 const directoryFiles = [
 	`./src/blocks/${ blockName }/*.php`,
@@ -8,10 +9,6 @@ const directoryFiles = [
 ];
 
 module.exports = {
-	presets: [
-		fs.existsSync( global.themePreset )
-			? require( global.themePreset )
-			: '',
-	],
+	presets: [ require( globalThemePreset ) ],
 	content: directoryFiles,
 };

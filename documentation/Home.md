@@ -1,13 +1,6 @@
--   [Home](Home.md)
--   [Philosophy](Philosophy.md)
--   [Functions](Functions.md)
--   [Blocks](Blocks.md)
--   [Modules](Modules.md)
--   [Elements](Elements.md)
--   [Scripts](Scripts.md)
--   [WP-CLI](WP-CLI.md)
-
 # Overview
+
+[Documentation Navigation](#documentation-navigation)
 
 If you have the latest version of [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/pro/) - ACF 6.0+ is required for this plugin to work correctly - then you can take advantage of our ACF Blocks system. ACF blocks are a great way to visually manage blocks of content throughout your website.
 
@@ -51,7 +44,7 @@ In the block's folder (in our case, `/src/blocks/block-name.php`), you’ll need
 
 Our script will automatically register your block with WordPress once the build (or watch) process is completed. You can achieve this with `npm run build` or `npm run start` in the root plugin folder.
 
-```
+```json
 {
 	"name": "abs/accordion",
 	"title": "Accordion",
@@ -104,7 +97,7 @@ This also allows for a huge benefit in performance, along with the obvious benef
 
 ### The Block Name
 
-```
+```json
 "name": "abs/accordion",
 ```
 
@@ -112,7 +105,7 @@ The importance of this is that every block will need to be namespaced. In this e
 
 ### ACF Attributes
 
-```
+```json
 "acf": {
 	"mode": "auto",
 	"renderTemplate": "accordion.php"
@@ -129,7 +122,7 @@ Your options are: `preview`, `edit`, `auto`.
 
 ### Supports
 
-```
+```json
 "supports": {
 	"align": false,
 	"anchor": true,
@@ -139,33 +132,33 @@ Your options are: `preview`, `edit`, `auto`.
 },
 ```
 
-**align**
+#### align
 
 Align should be left as `false`. Even if removed, this property is occasionally not respected by WordPress and the alignment control will display. The `.alignwide`, `.alignfull`, etc classes are not functional on the blocks within the WDS ACF Blocks plugin as we are manually defining the block alignment in SCSS.
 
-**anchor**
+#### anchor
 
 This allows you to specify if you'd like your block to support the `anchor` field, enabling you to define a custom ID for that block.
 [WP Docs](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/#anchor)
 
-**color**
+#### color
 
 This allows you to specify if you'd like your block to support the `color` block controls, enabling background color and text color options. The colors will be pulled from the defined colors in `theme.json`.
 [WP Docs](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/#color)
 
-**customClassName**
+#### customClassName
 
 This allows you to specify if you'd like your block to support the `customClassName` block field, allowing a user to add custom classes to the block in the Gutenberg editor.
 [WP Docs](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/#customclassname)
 
-**jsx**
+#### jsx
 
 This allows the `<InnerBlocks />` Component to function inside Gutenberg. If this is disabled, Inner Blocks will stop functioning for this block.
 [WP Docs](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/)
 
 ### Styles and Scripts
 
-```
+```json
 "editorStyle": "file:./editor.css",
 "editorScript": "file:./editor.js",
 "style": "file:./style-script.css",
@@ -182,7 +175,7 @@ Adding a custom block category is as easy as hooking into `block_categories_all`
 
 The block category is registered in `/inc/helpers/register-block-category.php; the code is displayed below.
 
-```
+```php
 <?php
 /**
  * Registers a 'WDS' block category with Gutenberg.
@@ -207,7 +200,7 @@ add_filter(
 
 Choosing that category is as simple as adding that newly-defined category to your block:
 
-```
+```json
 "category": "WDS",
 ```
 
@@ -257,3 +250,14 @@ The Quotes Block allows you to add as many quotes as you wish - they will be dis
 ### Side-by-Side
 
 The Side-by-Side Block allows you to create three different combinations of layouts. Media + Text. Text + Media. Or Text + Text via a WYSIWYG editor and media upload field.
+
+## Documentation Navigation
+
+-   [Overview](Home.md)
+-   [Philosophy](Philosophy.md)
+-   [Functions](Functions.md)
+-   [Blocks](Blocks.md)
+-   [Modules](Modules.md)
+-   [Elements](Elements.md)
+-   [Scripts](Scripts.md)
+-   [WP-CLI](WP-CLI.md)

@@ -1,13 +1,8 @@
-const fs = require( 'fs' );
-
+const { globalThemePreset } = require('../../postcss.config');
 const directoryFiles = [ `./assets/global-styles/*.scss` ];
 
 module.exports = {
-	presets: [
-		fs.existsSync( global.themePreset )
-			? require( global.themePreset )
-			: '',
-	],
+	presets: [ require( globalThemePreset ) ],
 	content: directoryFiles,
 	theme: {
 		extend: {},

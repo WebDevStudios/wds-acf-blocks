@@ -1,15 +1,13 @@
 const path = require( 'path' );
-global.themePreset = path.join(
-	__dirname,
+global.appRoot = path.resolve( __dirname );
+globalThemePreset = path.join(
+	global.appRoot,
 	'./../../themes/wd_s/wds.preset.js'
 );
-global.appRoot = path.resolve( __dirname );
 
 module.exports = {
 	plugins: {
-		'postcss-multiple-tailwind': {
-			mode: 'auto',
-		},
+		tailwindcss: { config: require( globalThemePreset ) },
 		autoprefixer: { grid: true },
 		...( process.env.NODE_ENV === 'production'
 			? {
@@ -26,4 +24,5 @@ module.exports = {
 			  }
 			: {} ),
 	},
+	globalThemePreset
 };
