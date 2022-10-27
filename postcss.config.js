@@ -1,14 +1,11 @@
-const path = require( 'path' );
-global.themePreset = path.join(
-	__dirname,
-	'./../../themes/wd_s/wds.preset.js'
-);
-global.appRoot = path.resolve( __dirname );
+const fs = require( 'fs' );
+require( 'dotenv' ).config();
 
 module.exports = {
 	plugins: {
-		'postcss-multiple-tailwind': {
-			mode: 'auto',
+		tailwindcss: {config: fs.existsSync( process.env.activePreset )
+			? require( process.env.activePreset )
+			: require( process.env.fallbackPreset )
 		},
 		autoprefixer: { grid: true },
 		...( process.env.NODE_ENV === 'production'
