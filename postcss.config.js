@@ -1,6 +1,6 @@
 module.exports = {
 	plugins: {
-		tailwindcss: {config: require( './../../themes/wd_s/wds.preset.js' ) },
+		tailwindcss: { config: require( './../../themes/wd_s/wds.preset.js' ) },
 		autoprefixer: { grid: true },
 		...( process.env.NODE_ENV === 'production'
 			? {
