@@ -77,7 +77,7 @@ We are additionally using a `CompanyName\ProjectName` style namespace - in our c
 
 ---
 
-**This requires the `wd_s` theme, but it's probably already been renamed to something else. Make sure that you update the path inside the `postcss.config.js` file that is looking for the Tailwind config inside the `wd_s` theme.**
+**This requires the `wd_s` theme, but it's probably already been renamed to something else. Make sure that you update the path assigned to the global variable `globalThemePreset` inside the `postcss.config.js` file. This sets the path for all of the Blocks' configs to the Tailwind config inside your newly-named theme.**
 
 ---
 
