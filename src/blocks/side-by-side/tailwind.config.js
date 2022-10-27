@@ -1,4 +1,4 @@
-require('../../../postcss.config');
+require( '../../../postcss.config' );
 
 const blockName = 'side-by-side';
 
@@ -9,6 +9,6 @@ const directoryFiles = [
 ];
 
 module.exports = {
-	presets: [require(globalThemePreset)],
+	presets: [ require( globalThemePreset ) ],
 	content: directoryFiles,
 };

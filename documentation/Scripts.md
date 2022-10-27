@@ -1,13 +1,6 @@
--   [Home](Home.md)
--   [Philosophy](Philosophy.md)
--   [Functions](Functions.md)
--   [Blocks](Blocks.md)
--   [Modules](Modules.md)
--   [Elements](Elements.md)
--   [Scripts](Scripts.md)
--   [WP-CLI](WP-CLI.md)
-
 # Scripts
+
+[Documentation Navigation](#documentation-navigation)
 
 ## Block Level Scripts
 
@@ -26,3 +19,14 @@ They are then built into the dist folder where we'll have admin and frontend scr
 ## WP CLI SCRIPT
 
 WP CLI command will copy all the files in the `wpcli/blockstarter` folder to the block folder of the plugin. It will rename all the placeholder text with your block name and namespace.
+
+## Documentation Navigation
+
+-   [Overview](Home.md)
+-   [Philosophy](Philosophy.md)
+-   [Functions](Functions.md)
+-   [Blocks](Blocks.md)
+-   [Modules](Modules.md)
+-   [Elements](Elements.md)
+-   [Scripts](Scripts.md)
+-   [WP-CLI](WP-CLI.md)

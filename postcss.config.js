@@ -7,7 +7,7 @@ globalThemePreset = path.join(
 
 module.exports = {
 	plugins: {
-		tailwindcss: {config: require( globalThemePreset ) },
+		tailwindcss: { config: require( globalThemePreset ) },
 		autoprefixer: { grid: true },
 		...( process.env.NODE_ENV === 'production'
 			? {
