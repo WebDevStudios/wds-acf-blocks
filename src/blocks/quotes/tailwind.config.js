@@ -1,3 +1,5 @@
+const { globalThemePreset } = require('../../../postcss.config');
+
 const blockName = 'quotes';
 
 const directoryFiles = [
@@ -7,6 +9,6 @@ const directoryFiles = [
 ];
 
 module.exports = {
-	presets: [ require( '../../../../../themes/wd_s/tailwind.config.js' ) ],
+	presets: [ require( globalThemePreset ) ],
 	content: directoryFiles,
 };
