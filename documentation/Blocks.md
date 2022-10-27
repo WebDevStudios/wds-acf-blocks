@@ -1,17 +1,10 @@
--   [Home](Home.md)
--   [Philosophy](Philosophy.md)
--   [Functions](Functions.md)
--   [Blocks](Blocks.md)
--   [Modules](Modules.md)
--   [Elements](Elements.md)
--   [Scripts](Scripts.md)
--   [WP-CLI](WP-CLI.md)
-
 # Blocks
+
+[Documentation Navigation](#documentation-navigation)
 
 The file & folder structure for a block is as follows:
 
-```
+```php
 src/blocks
   blockname
     blockname.php // render template
@@ -33,7 +26,7 @@ This folder will exist after you run `npm run build` or `npm run start`. `start`
 
 ## Functions used inside the Block render partial (`blockname.php`)
 
-```
+```php
 use function WebDevStudios\abs\print_module;
 use function WebDevStudios\abs\print_element;
 use function WebDevStudios\abs\get_acf_fields;
@@ -65,7 +58,7 @@ Each block sets up it's own consistent defaults. This is an array composed (typi
 
 This array looks like this:
 
-```
+```php
 $abs_defaults = [
 	'class'               => [ 'wds-block', 'wds-block-accordion' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
@@ -87,3 +80,14 @@ There can be only one location for Inner Blocks - either before or after your bl
 The Inner block "dropzone" will be rendered with a dotted border so it makes it visible in the admin. This is added via the global `admin-styles.scss` inside `./assets/global-styles` folder. It will be built automatically along with the blocks.
 
 **Note:** Remember to add the allowed blocks' names to the ACF Field Group so that your clients know which blocks can be used.
+
+## Documentation Navigation
+
+-   [Overview](Home.md)
+-   [Philosophy](Philosophy.md)
+-   [Functions](Functions.md)
+-   [Blocks](Blocks.md)
+-   [Modules](Modules.md)
+-   [Elements](Elements.md)
+-   [Scripts](Scripts.md)
+-   [WP-CLI](WP-CLI.md)
