@@ -1,4 +1,4 @@
-require( '../../../postcss.config' );
+const { globalThemePreset } = require('../../../postcss.config');
 
 const blockName = 'side-by-side';
 

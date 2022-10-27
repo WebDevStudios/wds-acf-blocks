@@ -1,7 +1,8 @@
+const { globalThemePreset } = require('../../postcss.config');
 const directoryFiles = [ `./assets/global-styles/*.scss` ];
 
 module.exports = {
-	presets: [ require( '../../../../../themes/wd_s/tailwind.config.js' ) ],
+	presets: [ require( globalThemePreset ) ],
 	content: directoryFiles,
 	theme: {
 		extend: {},
