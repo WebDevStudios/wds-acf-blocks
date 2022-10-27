@@ -5,9 +5,8 @@ const directoryFiles = [
 	`./src/blocks/${ blockName }/*.scss`,
 	`./src/blocks/${ blockName }/*.js`,
 ];
-console.log(global.themePreset)
 
 module.exports = {
-	presets: [require('../../../../../themes/wd_s/tailwind.config.js')],
+	presets: [ require( '../../../../../themes/wd_s/tailwind.config.js' ) ],
 	content: directoryFiles,
 };

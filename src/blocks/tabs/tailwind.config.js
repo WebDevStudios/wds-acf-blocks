@@ -7,10 +7,6 @@ const directoryFiles = [
 ];
 
 module.exports = {
-	presets: [
-		fs.existsSync( process.env.activePreset )
-			? require( process.env.activePreset )
-			: require( process.env.fallbackPreset ),
-	],
+	presets: [ require( '../../../../../themes/wd_s/tailwind.config.js' ) ],
 	content: directoryFiles,
 };
