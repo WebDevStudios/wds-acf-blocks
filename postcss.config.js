@@ -8,10 +8,7 @@ const downloadPath = path.join(
 	'./fallbackPreset.js'
 );
 
-const envPath = path.join(
-	path.resolve( __dirname ),
-	'./env.json'
-);
+const envPath = path.join( path.resolve( __dirname ), './env.json' );
 
 let { tailwindPreset } = fs.existsSync( envPath )
 	? require( './env.json' )
