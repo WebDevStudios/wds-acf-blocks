@@ -1,4 +1,4 @@
-const { globalThemePreset } = require( '../../../postcss.config' );
+const { tailwindPreset } = require( '../../../postcss.config' );
 const blockName = 'accordion';
 
 const directoryFiles = [
@@ -8,6 +8,6 @@ const directoryFiles = [
 ];
 
 module.exports = {
-	presets: [ require( globalThemePreset ) ],
+	presets: [ require( tailwindPreset ) ],
 	content: directoryFiles,
 };
