@@ -31,3 +31,7 @@ compass_app_log.txt
 vendor/
 build/
 dist/
+
+# tailwind config files
+/fallbackPreset.js
+/env.json

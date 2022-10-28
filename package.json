@@ -21,6 +21,7 @@
 	},
 	"main": "src/index.js",
 	"dependencies": {
+		"request": "^2.88.2",
 		"swiper": "^8.4.2"
 	},
 	"devDependencies": {
