@@ -93,7 +93,7 @@ Let’s take a look at how all of this comes together.
 
 ### The Build
 
-You can see what's in `block.json` and the files in the `/src/blocks/block-name/` folder - how does this connect to WordPress to build a block.
+You can see what's in `block.json` and the files in the `/src/blocks/block-name/` folder - this will be built by WP Scripts and copied (along with compiled styles and scripts) to the same folder name inside `/build/`.
 
 Starting in WordPress 5.8, WordPress allows for registration of a block inside `block.json`. This will typically be housed inside a folder that contains all of a block's files. In ACF parlance, this is a ["portable block"](https://gladdy.uk/blog/2022/07/24/creating-portable-acf-blocks/) (though it's not quite as portable as you might hope). All the files in any block's folder should contain all of the elements for it to be compiled, minified and/or "built" - at which point, WordPress will move it to the `/build` folder, with mostly the same structure intact. This is done with the `"@wordpress/scripts` NPM package and `wp scripts` NPM script.
 
