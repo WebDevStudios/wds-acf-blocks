@@ -6,10 +6,8 @@ const globalThemePreset = fs.existsSync( process.env.activePreset )
 	? process.env.activePreset
 	: process.env.fallbackPreset;
 
-
 //THIS WORKS
 // const globalThemePreset = '/Users/jennahines/Sites/wds-acf-blocks/app/public/wp-content/themes/wd_s/wds.preset.js';
-
 
 //THIS WORKS
 // const path = require( 'path' );
@@ -19,7 +17,7 @@ const globalThemePreset = fs.existsSync( process.env.activePreset )
 // 	'./../../themes/wd_s/wds.preset.js'
 // );
 
-console.log(globalThemePreset);
+// console.log( globalThemePreset );
 
 module.exports = {
 	plugins: {
