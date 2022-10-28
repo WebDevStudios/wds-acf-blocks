@@ -49,7 +49,7 @@ Put simply, each of the functions will perform a task that is indicated by their
 
 ## Block Defaults
 
-Each block sets up it's own consistent defaults. This is an array composed (typipcally) of the following key/value pairs.
+Each block sets up it's own consistent defaults. This is an array composed (typically) of the following key/value pairs.
 
 -   class => array of classes
 -   allowed_innerblocks => array of blocks allowed inside this block
