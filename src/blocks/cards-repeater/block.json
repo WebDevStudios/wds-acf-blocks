@@ -1,0 +1,32 @@
+{
+	"name": "abs/cards-repeater",
+	"title": "Cards - Repeater",
+	"description": "A block used to display a group of Cards.",
+	"editorStyle": "file:./editor.css",
+	"editorScript": "file:./editor.js",
+	"style": "file:./style-script.css",
+	"script": "file:./script.js",
+	"category": "WDS",
+	"icon": "images-alt",
+	"apiVersion": 2,
+	"keywords": [ "cards", "block" ],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "cards-repeater.php"
+	},
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"color": true,
+		"customClassName": true,
+		"jsx": true
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"_is_preview": "true"
+			}
+		}
+	}
+}

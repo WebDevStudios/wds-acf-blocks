@@ -1,0 +1,21 @@
+//----------------------------------------
+// Block - Side by Side
+//----------------------------------------
+
+.wds-block-side-by-side {
+	@apply container;
+
+	.wds-grid {
+		> * {
+			@apply col-span-12;
+
+			@screen tablet-portrait {
+				@apply col-span-6;
+			}
+		}
+
+		.card-first {
+			@apply -order-1;
+		}
+	}
+}

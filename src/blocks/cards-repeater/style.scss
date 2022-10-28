@@ -1,0 +1,18 @@
+//----------------------------------------
+// Block - Card Repeater, FRONTEND
+//----------------------------------------
+
+.wds-block-cards-repeater {
+	@apply container;
+
+	.card-wrap {
+		@apply wds-grid;
+
+		.wds-module-card {
+			@apply col-span-12;
+			@screen tablet-portrait {
+				@apply col-span-4;
+			}
+		}
+	}
+}

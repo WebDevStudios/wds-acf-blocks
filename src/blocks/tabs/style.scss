@@ -1,0 +1,26 @@
+//----------------------------------------
+// Block - Tabs Styles, FRONTEND
+//----------------------------------------
+.wds-block-tabs {
+	@apply container;
+
+	.wds-module-tabs {
+		@apply my-32;
+
+		nav {
+			@apply flex -mb-1;
+
+			.tab-title {
+				@apply flex justify-center py-8 px-16 ml-16 bg-gray-300 border border-gray-300 rounded-md rounded-b-none relative z-10;
+
+				&[aria-selected='true'] {
+					@apply bg-white border-b-white;
+				}
+			}
+		}
+
+		.tabs-content {
+			@apply border border-gray-300 p-16 bg-white rounded-md;
+		}
+	}
+}

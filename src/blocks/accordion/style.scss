@@ -1,0 +1,41 @@
+//----------------------------------------
+// Block - Accordion Styles, FRONTEND
+//----------------------------------------
+.wds-block-accordion {
+	@apply container;
+
+	.wds-module-accordion {
+		.accordion-item {
+			@apply mb-8 rounded-md border border-gray-300;
+		}
+
+		.accordion-title {
+			@apply mb-0 px-24 py-12 flex w-full justify-between items-center rounded-none;
+
+			&:hover,
+			&:focus {
+				@apply bg-gray-200;
+			}
+
+			&[aria-expanded='false'] {
+				~ div {
+					@apply hidden;
+				}
+			}
+
+			&[aria-expanded='true'] {
+				~ div {
+					@apply block;
+				}
+
+				svg {
+					@apply rotate-180 transform transition-all;
+				}
+			}
+		}
+
+		.accordion-content {
+			@apply px-24 py-12;
+		}
+	}
+}

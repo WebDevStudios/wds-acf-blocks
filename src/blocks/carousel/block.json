@@ -1,0 +1,32 @@
+{
+	"name": "abs/carousel",
+	"title": "Carousel",
+	"description": "A block used to show an Carousel.",
+	"editorStyle": "file:./editor.css",
+	"editorScript": "file:./editor.js",
+	"style": "file:./style-script.css",
+	"script": "file:./script.js",
+	"category": "WDS",
+	"icon": "slides",
+	"apiVersion": 2,
+	"keywords": [ "carousel", "block" ],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "carousel.php"
+	},
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"color": true,
+		"customClassName": true,
+		"jsx": true
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"_is_preview": "true"
+			}
+		}
+	}
+}

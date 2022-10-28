@@ -1,0 +1,16 @@
+//----------------------------------------
+// Global block styles, Frontend.
+//----------------------------------------
+.wds-block {
+	@apply my-64;
+
+	.acf-innerblocks-container {
+		[class*='wp-block-'] {
+			@apply inline-block px-0;
+		}
+
+		&:empty {
+			@apply hidden;
+		}
+	}
+}

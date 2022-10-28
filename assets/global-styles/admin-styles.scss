@@ -1,0 +1,16 @@
+//----------------------------------------
+// Global block styles, Admin.
+//----------------------------------------
+.acf-block-preview {
+	.acf-innerblocks-container {
+		@apply border-2 border-gray-300 border-dashed rounded-md mb-8 min-h-[40px] p-16 relative;
+
+		&[data-rich-text-placeholder] {
+			@apply text-gray-300;
+		}
+
+		&:empty::before {
+			@apply text-gray-300 content-['Drag_in_InnerBlocks_here'] left-1/2 absolute text-center top-1/2 w-full -translate-y-1/2 -translate-x-1/2;
+		}
+	}
+}

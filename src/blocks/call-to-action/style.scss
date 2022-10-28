@@ -1,0 +1,34 @@
+//----------------------------------------
+// Block - Call to Action Styles, FRONTEND
+//----------------------------------------
+.wds-block-call-to-action {
+	.wds-module-call-to-action,
+	.acf-innerblocks-container {
+		@apply container;
+	}
+
+	.wds-module-call-to-action {
+		@screen tablet-portrait {
+			@apply wds-grid;
+		}
+	}
+
+	.center-content {
+		@apply col-span-12 text-center;
+	}
+
+	.right-content,
+	.left-content {
+		@screen tablet-portrait {
+			@apply col-span-9;
+		}
+	}
+
+	.right-content {
+		@apply col-start-1;
+
+		@screen tablet-portrait {
+			@apply col-start-4;
+		}
+	}
+}

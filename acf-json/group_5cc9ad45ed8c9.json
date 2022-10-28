@@ -6,6 +6,7 @@
             "key": "field_5d6949aea1e5d",
             "label": "",
             "name": "",
+            "aria-label": "",
             "type": "message",
             "instructions": "",
             "required": 0,
@@ -20,49 +21,12 @@
             "esc_html": 0
         },
         {
-            "key": "field_5cc9ad4600896",
-            "label": "Title",
-            "name": "title",
-            "type": "text",
-            "instructions": "Optional. Write a catchy title to grab the user's attention.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "Accordion Block Title",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5cc9ad46008a2",
-            "label": "Text",
-            "name": "text",
-            "type": "textarea",
-            "instructions": "Enter text to be displayed above the accordions.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 4,
-            "new_lines": ""
-        },
-        {
             "key": "field_5cc9ad46008cd",
             "label": "Accordion Items",
             "name": "accordion_items",
-            "type": "repeater",
-            "instructions": "Add accordion items to your block. Each accordion requires Title and Text.",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -70,18 +34,15 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5cc9ad460902d",
-            "min": 1,
-            "max": 0,
-            "layout": "block",
-            "button_label": "Add Accordion Item",
+            "layout": "table",
             "sub_fields": [
                 {
-                    "key": "field_5e4ac38456f0f",
-                    "label": "Accordion Item",
-                    "name": "",
-                    "type": "accordion",
-                    "instructions": "",
+                    "key": "field_61e5c029c2786",
+                    "label": "Items",
+                    "name": "items",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "Add accordion items to your block. Each accordion requires Title and Text.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -89,47 +50,57 @@
                         "class": "",
                         "id": ""
                     },
-                    "open": 0,
-                    "multi_expand": 0,
-                    "endpoint": 0
-                },
-                {
-                    "key": "field_5cc9ad460902d",
-                    "label": "Accordion Title",
-                    "name": "accordion_title",
-                    "type": "text",
-                    "instructions": "Set the title of the individual accordion. Clicking\/Tapping on this will expand and collapse the accordion.",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "Accordion Item Title",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5cc9ad460904d",
-                    "label": "Accordion Text",
-                    "name": "accordion_text",
-                    "type": "wysiwyg",
-                    "instructions": "Set the text of the individual accordion. Clicking\/Tapping the title this show\/hide this content.",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "visual",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "layout": "row",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Accordion Item",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_5cc9ad460902d",
+                            "label": "Accordion Item Title",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Set the title of the individual accordion. Clicking\/Tapping on this will expand and collapse the accordion.",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_61e5c029c2786"
+                        },
+                        {
+                            "key": "field_61f4274477bcc",
+                            "label": "Accordion Item Content",
+                            "name": "content",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": "br",
+                            "parent_repeater": "field_61e5c029c2786"
+                        }
+                    ]
                 }
             ]
         }
@@ -139,7 +110,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/wds-accordion"
+                "value": "abs\/accordion"
             }
         ]
     ],
@@ -151,5 +122,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1623175514
+    "show_in_rest": 0,
+    "modified": 1666356598
 }

@@ -1,0 +1,32 @@
+{
+	"name": "abs/quotes",
+	"title": "Quotes",
+	"description": "A block used to show quotes.",
+	"editorStyle": "file:./editor.css",
+	"editorScript": "file:./editor.js",
+	"style": "file:./style-script.css",
+	"script": "file:./script.js",
+	"category": "WDS",
+	"icon": "format-quote",
+	"apiVersion": 2,
+	"keywords": [ "quotes", "block" ],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "quotes.php"
+	},
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"color": true,
+		"customClassName": true,
+		"jsx": true
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"_is_preview": "true"
+			}
+		}
+	}
+}
