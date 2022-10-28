@@ -69,7 +69,7 @@ From the command line, type any of the following to perform an action:
 
 ## Find and Replace
 
-Start by doing a find and replace within the plugin to update the namespace and functioon prefix. Currently, this is set to `abs` (for (_A_)CF (_B_)lock (_S_)tarter). The namespace and prefix need to match or you will get linting errors. Be careful when doing this as "abs" is also matched within the words `absolute`, `tabs`, `abstract`, etc.
+Start by doing a find and replace within the plugin to update the namespace and function prefix. Currently, this is set to `abs` (for (_A_)CF (_B_)lock (_S_)tarter). The namespace and prefix need to match or you will get linting errors. Be careful when doing this as "abs" is also matched within the words `absolute`, `tabs`, `abstract`, etc.
 
 We are using a `CompanyName\ProjectName` style namespace - in our case, `WebDevStudios\abs`. To maintain consistency, you should consider using a similar structure - ie: `AcmeWidgets\acme`.
 
