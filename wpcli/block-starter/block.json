@@ -9,7 +9,7 @@
 	"category": "WDS",
 	"icon": "{{icon}}",
 	"apiVersion": 2,
-	"keywords": [ "{{name}}", "block" ],
+	"keywords": [ "{{name}}", "{{keyword}}", "block" ],
 	"acf": {
 		"mode": "auto",
 		"renderTemplate": "{{name}}.php"
