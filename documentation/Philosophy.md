@@ -23,7 +23,7 @@ To that end, we came up with: Blocks, Modules and Elements. Read on to learn how
 
 ## Blocks
 
-Blocks are the building block ;) of this system. They are somewhat analagous to Organisms in that they can be composed of many modules and/or elements. They can have logic (if necessary). What the block handles:
+Blocks are the building block (ba-dum tss!) of this system. They are somewhat analagous to Organisms in that they can be composed of many modules and/or elements. They can have logic (if necessary). What the block handles:
 
 -   it defines the classes for the block, including any applied within Gutenberg
 -   it adds an ID from the Gutenberg input field, if set
