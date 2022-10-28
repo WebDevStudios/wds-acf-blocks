@@ -48,7 +48,7 @@ If you’re familiar with creating ACF Field Groups as post meta, you’re 80% o
 
 ### Registering The Block
 
-In the block's folder (in our case, `/src/blocks/block-name.php`), you’ll need to register your block, along with setting any options for that block that you'd like to enable. We’ll show this example with a single block, but you can see the full file below.
+In the `block.json` file (in our case, `/src/blocks/block-name/block.json`), you’ll need to register your block, along with setting any options for that block that you'd like to enable. We’ll show this example with a single block, but you can see the full file below.
 
 Our script will automatically register your block with WordPress once the build (or watch) process is completed. You can achieve this with `npm run build` or `npm run start` in the root plugin folder.
 
@@ -93,9 +93,9 @@ Let’s take a look at how all of this comes together.
 
 ### The Build
 
-You can see what's in `block.json` and the files in the `/src/blocks/blockname` folder - how does this connect to WordPress to build a block.
+You can see what's in `block.json` and the files in the `/src/blocks/block-name/` folder - how does this connect to WordPress to build a block.
 
-Starting in WordPress 5.8, WordPress allows for registration of a block inside `block.json`. This will typically be housed inside a folder that contains all of a block's files. In ACF parlance, this is a ["portable block"](https://gladdy.uk/blog/2022/07/24/creating-portable-acf-blocks/) (though it's not quite as portable as you might hope). All the files in any block's folder should contain all of the elements for it to be compiled, minified and/or "built" - at which point, WordPress will move it to the `/build` folder, with mostly the same structure intact. This is done with the `wp-scripts` NPM package.
+Starting in WordPress 5.8, WordPress allows for registration of a block inside `block.json`. This will typically be housed inside a folder that contains all of a block's files. In ACF parlance, this is a ["portable block"](https://gladdy.uk/blog/2022/07/24/creating-portable-acf-blocks/) (though it's not quite as portable as you might hope). All the files in any block's folder should contain all of the elements for it to be compiled, minified and/or "built" - at which point, WordPress will move it to the `/build` folder, with mostly the same structure intact. This is done with the `"@wordpress/scripts` NPM package and `wp scripts` NPM script.
 
 ### Why is this better?
 
@@ -175,13 +175,15 @@ This allows the `<InnerBlocks />` Component to function inside Gutenberg. If thi
 
 These are the files that WordPress will enqueue with your registered block. You can have separate styles and scripts for both the front and back-end of WordPress.
 
-For example, `"editorStyle": "file:./editor.css"` will **only** load in the WordPress Admin area. You can also enqueue previously registered scripts with their handle (ie: `'my-super-admin-javascript'`), or a combination of handle/filename. [Read all about it here.](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#editor-script)
+`"editorStyle": "file:./editor.css"` and `"editorScript": "file:./editor.js",` will **only** load in the WordPress Admin area, however the `"style": "file:./style-script.css",` and `"script": "file:./script.js",` will load in both the front and back-end of WordPress.
+
+You can also enqueue previously registered scripts with their handle (ie:`'my-super-admin-javascript'`), or a combination of handle/filename. [Read all about it here.](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#editor-script)
 
 #### Defining A Category
 
 Adding a custom block category is as easy as hooking into `block_categories_all` ([introduced in WordPress 5.8](https://developer.wordpress.org/reference/hooks/block_categories_all/)). By doing so, we can define a custom category in `block.json` so we can keep our blocks stored away in their own drawer in the Block Menu.
 
-The block category is registered in `/inc/helpers/register-block-category.php; the code is displayed below.
+The block category is registered in `/inc/helpers/register-block-category.php` the code is displayed below.
 
 ```php
 <?php
