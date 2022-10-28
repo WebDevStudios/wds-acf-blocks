@@ -1,6 +1,6 @@
 const path = require( 'path' );
 global.appRoot = path.resolve( __dirname );
-globalThemePreset = path.join(
+const globalThemePreset = path.join(
 	global.appRoot,
 	'./../../themes/wd_s/wds.preset.js'
 );
@@ -24,5 +24,5 @@ module.exports = {
 			  }
 			: {} ),
 	},
-	globalThemePreset
+	globalThemePreset,
 };
