@@ -84,7 +84,7 @@ Snippets you will need to update:
 
 ---
 
-**This requires the `wd_s` theme, but it's probably already been renamed to something else. Make sure that you update the path assigned to the global variable `globalThemePreset` inside the `postcss.config.js` file. This sets the path for all of the Blocks' configs to the Tailwind config inside your newly-named theme.**
+**This requires the `wd_s` theme, but it's probably already been renamed to something else. Make sure that you update the path assigned to the Tailwind preset (named `tailwindPreset`, surprisingly) inside the `env.json` file. This sets the path for all of the Blocks' configs to the Tailwind config inside your newly-named theme. Follow the steps below for more detail. **
 
 ---
 
