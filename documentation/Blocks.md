@@ -71,6 +71,8 @@ $abs_defaults = [
 
 Blocks will render a preview of themselves in the Gutenberg block picker, when a block preview image is put into `/assets/images/block-previews/blockname-preview.jpg`.
 
+For any new blocks you create, you will need to add a screenshot of that block to your project and update the filename in your block render file.
+
 ## Inner Blocks
 
 Blocks can accept Inner Blocks. This can be disabled in several ways; the easiest is to simply update the `$abs_defaults` array with `'allowed_innerblocks' => []`. Alternatively, you can also set `'jsx' => false` inside that block's `block.json`.
