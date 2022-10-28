@@ -222,7 +222,7 @@ You can revert to the default by setting it to `"category": "theme",` if you pre
 
 ### Accordion
 
-The Accordion Block allows for adding several accordion items to a block to be displayed in a single column. Inner Blocks are supported.
+The Accordion Block allows for adding several accordion items to a block to be displayed in a single column.
 
 ### Cards Repeater
 
