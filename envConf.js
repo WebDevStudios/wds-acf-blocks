@@ -16,7 +16,7 @@ if ( ! fs.existsSync( 'fallbackPreset.js' ) ) {
 
 // set presetContents
 let envVars =
-	'activePrest="' +
+	'activePreset="' +
 	path.join( __dirname, './../../themes/wd_s/wds.preset.js"' + '\r\n' );
 
 envVars +=
