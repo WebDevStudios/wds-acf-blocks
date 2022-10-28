@@ -63,7 +63,7 @@
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "npm run build",
-		"blocks": "cross-env NODE_ENV=production wp-scripts build --webpack-src-dir=src/blocks --webpack-copy-php",
+		"blocks": "node envConf.js && cross-env NODE_ENV=production wp-scripts build --webpack-src-dir=src/blocks --webpack-copy-php",
 		"global": "cross-env NODE_ENV=production wp-scripts build --config webpack.global.js",
 		"build": "npm-run-all blocks global",
 		"blocks:watch": "cross-env NODE_ENV=production wp-scripts start --webpack-src-dir=src/blocks --webpack-copy-php",
