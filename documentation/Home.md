@@ -34,6 +34,14 @@ These options are in addition to native Gutenberg settings like:
 
 ## Recommendations and Best Practices
 
+To style these blocks alongside a theme, consider the following approach.
+
+Global theme styles should be added to your accompanying theme. This should include your global fonts, colors, etc and should exist inside your Tailwind Preset as well as in your theme's SCSS.
+
+Global block styles should be added to `/assets/global-styles/frontend-styles.scss` (and/or `admin-styles.scss`, as appropriate).
+
+Scoped block styles should be added to each block's `style.scss` or `editor.scss` as appropriate.
+
 ## Creating Gutenberg Blocks with the WDS ACF Blocks plugin
 
 If you’re familiar with creating ACF Field Groups as post meta, you’re 80% of the way to creating a Gutenberg block using ACF. Below, we’ll walk through how to register and create a Gutenberg block with Advanced Custom Fields.
