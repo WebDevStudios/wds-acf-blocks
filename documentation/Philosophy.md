@@ -8,10 +8,10 @@ This method was adopted in order to accomplish the following:
 
 -   eliminate inconsistencies among different members of a team working on the same project
 -   formalize a method by which blocks are built, structured, and rendered - and by proxy, how their internal DOM structure is rendered
--   simplifies development by encapsulating all development within a constrained set of methods and functions
+-   simplify development by encapsulating all development within a constrained set of methods and functions
 -   introduce a naming convention by which all future block development would ahdere to
 -   encapsulate all enqueued block files into a single location
--   by virtue of the above goals, this would hopefully speed up development, while at the same time making it easier to build blocks quickly with more consistency and less overlap
+-   (by virtue of achieving the above goals,) speed up development, while at the same time making it easier to build blocks quickly with more consistency and less overlap
 
 ## Blocks, Modules and Elements, oh my
 
