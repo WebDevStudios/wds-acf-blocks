@@ -3,7 +3,10 @@ const path = require( 'path' );
 const request = require( 'request' );
 const themeUrl =
 	'https://raw.githubusercontent.com/WebDevStudios/wd_s/main/wds.preset.js';
-const downloadPath = path.join( path.resolve( __dirname ), './fallbackPreset.js' );
+const downloadPath = path.join(
+	path.resolve( __dirname ),
+	'./fallbackPreset.js'
+);
 
 let { tailwindPreset } = require( './env.json' );
 
