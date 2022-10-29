@@ -2,7 +2,7 @@
 
 [Documentation Navigation](#documentation-navigation)
 
-The main idea around the WDS ACF Blocks Plugin (internally called the ACF Block Starter) is to abstract repetitive development tasks into template parts. These template parts would receive a structured array of data, allowing them to render to the frontend.
+The main idea around the WDS ACF Blocks Plugin (internally called the ACF Block Starter) is to abstract repetitive development tasks into template parts that we call Modules and Elements. These template parts would receive a structured array of data from the parent Block, allowing them to render to the frontend.
 
 This method was adopted in order to accomplish the following:
 
