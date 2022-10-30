@@ -31,9 +31,9 @@ To better manage ACF Field Groups, the plugin supports [synchronized JSON](https
 
 Because the plugin compiles and bundles assets via NPM scripts, basic knowledge of the command line and the following dependencies are required: [Node LTS](https://nodejs.org) and NPM.
 
-#### IMPORTANT
-
-This plugin relies entirely on Advanced Custom Fields _Pro_ 6.0+ for WordPress. The Pro version is _required_, along with a version _greater_ than 6.0 - it will not work with any ACF 5.x version. Additonally, the WebDevStudios theme `wd_s` is _required_ - there are dependencies in the theme that this plugin relies on.
+> #### IMPORTANT
+>
+> This plugin relies entirely on Advanced Custom Fields _Pro_ 6.0+ for WordPress. The Pro version is _required_, along with a version _greater_ than > 6.0 - it will not work with any ACF 5.x version. Additonally, the WebDevStudios theme `wd_s` is _required_ - there are dependencies in the theme that this plugin relies on.
 
 ## Who this plugin is for
 
