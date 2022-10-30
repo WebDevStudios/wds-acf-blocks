@@ -19,7 +19,7 @@ This plugin includes the following blocks:
 -   Side-by-Side
 -   Tabs
 
-WDS ACF Blocks is bundled with [Style Lint](https://stylelint.io/), [ESLint](https://eslint.org/), and [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) linting rulesets – plus, it passes both WCAG 2.1AA and Section 508 standards out of the box. This plugin uses WP Scripts to handle the build process for the blocks. It uses
+WDS ACF Blocks is bundled with [Style Lint](https://stylelint.io/), [ESLint](https://eslint.org/), and [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) linting rulesets – plus, it passes both WCAG 2.1AA and Section 508 standards out of the box. This plugin uses WP Scripts to handle the build process for the blocks.
 
 To better manage ACF Field Groups, the plugin supports [synchronized JSON](https://www.advancedcustomfields.com/resources/synchronized-json/) for Advanced Custom Fields.
 
