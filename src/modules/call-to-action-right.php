@@ -31,16 +31,9 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 	<?php
 	// Button.
 	if ( ! empty( $abs_args['button_args']['button'] ) ) :
-		// Simplify this array.
-		$abs_button_args = $abs_args['button_args']['button'];
-
 		print_element(
 			'button',
-			[
-				'title'  => $abs_button_args['title'],
-				'href'   => $abs_button_args['url'],
-				'target' => $abs_button_args['target'],
-			]
+			$abs_args['button_args']['button']
 		);
 	endif;
 	?>
