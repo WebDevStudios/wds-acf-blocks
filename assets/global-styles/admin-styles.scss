@@ -14,3 +14,7 @@
 		}
 	}
 }
+
+html :where( .wp-block ) {
+	@apply max-w-none;
+}
