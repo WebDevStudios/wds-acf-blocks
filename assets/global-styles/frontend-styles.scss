@@ -28,10 +28,10 @@
 			@apply inline-flex;
 
 			.breadcrumbs-divider {
-				@apply mx-8;
+				@apply text-gray-500 mx-8;
 			}
 
-			&:last-child > a {
+			.breadcrumbs-current-page > a {
 				@apply text-gray-500 no-underline;
 			}
 		}
