@@ -17,7 +17,7 @@ $abs_defaults = [
 	'class'         => [ 'wds-element', 'wds-element-button' ],
 	'id'            => '',
 	'title'         => false,
-	'href'          => false,
+	'url'           => false,
 	'target'        => false,
 	'type'          => false,
 	'icon'          => [],
@@ -32,6 +32,9 @@ $abs_defaults = [
 ];
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
+
+// Map the ACF link 'url' attribute to an 'href' attribute.
+$abs_args['href'] = $abs_args['url'];
 
 // Make sure element should render.
 if ( $abs_args['title'] || $abs_args['icon'] ) :

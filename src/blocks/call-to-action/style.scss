@@ -2,10 +2,7 @@
 // Block - Call to Action Styles, FRONTEND
 //----------------------------------------
 .wds-block-call-to-action {
-	.wds-module-call-to-action,
-	.acf-innerblocks-container {
-		@apply container;
-	}
+	@apply container;
 
 	.wds-module-call-to-action {
 		@screen tablet-portrait {

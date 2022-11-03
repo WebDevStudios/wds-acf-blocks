@@ -178,12 +178,14 @@ class Blocks_Scaffold {
 					'{{title}}',
 					'{{description}}',
 					'{{icon}}',
+					'{{keyword}}',
 				],
 				[
 					$this->name,
 					$args['title'],
 					$args['desc'],
 					$args['icon'],
+					$args['keyword'],
 				],
 				$content
 			);
