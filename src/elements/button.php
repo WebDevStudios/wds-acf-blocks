@@ -28,6 +28,7 @@ $abs_defaults = [
 		'disabled' => false,
 		'expanded' => false,
 		'label'    => false,
+		'current'  => '',
 	],
 ];
 
