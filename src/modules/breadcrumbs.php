@@ -91,6 +91,7 @@ $abs_atts = get_formatted_atts( [ 'class', 'aria' ], $abs_args );
 					[
 						'title' => get_the_title(),
 						'url'   => get_the_permalink(),
+						'class' => 'breadcrumbs-current-page',
 						'aria'  => [
 							'current' => 'page',
 						],
