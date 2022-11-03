@@ -1,5 +1,5 @@
 //----------------------------------------
-// Global block styles, Frontend.
+// Global Block styles, Frontend.
 //----------------------------------------
 .wds-block {
 	@apply my-64;
@@ -11,6 +11,29 @@
 
 		&:empty {
 			@apply hidden;
+		}
+	}
+}
+
+//----------------------------------------
+// Global Module styles, Frontend.
+//----------------------------------------
+.wds-module-breadcrumbs {
+	@apply my-16;
+
+	ol {
+		@apply inline-flex;
+
+		li {
+			@apply inline-flex;
+
+			.breadcrumbs-divider {
+				@apply mx-8;
+			}
+
+			&:last-child > a {
+				@apply text-gray-500 no-underline;
+			}
 		}
 	}
 }
