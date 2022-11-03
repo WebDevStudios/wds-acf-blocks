@@ -12,7 +12,7 @@ wp abs create_portable_block myblock --title="This is myblock" --desc="This bloc
 
 -   title : The title of the block
 -   desc : The description of the block
--   keyword : Block keywords
+-   keyword : Block keywords. The slug for the block keyword is added automatically so this can be anything other than the slug to quickly get the block via search.
 -   icon : The icon of the block
 
 ## Documentation Navigation
