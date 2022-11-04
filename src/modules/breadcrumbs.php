@@ -11,12 +11,12 @@
 /**
  * Expected shape of the links array.
  * [
- *  'title' => 'url' (relative),
- *  'title' => 'url' (relative),
+ *  post_ID,
+ *  post_ID,
  * ]
  *
  * These will render like:
- * Home / Link 1 / Link 2
+ * Home / Link 1 / Link 2 / Current Page
  *
  * The home icon will display if 'display_home_icon' is true, otherwise 'Home' will be displayed as text.
  * The current page will display if 'display_current_page' is true.
