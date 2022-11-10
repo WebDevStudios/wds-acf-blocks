@@ -191,6 +191,7 @@ class Blocks_Scaffold {
 					'{{description}}',
 					'{{icon}}',
 					'abs/',
+					'{{keyword}}',
 				],
 				[
 					$this->name,
@@ -198,6 +199,7 @@ class Blocks_Scaffold {
 					$args['desc'],
 					$args['icon'],
 					trailingslashit( $args['namespace'] ),
+					$args['keyword'],
 				],
 				$content
 			);

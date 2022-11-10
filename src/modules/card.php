@@ -19,8 +19,7 @@ $abs_defaults = [
 	'eyebrow'       => false,
 	'heading'       => false,
 	'content'       => false,
-	'button_text'   => false,
-	'button_url'    => false,
+	'button'        => false,
 	'attachment_id' => false,
 	'src'           => false,
 	'meta'          => false,
@@ -86,11 +85,7 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 	if ( $abs_args['button'] ) :
 		print_element(
 			'button',
-			[
-				'title'  => $abs_args['button']['title'],
-				'href'   => $abs_args['button']['url'],
-				'target' => $abs_args['button']['target'],
-			]
+			$abs_args['button']
 		);
 	endif;
 	?>

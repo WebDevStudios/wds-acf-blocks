@@ -1,0 +1,32 @@
+{
+	"name": "abs/hero",
+	"title": "Hero",
+	"description": "Hero block to use at the top of your page.",
+	"editorStyle": "file:./editor.css",
+	"editorScript": "file:./editor.js",
+	"style": "file:./style-script.css",
+	"script": "file:./script.js",
+	"category": "WDS",
+	"icon": "cover-image",
+	"apiVersion": 2,
+	"keywords": [ "hero", "{{keyword}}", "block" ],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "hero.php"
+	},
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"color": true,
+		"customClassName": true,
+		"jsx": true
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"_is_preview": "true"
+			}
+		}
+	}
+}

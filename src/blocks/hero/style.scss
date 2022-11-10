@@ -1,0 +1,25 @@
+// Frontend styles.
+.wds-block-hero {
+	@apply container;
+
+	.wds-module-hero {
+		@apply h-[400px];
+
+		.background {
+			@apply relative;
+
+			.wds-element-image,
+			.overlay {
+				@apply absolute w-full h-[400px] object-cover;
+			}
+
+			.overlay {
+				@apply z-10;
+			}
+		}
+
+		.hero-content {
+			@apply relative z-20 h-full flex items-center justify-center flex-col text-white;
+		}
+	}
+}
