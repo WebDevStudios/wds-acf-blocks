@@ -133,12 +133,18 @@ class Blocks_Scaffold {
 	 * @since 2.0.0
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
-	private function create_block_render_php() {
-		$dir = ABS_ROOT_PATH . 'wpcli/block-starter/block.php';
+	private function create_block_render_php( $args ) {
+		$local_file = ABS_ROOT_PATH . 'wpcli/block-starter/block.php';
+		$content    = '';
 
-		// copy block render file.
-		if ( ! $this->init_filesystem()->copy( $dir, ABS_ROOT_PATH . 'src/blocks/' . $this->name . '/' . $this->name . '.php' ) ) {
-			WP_CLI::error( 'ERROR :: Could not create render file.', true );
+		if ( $this->init_filesystem()->exists( $local_file ) ) {
+			$content = $this->init_filesystem()->get_contents( $local_file );
+			$content = str_replace( 'abs', $args['namespace'], $content );
+			if ( ! $this->init_filesystem()->put_contents( ABS_ROOT_PATH . 'src/blocks/' . $this->name . '/block.php', $content ) ) {
+				WP_CLI::error( 'ERROR :: Could not create a render file.', true );
+			}
+		} else {
+			WP_CLI::error( 'ERROR :: Could not create a render file.', true );
 		}
 
 	}

@@ -4,5 +4,3 @@
  *
  * @package abs
  */
-
-namespace WebDevStudios\abs;
