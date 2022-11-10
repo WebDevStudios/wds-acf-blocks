@@ -71,7 +71,7 @@ class Blocks_Scaffold {
 				'desc'      => '',
 				'keywords'  => strtolower( $this->name ),
 				'icon'      => 'table-row-before',
-				'namespace' => 'WebDevStudios\abs',
+				'namespace' => 'abs/',
 			]
 		);
 
@@ -133,19 +133,12 @@ class Blocks_Scaffold {
 	 * @since 2.0.0
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
-	private function create_block_render_php( $args ) {
-		$local_file = ABS_ROOT_PATH . 'wpcli/block-starter/block.php';
-		$content    = '';
+	private function create_block_render_php() {
+		$dir = ABS_ROOT_PATH . 'wpcli/block-starter/block.php';
 
-		if ( $this->init_filesystem()->exists( $local_file ) ) {
-			$content = $this->init_filesystem()->get_contents( $local_file );
-			$content = str_replace( 'WebDevStudios\abs', esc_html( $args['namespace'] ), $content );
-
-			if ( ! $this->init_filesystem()->put_contents( ABS_ROOT_PATH . 'src/blocks/' . $this->name . '/block.php', $content ) ) {
-				WP_CLI::error( 'ERROR :: Could not create a render file.', true );
-			}
-		} else {
-			WP_CLI::error( 'ERROR :: Could not create a render file.', true );
+		// copy block render file.
+		if ( ! $this->init_filesystem()->copy( $dir, ABS_ROOT_PATH . 'src/blocks/' . $this->name . '/' . $this->name . '.php' ) ) {
+			WP_CLI::error( 'ERROR :: Could not create render file.', true );
 		}
 
 	}
@@ -191,12 +184,14 @@ class Blocks_Scaffold {
 					'{{title}}',
 					'{{description}}',
 					'{{icon}}',
+					'abs/',
 				],
 				[
 					$this->name,
 					$args['title'],
 					$args['desc'],
 					$args['icon'],
+					trailingslashit( $args['namespace'] ),
 				],
 				$content
 			);
