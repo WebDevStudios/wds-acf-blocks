@@ -18,6 +18,7 @@ $abs_defaults = [
 	'class'         => [ 'wds-module', 'wds-module-card' ],
 	'eyebrow'       => false,
 	'heading'       => false,
+	'heading_level' => 2,
 	'content'       => false,
 	'button'        => false,
 	'attachment_id' => false,
@@ -61,7 +62,7 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 			'heading',
 			[
 				'text'  => $abs_args['heading'],
-				'level' => 2,
+				'level' => $abs_args['heading_level'],
 			]
 		);
 	endif;
