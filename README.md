@@ -98,7 +98,7 @@ Start by copying the file `env-example.json` and name it `env.json`. Inside that
 
 ```json
 {
-	"tailwindPreset": "/Users/yourusername/Sites/yourproject/app/public/wp-content/themes/your-wd_s-theme/wds.preset.js"
+	"tailwindPreset": "../../themes/your-wd_s-theme/wds.preset.js"
 }
 ```
 
